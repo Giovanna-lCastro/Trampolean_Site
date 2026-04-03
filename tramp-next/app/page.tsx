@@ -2,6 +2,9 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Partners } from "@/components/Partners";
 import { Features } from "@/components/Features";
+import { Solutions } from "@/components/Solutions";
+import { Segments } from "@/components/Segments";
+import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -15,6 +18,9 @@ export default function Home() {
             <Hero />
             <Partners />
             <Features />
+            <Solutions />
+            <Segments />
+            <FinalCTA />
           </div>
         </main>
         <Footer />

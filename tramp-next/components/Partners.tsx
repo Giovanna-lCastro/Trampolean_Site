@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 export const Partners = () => {
@@ -12,24 +14,31 @@ export const Partners = () => {
   ];
 
   return (
-    <section className="Section-module-scss-module__sX6ybW__Section Section-module-scss-module__sX6ybW__dark-solid dark-solid" data-testid="carousel-container">
-      <div className="AnimatedSectionWrapper-module-scss-module__4Dy2TG__scroll">
-        <div className="Carousel2025-module-scss-module__HCi1xW__Carousel2025_sliderContainer Carousel2025-module-scss-module__HCi1xW__Carousel2025_sliderContainer___withGradientEdges">
-          <div className="Slider-module-scss-module__ZCi4oa__Slider_wrapper" data-testid="slider">
-            <div className="Slider-module-scss-module__ZCi4oa__Slider">
-              <div className="Slider-module-scss-module__ZCi4oa__Slider_container" style={{ display: "flex", gap: "2rem", justifyContent: "center", padding: "2rem 0" }}>
-                {logos.map((logo, index) => (
-                  <div key={index} className="Slider-module-scss-module__ZCi4oa__Slider_slide">
-                    <img 
-                      alt={logo} 
-                      className="CarouselImage-module-scss-module__PG-W9W__CarouselImage_element___small" 
-                      src={`/tramp_files/${logo}`}
-                      style={{ opacity: 0.7, filter: "brightness(0) invert(1)" }} 
-                    />
-                  </div>
-                ))}
+    <section className="Section-module-scss-module__sX6ybW__Section Section-module-scss-module__sX6ybW__white-solid white-solid" style={{ padding: "4rem 0" }}>
+      <div className="container2025Redesign" style={{ textAlign: "center", marginBottom: "3rem" }}>
+        <h2 className="ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock_title" style={{ fontSize: "2rem", color: "#1A3C5E" }}>
+           Empresas que Confiam na Trampolean para Liderar o Futuro
+        </h2>
+        <p style={{ maxWidth: "800px", margin: "1rem auto", opacity: 0.7, fontSize: "1.1rem" }}>
+          Desde a otimização de processos até a criação de culturas de aprendizagem contínua, 
+          nossos clientes alcançam novos patamares de eficiência, engajamento e inovação.
+        </p>
+      </div>
+
+      <div className="Carousel2025-module-scss-module__HCi1xW__Carousel2025_sliderContainer">
+        <div className="Slider-module-scss-module__ZCi4oa__Slider_wrapper">
+          <div className="Slider-module-scss-module__ZCi4oa__Slider_container" style={{ display: "flex", gap: "4rem", justifyContent: "center", alignItems: "center", flexWrap: "wrap", padding: "1rem 2rem" }}>
+            {logos.map((logo, index) => (
+              <div key={index} className="Slider-module-scss-module__ZCi4oa__Slider_slide">
+                <img 
+                  alt={logo} 
+                  src={`/tramp_files/${logo}`}
+                  style={{ height: "40px", opacity: 0.6, filter: "grayscale(100%)", transition: "all 0.3s ease" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.filter = "grayscale(0%)"; e.currentTarget.style.opacity = "1"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.filter = "grayscale(100%)"; e.currentTarget.style.opacity = "0.6"; }}
+                />
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

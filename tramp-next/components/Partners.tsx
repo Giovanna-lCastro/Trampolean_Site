@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 export const Partners = () => {
@@ -14,32 +12,28 @@ export const Partners = () => {
   ];
 
   return (
-    <section className="Section-module-scss-module__sX6ybW__Section Section-module-scss-module__sX6ybW__white-solid white-solid" style={{ padding: "4rem 0" }}>
-      <div className="container2025Redesign" style={{ textAlign: "center", marginBottom: "3rem" }}>
-        <h2 className="ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock_title" style={{ fontSize: "2rem", color: "#1A3C5E" }}>
+    <section className="bg-white py-16 border-b border-tramp-navy/5">
+      <div className="container2025Redesign text-center mb-12 !pb-0">
+        <h2 className="text-[2.4rem] text-tramp-navy font-bold mb-4">
            Empresas que Confiam na Trampolean para Liderar o Futuro
         </h2>
-        <p style={{ maxWidth: "800px", margin: "1rem auto", opacity: 0.7, fontSize: "1.1rem" }}>
+        <p className="max-w-2xl mx-auto opacity-70 text-[1.4rem] leading-relaxed">
           Desde a otimização de processos até a criação de culturas de aprendizagem contínua, 
           nossos clientes alcançam novos patamares de eficiência, engajamento e inovação.
         </p>
       </div>
 
-      <div className="Carousel2025-module-scss-module__HCi1xW__Carousel2025_sliderContainer">
-        <div className="Slider-module-scss-module__ZCi4oa__Slider_wrapper">
-          <div className="Slider-module-scss-module__ZCi4oa__Slider_container" style={{ display: "flex", gap: "4rem", justifyContent: "center", alignItems: "center", flexWrap: "wrap", padding: "1rem 2rem" }}>
-            {logos.map((logo, index) => (
-              <div key={index} className="Slider-module-scss-module__ZCi4oa__Slider_slide">
-                <img 
-                  alt={logo} 
-                  src={`/tramp_files/${logo}`}
-                  style={{ height: "40px", opacity: 0.6, filter: "grayscale(100%)", transition: "all 0.3s ease" }}
-                  onMouseEnter={(e) => { e.currentTarget.style.filter = "grayscale(0%)"; e.currentTarget.style.opacity = "1"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.filter = "grayscale(100%)"; e.currentTarget.style.opacity = "0.6"; }}
-                />
-              </div>
-            ))}
-          </div>
+      <div className="container2025Redesign !py-8">
+        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16 px-4">
+          {logos.map((logo, index) => (
+            <div key={index} className="flex items-center justify-center">
+              <img 
+                alt={logo} 
+                src={`/tramp_files/${logo}`}
+                className="h-10 md:h-12 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -25,47 +25,43 @@ export const Features = () => {
   ];
 
   return (
-    <section className="Section-module-scss-module__sX6ybW__Section Section-module-scss-module__sX6ybW__white-solid white-solid" style={{ padding: "6rem 0", color: "#220041" }}>
-      <div className="container2025Redesign ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_grid ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_gridCol___1 ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_gridGap___large">
-        <div data-testid="contentGridItem" className="ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_item">
-          <div className="ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock_container" style={{ textAlign: "center" }}>
-            <h2 className="ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock_title Alignment-module-scss-module__CdTCxq__Alignment___center" style={{ fontSize: "2.5rem", marginBottom: "2rem" }}>
-              Inovação com Raiz. Impacto com Propósito.
-            </h2>
-            <div className="ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock_description Alignment-module-scss-module__CdTCxq__Alignment___center" style={{ maxWidth: "900px", margin: "0 auto" }}>
-              <p style={{ fontSize: "1.15rem", lineHeight: "1.8", marginBottom: "1.5rem" }}>
-                Nascemos da Ergonomia e da Segurança no Trabalho. Evoluímos para a Inovação em Processos Organizacionais. 
-                Chegamos à Era da Inteligência Artificial com a mesma missão de sempre: colocar o ser humano no centro de tudo.
-              </p>
-              <p style={{ fontSize: "1.1rem", opacity: 0.8 }}>
-                A Trampolean combina profunda expertise em SST com tecnologias de ponta para criar soluções que 
-                transformam ambientes de trabalho — tornando-os mais seguros, inteligentes e humanos.
-              </p>
-            </div>
-          </div>
+    <section className="bg-white py-24 border-b border-tramp-navy/5">
+      <div className="container2025Redesign text-center !pb-0">
+        <h2 className="text-[3.5rem] md:text-[4.5rem] text-tramp-navy font-extrabold mb-10 leading-tight">
+          Inovação com Raiz. Impacto com Propósito.
+        </h2>
+        <div className="max-w-4xl mx-auto space-y-6">
+          <p className="text-[1.8rem] md:text-[2rem] text-tramp-gray leading-relaxed">
+            Nascemos da Ergonomia e da Segurança no Trabalho. Evoluímos para a Inovação em Processos Organizacionais. 
+            Chegamos à Era da Inteligência Artificial com a mesma missão de sempre: colocar o ser humano no centro de tudo.
+          </p>
+          <p className="text-[1.6rem] md:text-[1.8rem] text-tramp-gray/70 leading-relaxed italic">
+            A Trampolean combina profunda expertise em SST com tecnologias de ponta para criar soluções que 
+            transformam ambientes de trabalho — tornando-os mais seguros, inteligentes e humanos.
+          </p>
         </div>
-        <div data-testid="contentGridItem" className="ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_item" style={{ marginTop: "4rem" }}>
-          <div className="ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_flex ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_flexCol___4 ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_flexGap___small" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem" }}>
-            {pillars.map((pillar, index) => (
-              <div key={index} className="ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_item">
-                <div className="ContentBlockCard2025-module-scss-module__V6THDa__ContentBlockCard" style={{ height: "100%" }}>
-                  <div className="Card2025-module-scss-module__COW6xW__Card2025" style={{ height: "100%", padding: "2.5rem", borderRadius: "1.5rem", border: "1px solid rgba(0,0,0,0.05)", boxShadow: "0 10px 30px -5px rgba(0,0,0,0.05)" }}>
-                    <div className="ContentBlockCard2025-module-scss-module__V6THDa__ContentBlockCard_container">
-                      <div style={{ fontSize: "3rem", marginBottom: "1.5rem" }}>{pillar.icon}</div>
-                      <div className="ContentBlockCard2025-module-scss-module__V6THDa__ContentBlockCard_content">
-                        <div className="ContentBlockCard2025-module-scss-module__V6THDa__ContentBlockCard_title" style={{ fontSize: "1.25rem", fontWeight: "bold", marginBottom: "1rem", color: "#1A3C5E" }}>
-                          <span>{pillar.title}</span>
-                        </div>
-                        <div className="ContentBlockCard2025-module-scss-module__V6THDa__ContentBlockCard_description">
-                          <p style={{ lineHeight: "1.6", opacity: 0.8 }}>{pillar.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-24">
+          {pillars.map((pillar, index) => (
+            <div 
+              key={index} 
+              className="group p-12 rounded-[2.5rem] border border-tramp-navy/5 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:shadow-[0_40px_80px_rgba(26,60,94,0.08)] hover:-translate-y-3 transition-all duration-500 text-left h-full flex flex-col justify-between"
+            >
+              <div>
+                <div className="text-[5rem] mb-10 transform group-hover:scale-110 transition-transform duration-500 origin-left">
+                  {pillar.icon}
                 </div>
+                <h3 className="text-[2.2rem] font-bold text-tramp-navy mb-6 tracking-tight group-hover:text-tramp-cyan transition-colors">
+                  {pillar.title}
+                </h3>
+                <p className="text-[1.6rem] text-tramp-gray leading-relaxed opacity-80">
+                  {pillar.description}
+                </p>
               </div>
-            ))}
-          </div>
+              
+              <div className="mt-10 h-1 w-12 bg-tramp-cyan/20 group-hover:w-full transition-all duration-500"></div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

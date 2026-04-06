@@ -2,73 +2,72 @@ import React from "react";
 
 export const Hero = () => {
   return (
-    <section className="Section-module-scss-module__sX6ybW__Section Section-module-scss-module__sX6ybW__dark-solid dark-solid Section-module-scss-module__sX6ybW__Section___dynamicHeight" data-testid="contentGrid">
-      <div className="container2025Redesign fire-animation ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_grid ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_gridCol___1 ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_gridGap___extra-large">
-        <div data-testid="contentGridItem" className="ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_item">
-          <section className="Section-module-scss-module__sX6ybW__Section Section-module-scss-module__sX6ybW__dark-solid dark-solid Section-module-scss-module__sX6ybW__Section___dynamicHeight" data-testid="contentGrid">
-            <div className="fire-animation ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_grid ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_gridCol___2 ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_gridGap___small ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_gridDualColumnRatio___equal">
-              <div data-testid="contentGridItem" className="ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_item">
-                <section className="Section-module-scss-module__sX6ybW__Section Section-module-scss-module__sX6ybW__dark-solid dark-solid Section-module-scss-module__sX6ybW__Section___dynamicHeight" data-testid="contentBlock">
-                  <div className="ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock_container ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock___darkMode">
-                    <p className="ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock_supertitle Alignment-module-scss-module__CdTCxq__Alignment___left" style={{ fontSize: "0.875rem", opacity: 0.8, marginBottom: "1rem", fontStyle: "italic" }}>
-                      Nascemos da Ergonomia e da Segurança no Trabalho e evoluímos para a Inovação em Processos Organizacionais.
-                    </p>
-                    <h1 className="ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock_title Alignment-module-scss-module__CdTCxq__Alignment___left Alignment-module-scss-module__CdTCxq__Alignment___hero">
-                      <span className="ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock_titleText">Arquitetura de Aprendizagem e Trabalho na Era da IA</span>
-                    </h1>
-                    <div className="ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock_description Alignment-module-scss-module__CdTCxq__Alignment___left Alignment-module-scss-module__CdTCxq__Alignment___hero">
-                      <p>Somos líderes em Transformação Digital e Educação Corporativa. </p>
-                      <p style={{ marginTop: "1rem" }}>Criamos soluções inovadoras em IA, Gamificação, Universidades Corporativas e Saúde Digital para empresas que querem liderar o futuro.</p>
-                    </div>
-                    <div className="ContentBlock2025-module-scss-module__jZhQ6q__ContentBlock_links Alignment-module-scss-module__CdTCxq__Alignment___left Alignment-module-scss-module__CdTCxq__Alignment___hero">
-                      <a data-cta="HeroBanner" data-role="SignUp" href="#contato">
-                        <div className="ButtonLink2025-module-scss-module__cwpBHq__ButtonLink ButtonLink2025-module-scss-module__cwpBHq__ButtonLink___darkMode">
-                          <span className="ButtonLink2025-module-scss-module__cwpBHq__ButtonLink___primarySpecial" style={{ background: "linear-gradient(90deg, #1A3C5E 0%, #2E86AB 100%)" }}>
-                            <div className="ButtonLink2025-module-scss-module__cwpBHq__ButtonLink_contentContainer">Agende um Diagnóstico Gratuito</div>
-                            <div className="ButtonLink2025-module-scss-module__cwpBHq__ButtonLink_border" aria-hidden="true"></div>
-                          </span>
-                        </div>
-                      </a>
-                      <a data-cta="HeroBanner" data-role="Enterprise" href="#solucoes">
-                        <div className="ButtonLink2025-module-scss-module__cwpBHq__ButtonLink ButtonLink2025-module-scss-module__cwpBHq__ButtonLink___darkMode">
-                          <span className="ButtonLink2025-module-scss-module__cwpBHq__ButtonLink___secondarySpecial">
-                            <div className="ButtonLink2025-module-scss-module__cwpBHq__ButtonLink_contentContainer">Conheça Nossas Soluções</div>
-                            <div className="ButtonLink2025-module-scss-module__cwpBHq__ButtonLink_border" aria-hidden="true"></div>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-
-                    {/* Indicadores de Credibilidade (Stats) */}
-                    <div style={{ display: "flex", gap: "2rem", marginTop: "3rem", opacity: 0.9 }}>
-                       <div>
-                          <div style={{ fontSize: "1.25rem", fontWeight: "bold" }}>+10 anos</div>
-                          <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "1px" }}>Experiência SST</div>
-                       </div>
-                       <div style={{ width: "1px", backgroundColor: "rgba(255,255,255,0.2)" }}></div>
-                       <div>
-                          <div style={{ fontSize: "1.25rem", fontWeight: "bold" }}>Centenas</div>
-                          <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "1px" }}>Empresas</div>
-                       </div>
-                       <div style={{ width: "1px", backgroundColor: "rgba(255,255,255,0.2)" }}></div>
-                       <div>
-                          <div style={{ fontSize: "1.25rem", fontWeight: "bold" }}>IA & Games</div>
-                          <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "1px" }}>Soluções Integradas</div>
-                       </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div data-testid="contentGridItem" className="ContentGrid2025-module-scss-module__-3Y_vG__ContentGrid_item">
-                <img 
-                  src="/tramp_files/success-stories-perks-gabriel-stock.png" 
-                  alt="Trampolean Hero" 
-                  className="AnimationVideo-module-scss-module__QiGs2q__AnimationVideo"
-                  style={{ borderRadius: "1.5rem", width: "100%", height: "auto", boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)" }}
-                />
-              </div>
+    <section className="relative bg-tramp-dark text-white overflow-hidden pt-32 min-h-screen flex items-center">
+      {/* Background Decorativo opcional se houver no original */}
+      <div className="absolute inset-0 bg-radial-at-tr from-tramp-magenta/20 to-transparent pointer-events-none"></div>
+      
+      <div className="container2025Redesign relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          
+          <div className="fire-animation animate-left-to-right">
+            <p className="text-[1.4rem] opacity-70 italic mb-6">
+              Nascemos da Ergonomia e da Segurança no Trabalho e evoluímos para a Inovação em Processos Organizacionais.
+            </p>
+            
+            <h1 className="text-[4rem] md:text-[5.5rem] lg:text-[6.5rem] font-extrabold leading-[1.1] tracking-tighter mb-8">
+              Arquitetura de Aprendizagem e Trabalho na Era da IA
+            </h1>
+            
+            <div className="text-[1.8rem] lg:text-[2rem] leading-relaxed opacity-90 max-w-2xl mb-12">
+              <p>Somos líderes em Transformação Digital e Educação Corporativa.</p>
+              <p className="mt-4">Criamos soluções inovadoras em IA, Gamificação, Universidades Corporativas e Saúde Digital para empresas que querem liderar o futuro.</p>
             </div>
-          </section>
+            
+            <div className="flex flex-wrap gap-6 items-center mb-16">
+              <a href="#contato" className="group">
+                <div className="relative overflow-hidden bg-gradient-to-r from-tramp-navy to-tramp-cyan px-10 py-5 rounded-2xl font-bold text-[1.6rem] shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300">
+                  <div className="relative z-10">Agende um Diagnóstico Gratuito</div>
+                  <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+              </a>
+              
+              <a href="#solucoes" className="group">
+                <div className="relative overflow-hidden border-2 border-white/20 px-10 py-5 rounded-2xl font-bold text-[1.6rem] hover:bg-white/5 hover:border-white/40 active:scale-95 transition-all duration-300">
+                  <div className="relative z-10 text-white">Conheça Nossas Soluções</div>
+                </div>
+              </a>
+            </div>
+
+            {/* Indicadores de Credibilidade (Stats) */}
+            <div className="flex gap-12 pt-10 border-t border-white/10">
+               <div>
+                  <div className="text-[2.2rem] font-bold">+10 anos</div>
+                  <div className="text-[1rem] uppercase tracking-widest opacity-50 mt-1">Experiência SST</div>
+               </div>
+               <div className="w-[1px] bg-white/20 h-12 self-center"></div>
+               <div>
+                  <div className="text-[2.2rem] font-bold">Centenas</div>
+                  <div className="text-[1rem] uppercase tracking-widest opacity-50 mt-1">Empresas</div>
+               </div>
+               <div className="w-[1px] bg-white/20 h-12 self-center"></div>
+               <div>
+                  <div className="text-[2.2rem] font-bold">IA & Games</div>
+                  <div className="text-[1rem] uppercase tracking-widest opacity-50 mt-1">Soluções Integradas</div>
+               </div>
+            </div>
+          </div>
+
+          <div className="fire-animation animate-right-to-left">
+            <div className="relative">
+              {/* Glow effect behind image */}
+              <div className="absolute -inset-4 bg-tramp-cyan/20 blur-3xl rounded-full pointer-events-none"></div>
+              <img 
+                src="/tramp_files/success-stories-perks-gabriel-stock.png" 
+                alt="Trampolean Hero" 
+                className="relative z-10 w-full h-auto rounded-[2.5rem] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)]"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

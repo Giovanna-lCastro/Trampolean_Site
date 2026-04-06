@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../styles/index.css";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
-  title: "Make | Visual AI Workflow Automation",
-  description: "Build and manage automations and AI agents on one visual platform.",
+  title: "Trampolean | Arquitetura de Aprendizagem e IA",
+  description: "Líderes em Transformação Digital, Educação Corporativa e IA aplicada ao trabalho.",
 };
 
 export default function RootLayout({
@@ -15,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br" className={`${inter.variable}`}>
+      <body className="font-inter antialiased">{children}</body>
     </html>
   );
 }

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 export const Segments = () => {
@@ -27,46 +25,30 @@ export const Segments = () => {
   ];
 
   return (
-    <section style={{ backgroundColor: "#1A3C5E", color: "white", padding: "6rem 0" }}>
-       <div className="container2025Redesign" style={{ textAlign: "center", marginBottom: "4rem" }}>
-          <h2 style={{ fontSize: "2.5rem", fontWeight: "800", marginBottom: "1.5rem" }}>
+    <section className="bg-tramp-purple-dark text-white py-24">
+       <div className="container2025Redesign text-center mb-16 !pb-0">
+          <h2 className="text-[3.2rem] md:text-[4rem] font-extrabold mb-6 leading-tight">
              Soluções Inteligentes para os Seus Desafios Mais Críticos
           </h2>
-          <p style={{ maxWidth: "700px", margin: "0 auto", opacity: 0.8, fontSize: "1.1rem" }}>
+          <p className="max-w-3xl mx-auto opacity-70 text-[1.6rem] md:text-[1.8rem] leading-relaxed">
              Seja você um gestor de SST, um líder de RH ou um diretor de inovação — a Trampolean tem a solução certa para o seu contexto.
           </p>
        </div>
-       <div className="container2025Redesign">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem" }}>
+       <div className="container2025Redesign !py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
              {categories.map((cat, idx) => (
-                <div key={idx} style={{ 
-                  backgroundColor: "rgba(255,255,255,0.05)", 
-                  padding: "3rem", 
-                  borderRadius: "1.5rem", 
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  transition: "transform 0.3s ease",
-                  cursor: "default"
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-10px)"; e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.1)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.05)"; }}
+                <div 
+                  key={idx} 
+                  className="bg-white/5 p-12 rounded-[2.5rem] border border-white/10 hover:bg-white/10 hover:-translate-y-3 transition-all duration-300 cursor-default group"
                 >
-                   <div style={{ fontSize: "3rem", marginBottom: "1.5rem" }}>{cat.icon}</div>
-                   <h3 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "1rem" }}>{cat.title}</h3>
-                   <p style={{ lineHeight: "1.6", opacity: 0.8 }}>{cat.description}</p>
+                   <div className="text-[5rem] mb-8 group-hover:scale-110 transition-transform duration-500 origin-left">{cat.icon}</div>
+                   <h3 className="text-[2rem] font-bold mb-4 tracking-tight group-hover:text-tramp-cyan transition-colors">{cat.title}</h3>
+                   <p className="text-[1.6rem] opacity-70 leading-relaxed">{cat.description}</p>
                 </div>
              ))}
           </div>
-          <div style={{ textAlign: "center", marginTop: "4rem" }}>
-             <button style={{ 
-               backgroundColor: "#2E86AB", 
-               color: "white", 
-               padding: "1rem 2.5rem", 
-               borderRadius: "0.75rem", 
-               border: "none", 
-               fontWeight: "600",
-               fontSize: "1.1rem",
-               cursor: "pointer"
-             }}>
+          <div className="text-center mt-20">
+             <button className="bg-tramp-cyan text-white px-12 py-5 rounded-2xl font-bold text-[1.7rem] shadow-xl hover:shadow-tramp-cyan/20 hover:scale-105 active:scale-95 transition-all duration-300">
                 Explore Todas as Nossas Soluções
              </button>
           </div>

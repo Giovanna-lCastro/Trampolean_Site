@@ -1,87 +1,42 @@
-"use client";
-
 import React from "react";
 
 export const FinalCTA = () => {
   return (
-    <section id="cta-final" style={{ 
-      backgroundColor: "#1A3C5E", 
-      color: "white", 
-      padding: "8rem 0", 
-      position: "relative",
-      overflow: "hidden"
-    }}>
+    <section id="cta-final" className="bg-tramp-purple-dark text-white py-32 relative overflow-hidden">
        {/* Background accent */}
-       <div style={{ 
-         position: "absolute", 
-         top: "-10%", 
-         right: "-10%", 
-         width: "40%", 
-         height: "200%", 
-         background: "linear-gradient(135deg, rgba(46,134,171,0.2) 0%, rgba(46,134,171,0) 100%)", 
-         transform: "rotate(15deg)",
-         zIndex: 0
-       }}></div>
+       <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[200%] bg-gradient-to-br from-tramp-magenta/20 to-transparent rotate-15 z-0 pointer-events-none"></div>
 
-       <div className="container2025Redesign" style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
-          <h2 style={{ fontSize: "3rem", fontWeight: "800", marginBottom: "2rem" }}>
+       <div className="container2025Redesign relative z-10 text-center !pb-0">
+          <h2 className="text-[3.5rem] md:text-[5rem] font-extrabold mb-10 leading-tight">
              Sua Jornada de Transformação Começa Agora.
           </h2>
-          <p style={{ maxWidth: "800px", margin: "0 auto 4rem auto", opacity: 0.8, fontSize: "1.25rem", lineHeight: "1.6" }}>
+          <p className="max-w-4xl mx-auto mb-16 opacity-80 text-[1.8rem] md:text-[2.2rem] leading-relaxed">
              Não deixe sua empresa para trás enquanto o mercado avança. A Trampolean é sua parceira estratégica 
              para navegar na era da Inteligência Artificial com confiança, ética e resultados concretos. 
              Dê o primeiro passo hoje.
           </p>
           
-          <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap" }}>
-             <a href="#contato" style={{ 
-               backgroundColor: "#2E86AB", 
-               color: "white", 
-               padding: "1.25rem 2.5rem", 
-               borderRadius: "0.75rem", 
-               fontSize: "1.1rem", 
-               fontWeight: "bold", 
-               textDecoration: "none",
-               transition: "transform 0.2s ease"
-             }}
-             onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-             onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+          <div className="flex flex-wrap gap-6 justify-center items-center">
+             <a 
+               href="#contato" 
+               className="bg-tramp-cyan text-white px-12 py-6 rounded-2xl text-[1.7rem] font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300"
              >
                 Agende um Diagnóstico Gratuito
              </a>
-             <a href="https://wa.me/something" style={{ 
-               backgroundColor: "white", 
-               color: "#1A3C5E", 
-               padding: "1.25rem 2.5rem", 
-               borderRadius: "0.75rem", 
-               fontSize: "1.1rem", 
-               fontWeight: "bold", 
-               textDecoration: "none",
-               transition: "transform 0.2s ease"
-             }}
-             onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-             onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+             <a 
+               href="https://wa.me/something" 
+               className="bg-white text-tramp-navy px-12 py-6 rounded-2xl text-[1.7rem] font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300"
              >
                 Fale com um Especialista
              </a>
-             <a href="#ebook" style={{ 
-               backgroundColor: "transparent", 
-               color: "white", 
-               padding: "1.25rem 2.5rem", 
-               borderRadius: "0.75rem", 
-               fontSize: "1.1rem", 
-               fontWeight: "bold", 
-               textDecoration: "none",
-               border: "2px solid rgba(255,255,255,0.3)",
-               transition: "all 0.2s ease"
-             }}
-             onMouseEnter={(e) => { e.currentTarget.style.transform = "scale(1.05)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.8)"; }}
-             onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.3)"; }}
+             <a 
+               href="#ebook" 
+               className="border-2 border-white/20 text-white px-12 py-6 rounded-2xl text-[1.7rem] font-bold hover:bg-white/5 hover:border-white/50 active:scale-95 transition-all duration-300"
              >
                 Baixe o E-book Gratuito
              </a>
           </div>
-          <p style={{ marginTop: "1rem", fontSize: "0.9rem", color: "rgba(255,255,255,0.6)" }}>
+          <p className="mt-12 text-[1.3rem] text-white/50 italic">
              * O Futuro da IA no Trabalho — Guia Essencial 2025
           </p>
        </div>

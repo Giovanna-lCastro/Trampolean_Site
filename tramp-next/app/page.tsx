@@ -9,22 +9,17 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="after2025redesign">
-      <div className="PageLayout-module-scss-module__aOwoqa__PageLayout PageLayout-module-scss-module__aOwoqa__PageLayout___withNotificationBar" role="none">
-        <div className="hero-bg"></div>
-        <Header />
-        <main className="PageLayout-module-scss-module__aOwoqa__PageLayout_content">
-          <div>
-            <Hero />
-            <Partners />
-            <Features />
-            <Solutions />
-            <Segments />
-            <FinalCTA />
-          </div>
-        </main>
-        <Footer />
-      </div>
+    <div className="relative min-h-screen bg-white">
+      <Header />
+      <main>
+        <Hero />
+        <Partners />
+        <Features />
+        <Solutions />
+        <Segments />
+        <FinalCTA />
+      </main>
+      <Footer />
     </div>
   );
 }

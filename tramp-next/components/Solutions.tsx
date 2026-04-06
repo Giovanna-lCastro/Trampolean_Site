@@ -1,54 +1,29 @@
 import React from "react";
 
 const FeatureRow = ({ title, subtitle, description, items, image, reverse }: any) => (
-  <div className="container2025Redesign" style={{ 
-    display: "flex", 
-    flexDirection: reverse ? "row-reverse" : "row", 
-    alignItems: "center", 
-    gap: "4rem", 
-    padding: "6rem 0",
-    flexWrap: "wrap"
-  }}>
-    <div style={{ flex: "1 1 400px" }}>
-       <h3 style={{ fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "2px", color: "#2E86AB", marginBottom: "1rem", fontWeight: "bold" }}>{subtitle}</h3>
-       <h2 style={{ fontSize: "2.25rem", color: "#1A3C5E", marginBottom: "1.5rem", fontWeight: "800" }}>{title}</h2>
-       <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#4B5563", marginBottom: "2rem" }}>{description}</p>
-       <ul style={{ listStyle: "none", padding: 0 }}>
+  <div className={`container2025Redesign flex flex-wrap items-center gap-16 py-24 ${reverse ? "flex-row-reverse" : "flex-row"}`}>
+    <div className="flex-1 min-w-[320px] md:min-w-[400px]">
+       <h3 className="text-[1.4rem] uppercase tracking-[2px] text-tramp-cyan mb-4 font-bold">{subtitle}</h3>
+       <h2 className="text-[3.2rem] md:text-[3.6rem] text-tramp-navy mb-6 font-extrabold leading-tight">{title}</h2>
+       <p className="text-[1.8rem] leading-relaxed text-tramp-gray mb-8">{description}</p>
+       <ul className="list-none p-0">
           {items.map((item: string, i: number) => (
-            <li key={i} style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem", color: "#374151" }}>
-              <span style={{ color: "#2E86AB", fontWeight: "bold" }}>✓</span> {item}
+            <li key={i} className="flex items-center gap-3 mb-3 text-tramp-gray-muted text-[1.6rem]">
+              <span className="text-tramp-cyan font-bold text-[1.8rem]">✓</span> {item}
             </li>
           ))}
        </ul>
-       <button style={{ 
-         marginTop: "2.5rem", 
-         padding: "1rem 2rem", 
-         backgroundColor: "#1A3C5E", 
-         color: "white", 
-         borderRadius: "0.75rem", 
-         border: "none", 
-         fontWeight: "600",
-         cursor: "pointer",
-         boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
-       }}>
+       <button className="mt-10 px-10 py-4 bg-tramp-navy text-white rounded-xl font-bold text-[1.6rem] shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
          Saiba mais
        </button>
     </div>
-    <div style={{ flex: "1 1 400px", position: "relative" }}>
-       <div style={{ 
-         position: "absolute", 
-         top: "10%", 
-         left: "10%", 
-         width: "100%", 
-         height: "100%", 
-         background: "linear-gradient(135deg, #EAF4FB 0%, #D1E9F6 100%)", 
-         borderRadius: "2rem",
-         zIndex: -1
-       }}></div>
+    <div className="flex-1 min-w-[320px] md:min-w-[400px] relative group">
+       {/* Decorative Background */}
+       <div className="absolute top-[10%] left-[10%] w-full h-full bg-gradient-to-br from-tramp-bg-light to-tramp-bg-cyan rounded-[2.5rem] -z-10 group-hover:scale-105 transition-transform duration-500"></div>
        <img 
          src={`/tramp_files/${image}`} 
          alt={title} 
-         style={{ width: "100%", borderRadius: "2rem", boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }} 
+         className="w-full rounded-[2.5rem] shadow-2xl transition-transform duration-500 group-hover:-translate-y-2" 
        />
     </div>
   </div>
@@ -107,12 +82,12 @@ export const Solutions = () => {
   ];
 
   return (
-    <section id="solucoes" style={{ backgroundColor: "#FFFFFF", overflow: "hidden" }}>
-       <div className="container2025Redesign" style={{ textAlign: "center", paddingTop: "6rem" }}>
-          <h2 style={{ fontSize: "2.75rem", color: "#1A3C5E", fontWeight: "800" }}>
+    <section id="solucoes" className="bg-white overflow-hidden py-12">
+       <div className="container2025Redesign text-center !pb-0">
+          <h2 className="text-[3.5rem] md:text-[4.5rem] text-tramp-navy font-extrabold leading-tight">
              Descubra o Poder da Trampolean
           </h2>
-          <p style={{ maxWidth: "700px", margin: "1.5rem auto", opacity: 0.7, fontSize: "1.2rem" }}>
+          <p className="max-w-3xl mx-auto mt-6 opacity-70 text-[1.8rem] md:text-[2rem] leading-relaxed">
              Ferramentas e Serviços Criados para o Seu Sucesso. Redefinindo os limites da produtividade e gestão.
           </p>
        </div>

@@ -2,11 +2,22 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <footer className="Section-module-scss-module__sX6ybW__Section Section-module-scss-module__sX6ybW__dark-solid dark-solid" style={{ padding: "4rem 2rem", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
-      <div className="container2025Redesign" style={{ textAlign: "center" }}>
-        <img alt="Make Logo" loading="lazy" width="120" height="40" src="/tramp_files/Make-Logo-RGB_(2).png" style={{ marginBottom: "2rem" }} />
-        <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.875rem" }}>
-          © 2026 Celonis Inc. All rights reserved. Make is a registered trademark of Celonis.
+    <footer className="bg-tramp-dark text-white py-20 border-t border-white/10">
+      <div className="container2025Redesign text-center !pb-0">
+        <span className="text-[2.5rem] font-extrabold tracking-tighter text-white mb-10 block">
+          Trampolean
+        </span>
+        
+        <div className="flex flex-wrap justify-center gap-8 mb-12 text-[1.4rem] opacity-60">
+          <a href="/sobre" className="hover:text-tramp-cyan transition-colors">Sobre Nós</a>
+          <a href="#solucoes" className="hover:text-tramp-cyan transition-colors">Soluções</a>
+          <a href="/inovacao" className="hover:text-tramp-cyan transition-colors">Inovação</a>
+          <a href="/contato" className="hover:text-tramp-cyan transition-colors">Contato</a>
+          <a href="/privacidade" className="hover:text-tramp-cyan transition-colors">Privacidade</a>
+        </div>
+
+        <div className="text-[1.3rem] text-white/30 border-t border-white/5 pt-10">
+          © {new Date().getFullYear()} Trampolean Arquitetura de Aprendizagem. Todos os direitos reservados.
         </div>
       </div>
     </footer>

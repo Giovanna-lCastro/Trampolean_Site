@@ -85,6 +85,8 @@ export const Header = () => {
         { title: "Dev de Jogos", description: "Criação de serious games e experiências gamificadas.", href: "/solucoes#dev-jogos", icon: <IconGamepad /> },
         { title: "Dev de Software", description: "Sistemas e apps escaláveis sob medida.", href: "/solucoes#dev-software", icon: <IconLayers /> },
         { title: "Automação de IA", description: "Eficiência operacional com fluxos inteligentes.", href: "/solucoes#automacao-ia", icon: <IconZap /> },
+        { title: "Treinamentos", description: "Capacitação corporativa em IA e inovação.", href: "/solucoes#treinamentos", icon: <IconZap /> },
+        { title: "Workshops", description: "Imersões práticas para times e líderes.", href: "/solucoes#workshops", icon: <IconZap /> },
         { title: "Gamificação", description: "Engajamento real através de ciência comportamental.", href: "/solucoes#gamificacao", icon: <IconMedal /> },
         { title: "SST Inovadora", description: "Saúde e Segurança com tecnologia e propósito.", href: "/solucoes#sst", icon: <IconShield /> }
       ],

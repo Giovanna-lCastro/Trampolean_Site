@@ -57,10 +57,10 @@ export const Header = () => {
       href: "/produtos",
       hasMega: true,
       items: [
-        { title: "Manual de Ética de IA", description: "Governança e compliance para uso responsável de IA.", href: "/produtos/manual-etica", icon: <IconShield /> },
-        { title: "Book Wizard", description: "Transforme ideias em livros e apostilas com IA.", href: "/produtos/book-wizard", icon: <IconWand /> },
-        { title: "Player 2", description: "Acelere a prototipagem de games no Unity via IA.", href: "/produtos/player-2", icon: <IconGamepad /> },
-        { title: "Kapta", description: "Gamificação aplicada à sustentabilidade e resíduos.", href: "/produtos/kapta", icon: <IconLeaf /> }
+        { title: "Manual de Ética de IA", description: "Governança e compliance para uso responsável de IA.", href: "/produtos#manual-etica", icon: <IconShield /> },
+        { title: "Book Wizard", description: "Transforme ideias em livros e apostilas com IA.", href: "/produtos#book-wizard", icon: <IconWand /> },
+        { title: "Player 2", description: "Acelere a prototipagem de games no Unity via IA.", href: "/produtos#player-2", icon: <IconGamepad /> },
+        { title: "Kapta", description: "Gamificação aplicada à sustentabilidade e resíduos.", href: "/produtos#kapta", icon: <IconLeaf /> }
       ],
       footer: { text: "Ver todos os produtos", href: "/produtos" }
     },
@@ -69,9 +69,9 @@ export const Header = () => {
       href: "/educacao",
       hasMega: true,
       items: [
-        { title: "IA na Educação", description: "Metodologias disruptivas para instituições de ensino.", href: "/educacao/ia-educacao", icon: <IconBrain /> },
-        { title: "Workshop para Líderes", description: "Capacitação prática em IA para tomada de decisão.", href: "/educacao/workshop-lideres", icon: <IconSchool /> },
-        { title: "Treinamento Corporativo", description: "Scale o conhecimento de IA em toda a sua empresa.", href: "/educacao/treinamento-empresas", icon: <IconBuilding /> }
+        { title: "IA na Educação", description: "Metodologias disruptivas para instituições de ensino.", href: "/educacao#ia-educacao", icon: <IconBrain /> },
+        { title: "Workshop para Líderes", description: "Capacitação prática em IA para tomada de decisão.", href: "/educacao#workshop-lideres", icon: <IconSchool /> },
+        { title: "Treinamento Corporativo", description: "Scale o conhecimento de IA em toda a sua empresa.", href: "/educacao#treinamento-empresas", icon: <IconBuilding /> }
       ],
       footer: { text: "Explorar programas", href: "/educacao" }
     },
@@ -81,12 +81,12 @@ export const Header = () => {
       hasMega: true,
       gridCols: "grid-cols-2",
       items: [
-        { title: "Consultoria de IA", description: "Design de estratégia e roadmap de implementação.", href: "/solucoes/consultoria-ia", icon: <IconZap /> },
-        { title: "Dev de Jogos", description: "Criação de serious games e experiências gamificadas.", href: "/solucoes/dev-jogos", icon: <IconGamepad /> },
-        { title: "Dev de Software", description: "Sistemas e apps escaláveis sob medida.", href: "/solucoes/dev-software", icon: <IconLayers /> },
-        { title: "Automação de IA", description: "Eficiência operacional com fluxos inteligentes.", href: "/solucoes/automacao-ia", icon: <IconZap /> },
-        { title: "Gamificação", description: "Engajamento real através de ciência comportamental.", href: "/solucoes/gamificacao", icon: <IconMedal /> },
-        { title: "SST Inovadora", description: "Saúde e Segurança com tecnologia e propósito.", href: "/solucoes/sst", icon: <IconShield /> }
+        { title: "Consultoria de IA", description: "Design de estratégia e roadmap de implementação.", href: "/solucoes#consultoria-ia", icon: <IconZap /> },
+        { title: "Dev de Jogos", description: "Criação de serious games e experiências gamificadas.", href: "/solucoes#dev-jogos", icon: <IconGamepad /> },
+        { title: "Dev de Software", description: "Sistemas e apps escaláveis sob medida.", href: "/solucoes#dev-software", icon: <IconLayers /> },
+        { title: "Automação de IA", description: "Eficiência operacional com fluxos inteligentes.", href: "/solucoes#automacao-ia", icon: <IconZap /> },
+        { title: "Gamificação", description: "Engajamento real através de ciência comportamental.", href: "/solucoes#gamificacao", icon: <IconMedal /> },
+        { title: "SST Inovadora", description: "Saúde e Segurança com tecnologia e propósito.", href: "/solucoes#sst", icon: <IconShield /> }
       ],
       footer: { text: "Todas as soluções", href: "/solucoes" }
     },

@@ -51,6 +51,7 @@ export const Header = () => {
   }, []);
 
   const navLinks = [
+    { name: "Início", href: "/" },
     { name: "A Trampolean", href: "/sobre" },
     { 
       name: "Produtos", 

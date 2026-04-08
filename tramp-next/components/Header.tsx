@@ -97,8 +97,8 @@ export const Header = () => {
     <header 
       className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
         scrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-xl py-4 border-b border-black/5" 
-          : "bg-[#16002e]/80 backdrop-blur-sm py-8 border-b border-white/10"
+          ? "bg-white/95 backdrop-blur-md shadow-xl py-2 border-b border-black/5" 
+          : "bg-[#16002e]/80 backdrop-blur-sm py-3 lg:py-4 border-b border-white/10"
       }`}
     >
       <div className="container2025Redesign flex items-center justify-between !py-0">
@@ -107,11 +107,11 @@ export const Header = () => {
           href="/" 
           className="flex items-center gap-2 group outline-none"
         >
-          <span className={`text-[2.6rem] font-black tracking-tighter transition-colors duration-300 ${
-            scrolled ? "text-tramp-dark" : "text-white"
-          } group-hover:text-tramp-accent`}>
-            Trampolean<span className="text-tramp-accent">.</span>
-          </span>
+          <img 
+            src="https://trampolean.net/assets/trampolean-logo-CK3Knm7t.png" 
+            alt="Trampolean Logo" 
+            className="h-[6.4rem] md:h-[9.6rem] w-auto object-contain transition-all duration-300 group-hover:opacity-80"
+          />
         </Link>
         
         {/* Navigation Desktop */}

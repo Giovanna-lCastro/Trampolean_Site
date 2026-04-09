@@ -12,25 +12,31 @@ export const Partners = () => {
   ];
 
   return (
-    <section className="bg-white py-16 border-b border-tramp-navy/5">
-      <div className="container2025Redesign text-center mb-12 !pb-0">
-        <h2 className="text-[2.4rem] text-tramp-navy font-bold mb-4">
-           Empresas que Confiam na Trampolean para Liderar o Futuro
-        </h2>
-        <p className="max-w-2xl mx-auto opacity-70 text-[1.4rem] leading-relaxed">
-          Desde a otimização de processos até a criação de culturas de aprendizagem contínua, 
-          nossos clientes alcançam novos patamares de eficiência, engajamento e inovação.
-        </p>
+    <section className="bg-white py-32 border-y border-black/5 overflow-hidden">
+      <div className="container2025Redesign text-center mb-20 !pb-0">
+        <div className="max-w-[95%] lg:max-w-none mx-auto">
+          <span className="inline-block px-4 py-1 bg-tramp-magenta/10 text-tramp-magenta text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
+            Liderança & Confiança
+          </span>
+          <h2 className="text-[3rem] md:text-[4.2rem] text-tramp-dark font-black mb-6 leading-tight tracking-tight whitespace-nowrap">
+             Grandes Marcas que Evoluem com a <span className="text-tramp-magenta">Trampolean.</span>
+          </h2>
+          <p className="text-[1.8rem] md:text-[2rem] text-tramp-gray opacity-70 leading-relaxed max-w-3xl mx-auto">
+             Parcerias estratégicas que transformam o futuro das organizações através da inovação.
+          </p>
+        </div>
       </div>
 
-      <div className="container2025Redesign !py-8">
-        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16 px-4">
-          {logos.map((logo, index) => (
-            <div key={index} className="flex items-center justify-center">
+      <div className="max-w-[80%] mx-auto tp-partners-carousel">
+        <div className="tp-partners-track gap-20 md:gap-40 items-center">
+          {/* Duplicamos os logos para o efeito de loop infinito */}
+          {[...logos, ...logos, ...logos].map((logo, index) => (
+            <div key={index} className="flex items-center justify-center min-w-[200px] md:min-w-[280px]">
               <img 
                 alt={logo} 
                 src={`/tramp_files/${logo}`}
-                className="h-10 md:h-12 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer"
+                className="h-20 md:h-32 !opacity-100 !grayscale-0 !brightness-100 !filter-none hover:scale-105 transition-all duration-500 cursor-pointer object-contain"
+                style={{ opacity: 1, filter: 'none' }}
               />
             </div>
           ))}

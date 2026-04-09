@@ -1,0 +1,6 @@
+Aba "Carreira":
+
+A começar, ele não começa com a parte roxa que destaca a introdução da página, conforme os outros exemplos de páginas que existem no site. Logo, deve ser incrementado esse padrão, pois é um valor da identidade visual do site.
+
+Sobre a sessão de "Por que a Trampolean" na aba "Carreira", ela deve ser centralizada, já que há 3 cards que ficariam muito melhores se fossem posicionados verticalmente, da mesma forma que há na página /home, especificamente a sessão "Soluções Inteligentes para os
+Seus Desafios Mais Críticos" em /home.

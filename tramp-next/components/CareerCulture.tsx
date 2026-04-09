@@ -2,74 +2,67 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Rocket, Users, Brain } from "lucide-react";
+import { Rocket, Users, Brain, Zap, Star } from "lucide-react";
 
 export const CareerCulture = () => {
-  const points = [
+  const values = [
     {
-      icon: <Rocket className="w-10 h-10" />,
-      title: "Projetos de impacto real",
-      description: "Trabalhamos em iniciativas que mudam a forma como empresas operam e como pessoas aprendem."
+      title: "Inovação Constante",
+      description: "Trabalhamos na fronteira da tecnologia organizacional. Se você gosta de aprender e aplicar o novo, aqui é seu lugar.",
+      icon: <Zap className="w-12 h-12 text-tramp-magenta" />
     },
     {
-      icon: <Users className="w-10 h-10" />,
-      title: "Equipe multidisciplinar",
-      description: "Designers, devs, educadores, estrategistas — uma equipe diversa e totalmente colaborativa."
+      title: "Impacto Humano",
+      description: "Nossa tecnologia não substitui pessoas; ela as potencializa. Cada projeto visa melhorar a vida de quem trabalha.",
+      icon: <Users className="w-12 h-12 text-tramp-magenta" />
     },
     {
-      icon: <Brain className="w-10 h-10" />,
-      title: "Aprendizado contínuo",
-      description: "Aqui, a aprendizagem é parte do trabalho. Incentivamos o crescimento técnico e humano constante."
+      title: "Liberdade Criativa",
+      description: "Valorizamos a autonomia e a voz de cada colaborador. Boas ideias vêm de todos os lugares e são ouvidas.",
+      icon: <Star className="w-12 h-12 text-tramp-magenta" />
     }
   ];
 
   return (
-    <section className="py-32 bg-white overflow-hidden border-b border-black/5">
-      <div className="container2025Redesign">
-        <div className="flex flex-wrap lg:flex-nowrap gap-16 items-start">
-          {/* Label & Title (1/3) */}
-          <div className="w-full lg:w-1/3">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="text-tramp-accent font-bold text-[1.4rem] tracking-[0.2em] uppercase mb-4 block">
-                Cultura & Valores
-              </span>
-              <h2 className="text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2] mb-8">
-                Por que a Trampolean?
-              </h2>
-              <p className="text-[1.7rem] leading-relaxed text-tramp-gray">
-                Não somos apenas uma empresa de tecnologia. Somos um laboratório de inovação humana potencializado por IA.
-              </p>
-            </motion.div>
-          </div>
+    <section className="bg-white py-32 overflow-hidden border-b border-black/5">
+       <div className="container2025Redesign text-center mb-20 !pb-0">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="inline-block px-4 py-1 bg-tramp-magenta/10 text-tramp-magenta text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
+              Nossa Cultura
+            </span>
+            <h2 className="text-[3.5rem] md:text-[5.5rem] text-tramp-navy font-black mb-10 leading-tight">
+              Por que a <span className="text-tramp-magenta">Trampolean?</span>
+            </h2>
+            <p className="max-w-3xl mx-auto text-[1.8rem] md:text-[2.1rem] text-tramp-gray leading-relaxed mb-16">
+              Oferecemos um ambiente de crescimento acelerado, onde a tecnologia de ponta e o bem-estar caminham juntos.
+            </p>
+          </motion.div>
+       </div>
 
-          {/* Points (2/3) */}
-          <div className="w-full lg:w-2/3">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {points.map((point, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: idx * 0.1 }}
-                  className="p-10 bg-tramp-bg-light/20 border border-black/5 rounded-[2.5rem] hover:shadow-xl hover:translate-x-2 transition-all duration-300"
+       <div className="container2025Redesign !py-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+             {values.map((v, idx) => (
+                <motion.div 
+                   key={idx} 
+                   initial={{ opacity: 0, scale: 0.95 }}
+                   whileInView={{ opacity: 1, scale: 1 }}
+                   viewport={{ once: true }}
+                   transition={{ delay: idx * 0.1 }}
+                   className="bg-white p-12 rounded-[3.5rem] border border-tramp-navy/5 shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_40px_80px_rgba(130,0,250,0.1)] hover:-translate-y-4 transition-all duration-500 group"
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-tramp-magenta text-white flex items-center justify-center mb-6">
-                    {point.icon}
-                  </div>
-                  <h3 className="text-[2rem] font-bold text-tramp-dark mb-4">{point.title}</h3>
-                  <p className="text-[1.6rem] text-tramp-gray leading-relaxed">{point.description}</p>
+                   <div className="mb-10 p-6 bg-tramp-magenta/5 w-fit rounded-3xl group-hover:scale-110 transition-transform duration-500">
+                      {v.icon}
+                   </div>
+                   <h3 className="text-[2.4rem] font-bold text-tramp-navy mb-6 group-hover:text-tramp-magenta transition-colors">{v.title}</h3>
+                   <p className="text-[1.7rem] text-tramp-gray leading-relaxed opacity-80">{v.description}</p>
                 </motion.div>
-              ))}
-            </div>
+             ))}
           </div>
-        </div>
-      </div>
+       </div>
     </section>
   );
 };

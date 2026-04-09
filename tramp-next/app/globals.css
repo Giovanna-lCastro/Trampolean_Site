@@ -114,7 +114,62 @@
   100% { opacity: 1; transform: translateX(0); }
 }
 
-/* Utilitários Extras para compatibilidade literal */
-.after2025redesign {
-  @apply antialiased;
+@utility btn-premium-purple {
+  background: linear-gradient(135deg, var(--color-tramp-gradient-start) 0%, var(--color-tramp-gradient-end) 100%);
+  color: white;
+  box-shadow: 0 10px 30px -10px rgba(130, 0, 250, 0.5);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px -10px rgba(130, 0, 250, 0.7);
+    filter: brightness(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
 }
+
+/* Estilos para o Carrossel Infinito - Renomeado para evitar conflitos */
+.tp-partners-carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.tp-partners-track {
+  display: flex;
+  width: max-content;
+  animation: tp-scroll 40s linear infinite;
+}
+
+.tp-partners-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes tp-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+

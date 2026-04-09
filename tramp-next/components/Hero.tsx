@@ -24,11 +24,8 @@ export const Hero = () => {
             </div>
             
             <div className="flex flex-wrap gap-6 items-center mb-16">
-              <a href="#contato" className="group">
-                <div className="relative overflow-hidden bg-gradient-to-r from-tramp-navy to-tramp-cyan px-10 py-5 rounded-2xl font-bold text-[1.6rem] shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300">
-                  <div className="relative z-10">Agende um Diagnóstico Gratuito</div>
-                  <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </div>
+              <a href="#contato" className="btn-premium-purple px-10 py-5 rounded-2xl font-bold text-[1.6rem] shadow-2xl block text-center">
+                Agende um Diagnóstico Gratuito
               </a>
               
               <a href="#solucoes" className="group">

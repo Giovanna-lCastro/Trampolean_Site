@@ -1,5 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { PressSection } from "@/components/PressSection";
+import { EbookCTA } from "@/components/EbookCTA";
 import { Partners } from "@/components/Partners";
 import { Features } from "@/components/Features";
 import { Solutions } from "@/components/Solutions";
@@ -13,6 +15,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <PressSection />
+        <EbookCTA />
         <Partners />
         <Features />
         <Solutions />

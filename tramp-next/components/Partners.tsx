@@ -2,13 +2,21 @@ import React from "react";
 
 export const Partners = () => {
   const logos = [
-    "Bamboo_HR_logo__1_.png",
-    "BNY_logo_2x.png",
-    "Bolt_logo_2x.png",
-    "Finn_logo_2x.png",
-    "fonds-finanz_2x.png",
-    "gojob_2x.png",
-    "tally_2x.png"
+    "Logo_-_Descomplica.png",
+    "Oficina.webp",
+    "Senac_logo.svg.png",
+    "cropped-credilink_R_policromia-1.png",
+    "distrito_de_inovao_da_cidade_de_so_paulo_logo.jpg",
+    "logo-cf.svg",
+    "logo_xp-educacao_grVPjD.png",
+    "seo_vz.webp",
+    "turma-do-jilo.webp",
+    "uber--600.png",
+    "images (1).png",
+    "images (2).png",
+    "images (3).png",
+    "images (4).png",
+    "images.png"
   ];
 
   return (
@@ -34,8 +42,8 @@ export const Partners = () => {
             <div key={index} className="flex items-center justify-center min-w-[200px] md:min-w-[280px]">
               <img 
                 alt={logo} 
-                src={`/tramp_files/${logo}`}
-                className="h-20 md:h-32 !opacity-100 !grayscale-0 !brightness-100 !filter-none hover:scale-105 transition-all duration-500 cursor-pointer object-contain"
+                src={`/parcerias/${logo}`}
+                className="h-24 md:h-36 !opacity-100 !grayscale-0 !brightness-100 !filter-none transition-all duration-500 object-contain"
                 style={{ opacity: 1, filter: 'none' }}
               />
             </div>

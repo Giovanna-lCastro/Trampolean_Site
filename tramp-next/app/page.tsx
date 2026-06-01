@@ -2,10 +2,11 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { PressSection } from "@/components/PressSection";
 import { EbookCTA } from "@/components/EbookCTA";
+import { ResultsSection } from "@/components/ResultsSection";
 import { Partners } from "@/components/Partners";
 import { Features } from "@/components/Features";
 import { Solutions } from "@/components/Solutions";
-import { Segments } from "@/components/Segments";
+// import { Segments } from "@/components/Segments";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 
@@ -17,10 +18,11 @@ export default function Home() {
         <Hero />
         <PressSection />
         <EbookCTA />
+        <ResultsSection />
         <Partners />
         <Features />
         <Solutions />
-        <Segments />
+        {/* <Segments /> */}
         <FinalCTA />
       </main>
       <Footer />

@@ -8,25 +8,26 @@ export const Hero = () => {
 
       <div className="container2025Redesign relative z-10 !py-0">
         <div className="fire-animation animate-left-to-right mb-12 lg:mb-16 text-center">
-          <p className="text-[1.2rem] uppercase tracking-widest font-semibold mb-6 text-tramp-accent">
-            Transformação Digital Centrada no Humano
-          </p>
-
           <h1 className="text-balance text-[3rem] md:text-[3.8rem] lg:text-[4.2rem] xl:text-[4.8rem] font-extrabold leading-[1.15] tracking-tighter max-w-none">
-            Tecnologia para transformar processos, trabalho e aprendizagem
+            Tecnologia para organizações mais saudáveis
           </h1>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-16 items-center">
 
           <div className="fire-animation animate-left-to-right">
-            <div className="text-[1.4rem] lg:text-[1.7rem] leading-relaxed opacity-90 text-pretty max-w-none mb-12 text-gray-300">
-              <p>A Trampolean une inteligência artificial, automação, software, jogos digitais, educação corporativa, ergonomia e semiótica para criar soluções aderentes aos desafios reais das organizações. Atuamos da estratégia à implementação, desenvolvendo pessoas, processos e tecnologias sob medida.</p>
+            <p className="text-[1.8rem] lg:text-[2.1rem] font-bold text-tramp-accent text-pretty leading-snug mb-6">
+              A Trampolean nasce da ergonomia e evolui com a inovação.
+            </p>
+
+            <div className="text-[1.4rem] lg:text-[1.7rem] leading-relaxed opacity-90 text-pretty max-w-none mb-12 text-gray-300 space-y-4">
+              <p>Combinamos inteligência artificial, transformação digital e conhecimento sobre o trabalho para desenvolver organizações mais seguras, saudáveis e preparadas para o futuro.</p>
+              <p>Criamos treinamentos, softwares, automações e jogos digitais que aprimoram processos, desenvolvem pessoas e transformam a relação entre tecnologia, trabalho e desempenho.</p>
             </div>
 
             <div className="flex flex-wrap gap-6 items-center mb-16">
-              <a href="/contato" className="btn-premium-purple px-10 py-5 rounded-2xl font-bold text-[1.6rem] shadow-2xl block text-center">
-                Conte seu desafio
+              <a href="/educacao" className="btn-premium-purple px-10 py-5 rounded-2xl font-bold text-[1.6rem] shadow-2xl block text-center">
+                Aprenda sobre IA
               </a>
 
               <a href="/solucoes" className="group">
@@ -37,21 +38,12 @@ export const Hero = () => {
             </div>
 
             {/* Indicadores de Credibilidade (Stats) */}
-            <div className="flex gap-12 pt-10 border-t border-white/10">
-              <div>
-                <div className="text-[2.2rem] font-bold">+10 anos</div>
-                <div className="text-[1rem] uppercase tracking-widest opacity-50 mt-1">Experiência SST</div>
-              </div>
-              <div className="w-[1px] bg-white/20 h-12 self-center"></div>
-              <div>
-                <div className="text-[2.2rem] font-bold">Centenas</div>
-                <div className="text-[1rem] uppercase tracking-widest opacity-50 mt-1">Empresas</div>
-              </div>
-              <div className="w-[1px] bg-white/20 h-12 self-center"></div>
-              <div>
-                <div className="text-[2.2rem] font-bold">IA & Tecnologia</div>
-                <div className="text-[1rem] uppercase tracking-widest opacity-50 mt-1">Soluções Integradas</div>
-              </div>
+            <div className="flex flex-wrap gap-x-12 gap-y-4 pt-10 border-t border-white/10">
+              <div className="text-[1.8rem] font-bold">20 anos</div>
+              <div className="w-[1px] bg-white/20 h-8 self-center"></div>
+              <div className="text-[1.8rem] font-bold">Mais de 1.200 projetos</div>
+              <div className="w-[1px] bg-white/20 h-8 self-center"></div>
+              <div className="text-[1.8rem] font-bold">+15.000 pessoas impactadas</div>
             </div>
           </div>
 

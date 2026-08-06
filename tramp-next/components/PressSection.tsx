@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export const PressSection = () => {
   return (
-    <section className="py-24 bg-gray-50 border-y border-gray-200 overflow-hidden">
+    <section className="bg-gray-50 border-y border-gray-200 overflow-hidden">
       <div className="container2025Redesign">
-        <div className="text-center flex flex-col items-center mb-24">
+        <div className="text-center flex flex-col items-center mb-16 md:mb-20">
           <div className="inline-block bg-tramp-accent text-white px-8 py-3 rounded-full mb-8 shadow-[0_10px_20px_-5px_rgba(240,36,246,0.4)]">
             <h2 className="uppercase tracking-widest font-extrabold text-[1.4rem]">Na Mídia</h2>
           </div>

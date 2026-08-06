@@ -23,13 +23,14 @@ export const ProductsHero = () => {
             <span className="inline-block px-6 py-2 bg-white/5 border border-white/10 rounded-full text-tramp-accent text-[1.4rem] font-bold tracking-widest uppercase mb-8">
               Nossos Produtos
             </span>
-            
-            <h1 className="text-[4.5rem] md:text-[6.5rem] lg:text-[7.5rem] font-black text-white leading-[1.1] mb-8 tracking-tight">
-              Tecnologia que resolve <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">problemas reais.</span>
+
+            <h1 className="text-balance text-[3.2rem] md:text-[4.2rem] lg:text-[4.8rem] font-black text-white leading-[1.15] mb-8 tracking-tight">
+              Tecnologia própria para resolver{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">problemas reais.</span>
             </h1>
-            
-            <p className="text-[1.8rem] md:text-[2.2rem] text-white/70 max-w-2xl leading-relaxed mb-12">
-              Desenvolvemos produtos originais que unem inteligência artificial, gamificação e inovação 
+
+            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 max-w-2xl leading-relaxed mb-12">
+              Desenvolvemos produtos originais que unem inteligência artificial, gamificação e inovação
               para transformar a forma como empresas e pessoas aprendem, criam e se responsabilizam.
             </p>
           </motion.div>
@@ -52,7 +53,7 @@ export const ProductsHero = () => {
              
              {/* Floating Elements */}
              <div className="absolute -top-10 -right-10 bg-tramp-accent p-8 rounded-3xl shadow-2xl border border-white/10 animate-bounce-slow">
-                <p className="text-white text-[2rem] font-black leading-tight">4 <br /> <span className="text-white/70 text-[1.2rem] uppercase tracking-widest leading-none">Original <br /> Products</span></p>
+                <p className="text-white text-[2rem] font-black leading-tight">4 <br /> <span className="text-white/70 text-[1.2rem] uppercase tracking-widest leading-none">produtos <br /> originais</span></p>
              </div>
           </motion.div>
         </div>

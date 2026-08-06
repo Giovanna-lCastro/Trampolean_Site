@@ -37,20 +37,20 @@ const ValueCard = ({ icon, title, description, delay }: { icon: React.ReactNode;
 
 export const AboutValues = () => {
   const values = [
-    { 
-      title: "Inovação", 
-      description: "Desenvolvemos soluções que ainda não existem, porque os problemas de amanhã precisam de respostas hoje.",
-      icon: <IconLamp /> 
+    {
+      title: "Inovação com aplicação",
+      description: "Buscamos o novo pela transformação real do trabalho, não pela novidade em si.",
+      icon: <IconLamp />
     },
-    { 
-      title: "Propósito", 
-      description: "Cada projeto tem um impacto real. Trabalhamos com tecnologia porque acreditamos nas pessoas.",
-      icon: <IconUsers /> 
+    {
+      title: "Propósito",
+      description: "Cada projeto tem impacto real. Trabalhamos com tecnologia porque acreditamos nas pessoas.",
+      icon: <IconUsers />
     },
-    { 
-      title: "Excelência", 
-      description: "Entregamos com rigor técnico e criatividade, sem abrir mão da qualidade em nenhuma etapa.",
-      icon: <IconGear /> 
+    {
+      title: "Excelência",
+      description: "Rigor técnico e criatividade em todas as etapas.",
+      icon: <IconGear />
     },
   ];
 
@@ -67,8 +67,8 @@ export const AboutValues = () => {
             <span className="text-tramp-accent font-bold text-[1.4rem] tracking-[0.2em] uppercase mb-4 block">
               O que nos move
             </span>
-            <h2 className="text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2]">
-              Nossos Pilares
+            <h2 className="text-balance text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2]">
+              Nossos Valores
             </h2>
           </motion.div>
         </div>

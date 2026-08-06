@@ -23,14 +23,15 @@ export const SolutionsHero = () => {
             <span className="inline-block px-6 py-2 bg-white/5 border border-white/10 rounded-full text-tramp-accent text-[1.4rem] font-bold tracking-widest uppercase mb-8">
               Nossas Soluções
             </span>
-            
-            <h1 className="text-[4.5rem] md:text-[6.5rem] lg:text-[7.5rem] font-black text-white leading-[1.1] mb-8 tracking-tight">
-              Do desafio à solução, <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">do conceito à entrega.</span>
+
+            <h1 className="text-balance text-[3.2rem] md:text-[4.2rem] lg:text-[4.8rem] font-black text-white leading-[1.15] mb-8 tracking-tight">
+              Da estratégia à automação, <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">do treinamento ao produto digital.</span>
             </h1>
-            
-            <p className="text-[1.8rem] md:text-[2.2rem] text-white/70 max-w-2xl leading-relaxed mb-12">
-              A Trampolean oferece um portfólio completo de serviços em tecnologia, educação e inovação 
-              para empresas que querem crescer com inteligência.
+
+            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 max-w-2xl leading-relaxed mb-12">
+              A Trampolean atua em todo o ciclo da transformação digital. Diagnosticamos desafios,
+              redesenhamos processos, formamos pessoas e desenvolvemos agentes, automações,
+              softwares, jogos e experiências digitais.
             </p>
           </motion.div>
 
@@ -42,17 +43,17 @@ export const SolutionsHero = () => {
             className="hidden lg:block relative"
           >
              <div className="relative rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
-               <img 
-                 src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1000&auto=format&fit=crop" 
-                 alt="Professional teamwork and digital solutions" 
-                 className="w-full h-auto object-cover aspect-video hover:scale-110 transition-transform duration-700" 
+               <img
+                 src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1000&auto=format&fit=crop"
+                 alt="Equipe trabalhando em soluções digitais"
+                 className="w-full h-auto object-cover aspect-video hover:scale-110 transition-transform duration-700"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-tramp-dark via-transparent to-transparent opacity-60" />
              </div>
-             
+
              {/* Floating Elements */}
              <div className="absolute -top-10 -right-10 bg-tramp-accent p-8 rounded-3xl shadow-2xl border border-white/10 animate-bounce-slow">
-                <p className="text-white text-[2rem] font-black leading-tight">8 <br /> <span className="text-white/70 text-[1.2rem] uppercase tracking-widest leading-none">Core <br /> Solutions</span></p>
+                <p className="text-white text-[2rem] font-black leading-tight">5 <br /> <span className="text-white/70 text-[1.2rem] uppercase tracking-widest leading-none">Frentes <br /> Integradas</span></p>
              </div>
           </motion.div>
         </div>

@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { Mail, MessageCircle } from "lucide-react";
 import { MegaMenu } from "./MegaMenu";
 
 // --- Custom SVGs for Mega Menu Icons ---
@@ -30,16 +31,22 @@ const IconBuilding = () => (
 const IconZap = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
 );
-const IconLayers = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polygon points="2 12 12 17 22 12"/><polygon points="2 17 12 22 22 17"/></svg>
+const IconRocket = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
 );
-const IconMedal = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6.1 2h11.8a2 2 0 0 1 1.7.8l1.61 2.14a2 2 0 0 1 .13 2.2L16.79 15"/><path d="M11 12 5.12 2.2"/><path d="m13 12 5.88-9.8"/><path d="M8 7h8"/><circle cx="12" cy="17" r="5"/><path d="M12 18v-2h.01"/></svg>
+const IconBot = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+);
+const IconPulse = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
 );
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,70 +57,79 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (contactRef.current && !contactRef.current.contains(e.target as Node)) {
+        setContactOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const navLinks = [
     { name: "Início", href: "/" },
     { name: "A Trampolean", href: "/sobre" },
-    { 
-      name: "Produtos", 
+    {
+      name: "Soluções",
+      href: "/solucoes",
+      hasMega: true,
+      gridCols: "grid-cols-1",
+      items: [
+        { title: "Transformação Digital e Estratégia de IA", description: "Diagnóstico, roadmap, redesenho de processos, governança e adoção.", href: "/solucoes#transformacao-digital", icon: <IconRocket /> },
+        { title: "Automações, Agentes e Software", description: "Fluxos automatizados, assistentes, RAG, integrações, sistemas e plataformas sob medida.", href: "/solucoes#automacoes-agentes-software", icon: <IconBot /> },
+        { title: "Jogos, Gamificação e Imersão", description: "Serious games, simuladores, experiências gamificadas e realidade virtual.", href: "/solucoes#jogos-gamificacao-imersao", icon: <IconGamepad /> },
+        { title: "Educação Corporativa e Treinamentos de IA", description: "Formação de líderes, trilhas por área, IA na educação e programas de adoção.", href: "/solucoes#educacao-corporativa", icon: <IconSchool /> },
+        { title: "Ergonomia, Semiótica e Fatores Humanos", description: "Trabalho real, interfaces, linguagem, riscos psicossociais e SST.", href: "/solucoes#ergonomia-semiotica", icon: <IconPulse /> }
+      ],
+      footer: { text: "Todas as soluções", href: "/solucoes" }
+    },
+    {
+      name: "Educação",
+      href: "/educacao",
+      hasMega: true,
+      items: [
+        { title: "IA para Lideranças", description: "Formação executiva para decidir e conduzir a transformação.", href: "/educacao#ia-liderancas", icon: <IconBuilding /> },
+        { title: "IA Aplicada ao Trabalho", description: "Prática em prompts, agentes, automações e fluxos.", href: "/educacao#ia-aplicada", icon: <IconZap /> },
+        { title: "IA na Educação", description: "Formação de docentes e gestores para transformar a aprendizagem.", href: "/educacao#ia-educacao", icon: <IconSchool /> },
+        { title: "Governança e Uso Responsável", description: "Ética, privacidade, segurança e responsabilidade humana.", href: "/educacao#governanca", icon: <IconShield /> }
+      ],
+      footer: { text: "Explorar programas", href: "/educacao" }
+    },
+    {
+      name: "Produtos",
       href: "/produtos",
       hasMega: true,
       items: [
         { title: "Manual de Ética de IA", description: "Governança e compliance para uso responsável de IA.", href: "/produtos#manual-etica", icon: <IconShield /> },
         { title: "Book Wizard", description: "Transforme ideias em livros e apostilas com IA.", href: "/produtos#book-wizard", icon: <IconWand /> },
-        { title: "Player 2", description: "Acelere a prototipagem de games no Unity via IA.", href: "/produtos#player-2", icon: <IconGamepad /> },
+        { title: "Player 2", description: "Acelere a prototipagem de games no Unity com IA.", href: "/produtos#player-2", icon: <IconGamepad /> },
         { title: "Kapta", description: "Gamificação aplicada à sustentabilidade e resíduos.", href: "/produtos#kapta", icon: <IconLeaf /> }
       ],
       footer: { text: "Ver todos os produtos", href: "/produtos" }
-    },
-    { 
-      name: "Educação", 
-      href: "/educacao",
-      hasMega: true,
-      items: [
-        { title: "IA na Educação", description: "Metodologias disruptivas para instituições de ensino.", href: "/educacao#ia-educacao", icon: <IconBrain /> },
-        { title: "Workshop para Líderes", description: "Capacitação prática em IA para tomada de decisão.", href: "/educacao#workshop-lideres", icon: <IconSchool /> },
-        { title: "Treinamento Corporativo", description: "Scale o conhecimento de IA em toda a sua empresa.", href: "/educacao#treinamento-empresas", icon: <IconBuilding /> }
-      ],
-      footer: { text: "Explorar programas", href: "/educacao" }
-    },
-    { 
-      name: "Soluções", 
-      href: "/solucoes",
-      hasMega: true,
-      gridCols: "grid-cols-2",
-      items: [
-        { title: "Consultoria de IA", description: "Design de estratégia e roadmap de implementação.", href: "/solucoes#consultoria-ia", icon: <IconZap /> },
-        { title: "Dev de Jogos", description: "Criação de serious games e experiências gamificadas.", href: "/solucoes#dev-jogos", icon: <IconGamepad /> },
-        { title: "Dev de Software", description: "Sistemas e apps escaláveis sob medida.", href: "/solucoes#dev-software", icon: <IconLayers /> },
-        { title: "Automação de IA", description: "Eficiência operacional com fluxos inteligentes.", href: "/solucoes#automacao-ia", icon: <IconZap /> },
-        { title: "Treinamentos", description: "Capacitação corporativa em IA e inovação.", href: "/solucoes#treinamentos", icon: <IconZap /> },
-        { title: "Workshops", description: "Imersões práticas para times e líderes.", href: "/solucoes#workshops", icon: <IconZap /> },
-        { title: "Gamificação", description: "Engajamento real através de ciência comportamental.", href: "/solucoes#gamificacao", icon: <IconMedal /> },
-        { title: "SST Inovadora", description: "Saúde e Segurança com tecnologia e propósito.", href: "/solucoes#sst", icon: <IconShield /> }
-      ],
-      footer: { text: "Todas as soluções", href: "/solucoes" }
     },
     { name: "Carreira", href: "/carreira" },
   ];
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
-        scrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-xl py-2 border-b border-black/5" 
-          : "bg-[#16002e]/80 backdrop-blur-sm py-3 lg:py-4 border-b border-white/10"
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-xl border-b border-black/5"
+          : "bg-[#16002e]/80 backdrop-blur-sm border-b border-white/10"
       }`}
     >
-      <div className="container2025Redesign flex items-center justify-between !py-0">
+      <div className="flex items-stretch">
+      <div className={`container2025Redesign flex-1 min-w-0 flex items-center justify-between ${scrolled ? "!py-2" : "!py-3 lg:!py-4"}`}>
         {/* Logo */}
         <Link 
           href="/" 
           className="flex items-center gap-2 group outline-none"
         >
-          <img 
-            src="https://trampolean.net/assets/trampolean-logo-CK3Knm7t.png" 
-            alt="Trampolean Logo" 
-            className="h-[6.4rem] md:h-[9.6rem] w-auto object-contain transition-all duration-300 group-hover:opacity-80"
+          <img
+            src="/logo-trampolean.png"
+            alt="Trampolean Logo"
+            className="h-[4rem] md:h-[5.2rem] w-auto object-contain transition-all duration-300 group-hover:opacity-80"
           />
         </Link>
         
@@ -166,27 +182,133 @@ export const Header = () => {
 
         {/* Search & CTAs */}
         <div className="flex items-center gap-6">
-          <Link 
-            href="/contato"
-            className={`hidden sm:block text-[1.5rem] font-bold transition-colors px-4 ${
-              scrolled ? "text-tramp-dark/80 hover:text-tramp-accent" : "text-white hover:text-tramp-accent"
-            }`}
-          >
-            Log in
-          </Link>
-          <Link 
-            href="/contato"
-            className={`bg-tramp-accent text-white px-8 py-3.5 rounded-2xl text-[1.5rem] font-black shadow-[0_8px_20px_rgba(240,36,246,0.3)] hover:shadow-[0_12px_24px_rgba(240,36,246,0.5)] hover:scale-105 active:scale-95 transition-all duration-300`}
-          >
-            Contato
-          </Link>
-          
+          <div className="relative" ref={contactRef}>
+            <button
+              onClick={() => setContactOpen((prev) => !prev)}
+              aria-expanded={contactOpen}
+              className="bg-tramp-accent text-white px-8 py-3.5 rounded-2xl text-[1.5rem] font-black shadow-[0_8px_20px_rgba(240,36,246,0.3)] hover:shadow-[0_12px_24px_rgba(240,36,246,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2"
+            >
+              Contato
+              <motion.span
+                animate={{ rotate: contactOpen ? 180 : 0 }}
+                className="text-[1.1rem] opacity-80"
+              >
+                ▾
+              </motion.span>
+            </button>
+
+            <AnimatePresence>
+              {contactOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10, scale: 0.96 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 10, scale: 0.96 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute right-0 top-full mt-3 w-96 bg-white rounded-2xl shadow-2xl border border-black/5 overflow-hidden z-50"
+                >
+                  <a
+                    href="mailto:contato@trampolean.net"
+                    onClick={() => setContactOpen(false)}
+                    className="flex items-center gap-4 px-6 py-5 text-tramp-dark hover:bg-tramp-bg-light transition-colors"
+                  >
+                    <span className="w-11 h-11 rounded-xl bg-tramp-bg-light flex items-center justify-center text-tramp-magenta flex-shrink-0">
+                      <Mail className="w-5 h-5" />
+                    </span>
+                    <span className="flex flex-col leading-tight whitespace-nowrap">
+                      <span className="text-[1.5rem] font-bold">E-mail</span>
+                      <span className="text-[1.2rem] text-tramp-gray">contato@trampolean.net</span>
+                    </span>
+                  </a>
+                  <a
+                    href="https://wa.me/5511913271774"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setContactOpen(false)}
+                    className="flex items-center gap-4 px-6 py-5 text-tramp-dark hover:bg-tramp-bg-light transition-colors border-t border-black/5"
+                  >
+                    <span className="w-11 h-11 rounded-xl bg-tramp-bg-light flex items-center justify-center text-tramp-magenta flex-shrink-0">
+                      <MessageCircle className="w-5 h-5" />
+                    </span>
+                    <span className="flex flex-col leading-tight whitespace-nowrap">
+                      <span className="text-[1.5rem] font-bold">WhatsApp</span>
+                      <span className="text-[1.2rem] text-tramp-gray">+55 (11) 91327-1774</span>
+                    </span>
+                  </a>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           {/* Mobile Menu Trigger */}
-          <button className={`lg:hidden p-2 ${scrolled ? "text-tramp-dark" : "text-white"}`}>
-             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <button
+            onClick={() => setMobileOpen((prev) => !prev)}
+            aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={mobileOpen}
+            className={`lg:hidden p-2 ${scrolled ? "text-tramp-dark" : "text-white"}`}
+          >
+             {mobileOpen ? (
+               <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+             ) : (
+               <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+             )}
           </button>
         </div>
       </div>
+
+        {/* T4 Interactive Banner */}
+        <a
+          href="https://www.t4interactive.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden lg:flex items-stretch shrink-0 relative overflow-hidden group"
+        >
+          <img
+            src="/t4-vibe-soccer-banner.png"
+            alt="T4 Interactive - Vibe Soccer"
+            className="h-full w-auto object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+          />
+          {/* Fade to blend with header on the left */}
+          <div
+            className={`absolute inset-y-0 left-0 w-10 xl:w-14 bg-gradient-to-r transition-colors duration-500 ${
+              scrolled ? "from-white" : "from-[#16002e]"
+            } to-transparent`}
+          />
+        </a>
+      </div>
+
+      {/* Mobile Menu Panel */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden overflow-hidden bg-white border-t border-black/5 shadow-xl"
+          >
+            <nav className="container2025Redesign !py-8 flex flex-col gap-2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-[1.8rem] font-bold text-tramp-dark py-3 border-b border-black/5"
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <a
+                href="https://wa.me/5511913271774"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[1.8rem] font-bold text-tramp-accent py-3"
+              >
+                Falar no WhatsApp
+              </a>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

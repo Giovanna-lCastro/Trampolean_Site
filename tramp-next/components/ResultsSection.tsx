@@ -21,7 +21,7 @@ export const ResultsSection = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 relative overflow-hidden bg-tramp-dark text-white border-b border-white/10">
+    <section className="relative overflow-hidden bg-tramp-dark text-white border-b border-white/10">
       {/* Background Decorativo - Brilho suave central para mesclar com o EbookCTA */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-tramp-cyan/10 via-tramp-dark to-tramp-dark pointer-events-none"></div>
 
@@ -37,7 +37,7 @@ export const ResultsSection = () => {
             Transformação em <span className="text-transparent bg-clip-text bg-gradient-to-r from-tramp-gradient-start to-tramp-gradient-end">Números</span>
           </h2>
           <p className="text-[1.8rem] text-gray-300 font-medium max-w-3xl mx-auto">
-            Mais do que métricas, entregamos experiências e soluções que redefinem o mercado e impulsionam o futuro.
+            Mais do que métricas, entregamos experiências e soluções que transformam o trabalho e impulsionam as organizações.
           </p>
         </div>
 

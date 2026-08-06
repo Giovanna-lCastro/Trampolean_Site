@@ -16,7 +16,7 @@ interface SolutionProps {
 }
 
 const SolutionSection = ({ id, tag, title, description, itemsLabel, items, image, reverse }: SolutionProps) => (
-  <section id={id} className={`py-32 overflow-hidden border-b border-black/5 ${reverse ? "bg-tramp-bg-light/10" : "bg-white"}`}>
+  <section id={id} className={`overflow-hidden border-b border-black/5 ${reverse ? "bg-tramp-bg-light/10" : "bg-white"}`}>
     <div className="container2025Redesign">
       <div className={`grid grid-cols-1 lg:grid-cols-2 gap-20 items-center ${reverse ? "lg:flex-row-reverse" : ""}`}>
         {/* Text Area */}
@@ -30,7 +30,7 @@ const SolutionSection = ({ id, tag, title, description, itemsLabel, items, image
           <span className="inline-block px-4 py-1 bg-tramp-accent/10 text-tramp-accent text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
             {tag}
           </span>
-          <h2 className="text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2] mb-8 tracking-tight">
+          <h2 className="text-balance text-[3.2rem] md:text-[4.2rem] font-black text-tramp-dark leading-[1.2] mb-8 tracking-tight">
             {title}
           </h2>
           <p className="text-[1.8rem] md:text-[2rem] leading-relaxed text-tramp-gray mb-10">
@@ -79,84 +79,96 @@ const SolutionSection = ({ id, tag, title, description, itemsLabel, items, image
 export const SolutionsDetail = () => {
   const solutions = [
     {
-      id: "consultoria-ia",
+      id: "estrategia-ia",
       tag: "Estratégia",
-      title: "Consultoria de IA",
-      description: "Ajudamos sua empresa a entender onde e como aplicar inteligência artificial de forma estratégica, ética e com retorno mensurável. Do mapeamento de oportunidades à definição de roadmap de adoção, nossa consultoria é orientada a resultado.",
-      itemsLabel: "Entregáveis típicos",
-      items: ["Diagnóstico de maturidade digital", "Mapa de oportunidades de IA", "Roadmap de implementação", "Políticas de governança"],
+      title: "Transformação Digital e Estratégia de IA",
+      description: "Estruturamos estratégias de transformação a partir dos objetivos, processos, riscos, pessoas e tecnologias da organização.",
+      itemsLabel: "Entregáveis",
+      items: [
+        "Diagnóstico de maturidade digital e de IA",
+        "Mapeamento de processos e oportunidades",
+        "Roadmap de transformação",
+        "Governança, políticas e comitês de IA",
+        "Método Semiose",
+        "Pilotos, indicadores e gestão da adoção",
+      ],
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
       reverse: false
     },
     {
-      id: "dev-jogos",
-      tag: "Game Dev",
-      title: "Desenvolvimento de Jogos",
-      description: "Criamos jogos sérios, educacionais, corporativos e de entretenimento com alta qualidade técnica e criativa. Nossas produções unem narrativa envolvente, mecânicas bem projetadas e tecnologia de ponta.",
-      itemsLabel: "Tipos de jogos",
-      items: ["Jogos sérios (treinamento)", "Jogos educacionais", "Simuladores", "Jogos mobile", "Experiências gamificadas"],
-      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop",
-      reverse: true
-    },
-    {
-      id: "dev-software",
+      id: "automacoes-agentes-software",
       tag: "Tecnologia",
-      title: "Desenvolvimento de Software",
-      description: "Desenvolvemos sistemas, aplicativos e plataformas digitais sob medida para as necessidades do seu negócio. Trabalhamos com metodologias ágeis, foco em experiência do usuário e arquitetura escalável.",
-      itemsLabel: "Tipos de entrega",
-      items: ["Aplicações web", "Apps mobile", "APIs e integrações", "Sistemas internos", "Plataformas SaaS"],
+      title: "Automações, Agentes e Software",
+      description: "Automatizamos processos e desenvolvemos soluções digitais sob medida, com ou sem inteligência artificial. Atuamos desde fluxos específicos até sistemas integrados de maior complexidade.",
+      itemsLabel: "Exemplos",
+      items: [
+        "Atendimento e triagem",
+        "Geração e análise de documentos",
+        "Relatórios e dashboards",
+        "Aprovações e fluxos internos",
+        "Integração entre sistemas e APIs",
+        "Agentes e assistentes de IA",
+        "Bases de conhecimento e RAG",
+        "Portais, aplicativos e plataformas sob medida",
+      ],
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
-      reverse: false
-    },
-    {
-      id: "automacao-ia",
-      tag: "Eficiência",
-      title: "Automação de IA",
-      description: "Mapeamos e automatizamos processos repetitivos e de alto volume usando inteligência artificial e ferramentas de fluxo inteligente. O resultado é uma operação eficiente, com menos erros e mais tempo estratégico.",
-      itemsLabel: "Casos de uso",
-      items: ["Atendimento automatizado", "Geração de relatórios", "Triagem de documentos", "Fluxos de aprovação", "Integração entre sistemas"],
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800&auto=format&fit=crop",
       reverse: true
     },
     {
-      id: "treinamentos",
-      tag: "Capacitação",
-      title: "Treinamentos",
-      description: "Desenvolvemos e facilitamos treinamentos corporativos em tecnologia, inovação e inteligência artificial, adaptados ao perfil da sua organização. Combinamos teoria e prática.",
-      itemsLabel: "Formatos",
-      items: ["Presencial", "Online / Híbrido", "Assíncrono (EAD)", "Trilhas personalizadas"],
-      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop",
-      reverse: false
-    },
-    {
-      id: "workshops",
-      tag: "Imersão",
-      title: "Workshops",
-      description: "Workshops imersivos de 1 a 2 dias para times, lideranças e projetos específicos. Focados em resolução de problemas reais com entregáveis concretos ao final.",
-      itemsLabel: "Exemplos de temas",
-      items: ["IA para líderes", "Inovação em equipe", "Design de produtos digitais", "Gamificação aplicada"],
-      image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop",
-      reverse: true
-    },
-    {
-      id: "gamificacao",
-      tag: "Engajamento",
-      title: "Gamificação",
-      description: "Aplicamos mecânicas de jogo em contextos corporativos e educacionais para aumentar engajamento e motivação. Nossa abordagem é baseada em ciência comportamental.",
-      itemsLabel: "Aplicações",
-      items: ["Onboarding de colaboradores", "Programas de saúde", "Treinamentos & Vendas", "Sustentabilidade (ESG)"],
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop",
-      reverse: false
-    },
-    {
-      id: "sst",
-      tag: "SST & ESG",
-      title: "Saúde e Segurança do Trabalho",
-      description: "Desenvolvemos soluções tecnológicas voltadas para a saúde e segurança do trabalho, integrando gamificação e IA para melhorar indicadores de segurança e qualidade de vida.",
+      id: "jogos-gamificacao-experiencias",
+      tag: "Experiências",
+      title: "Jogos, Gamificação e Experiências Imersivas",
+      description: "Desenvolvemos jogos e experiências interativas para treinamento, educação, cultura, vendas, saúde, segurança, sustentabilidade e entretenimento.",
       itemsLabel: "Entregáveis",
-      items: ["Plataformas de SST gamificadas", "Treinamentos de segurança", "Módulos de conscientização", "Painéis de indicadores"],
-      image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=800&auto=format&fit=crop",
+      items: [
+        "Serious games",
+        "Jogos educacionais e corporativos",
+        "Jogos de entretenimento",
+        "Simuladores de decisão e treinamento",
+        "Campanhas gamificadas",
+        "Realidade virtual e experiências imersivas",
+        "Desenvolvimento multiplataforma",
+      ],
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop",
+      reverse: false
+    },
+    {
+      id: "educacao-corporativa-ia",
+      tag: "Capacitação",
+      title: "Educação Corporativa e Treinamentos de IA",
+      description: "Criamos formações práticas para que líderes e equipes compreendam, utilizem e governem a inteligência artificial em seus contextos reais de trabalho.",
+      itemsLabel: "Entregáveis",
+      items: [
+        "IA para líderes e C-levels",
+        "Letramento em IA",
+        "IA aplicada às áreas de negócio",
+        "Engenharia de prompts",
+        "Automação de fluxos com IA",
+        "IA na educação",
+        "Ética, segurança e governança",
+        "Trilhas, workshops e laboratórios",
+      ],
+      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop",
       reverse: true
+    },
+    {
+      id: "ergonomia-semiotica-fatores-humanos",
+      tag: "Fatores Humanos",
+      title: "Ergonomia, Semiótica e Fatores Humanos",
+      description: "Aplicamos ergonomia e semiótica para compreender como pessoas trabalham, interpretam informações, interagem com tecnologias e produzem sentido em sistemas complexos.",
+      itemsLabel: "Entregáveis",
+      items: [
+        "Análise Ergonômica do Trabalho (AET) — conformidade NR-17 e PGR",
+        "Ergonomia de interfaces e sistemas digitais",
+        "Fatores humanos e experiência do usuário",
+        "Riscos psicossociais e organização do trabalho",
+        "Análise semiótica de interfaces, documentos e narrativas",
+        "Arquitetura de informação e linguagem",
+        "SST, EHS, DDS, SIPATs e treinamentos obrigatórios",
+        "Campanhas de saúde, prevenção e bem-estar",
+      ],
+      image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=800&auto=format&fit=crop",
+      reverse: false
     }
   ];
 

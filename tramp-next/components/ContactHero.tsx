@@ -23,13 +23,13 @@ export const ContactHero = () => {
             <span className="inline-block px-6 py-2 bg-white/5 border border-white/10 rounded-full text-tramp-accent text-[1.4rem] font-bold tracking-widest uppercase mb-8">
               Contato & Parcerias
             </span>
-            
-            <h1 className="text-[4.5rem] md:text-[6.5rem] lg:text-[7.5rem] font-black text-white leading-[1.1] mb-8 tracking-tight">
-              Fale com a <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-tramp-magenta via-white to-white/70">Trampolean.</span>
+
+            <h1 className="text-[3.2rem] md:text-[4.2rem] lg:text-[4.8rem] font-black text-white leading-[1.15] mb-8 tracking-tight text-balance">
+              Conte o que sua organização precisa transformar.
             </h1>
-            
-            <p className="text-[1.8rem] md:text-[2.2rem] text-white/70 max-w-2xl leading-relaxed mb-12">
-              Estamos prontos para ouvir seus desafios e transformar sua organização através da inovação, tecnologia e educação. Vamos conversar?
+
+            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 max-w-2xl leading-relaxed mb-12">
+              Fale com a Trampolean sobre transformação digital, inteligência artificial, automação, software, jogos, treinamentos, ergonomia, semiótica ou projetos especiais.
             </p>
           </motion.div>
 

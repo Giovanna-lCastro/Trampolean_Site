@@ -1,12 +1,16 @@
-"use client";
-
-import React from "react";
+import type { Metadata } from "next";
+import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SolutionsHero } from "@/components/SolutionsHero";
 import { SolutionsDetail } from "@/components/SolutionsDetail";
-import { AboutCTA } from "@/components/AboutCTA";
-import { motion } from "framer-motion";
+import { SectionIntro } from "@/components/SectionIntro";
+
+export const metadata: Metadata = {
+  title: { absolute: "Soluções | Trampolean" },
+  description: "Da estratégia à automação, do treinamento ao produto digital. IA, automação, software, jogos, educação corporativa, ergonomia e semiótica para transformar processos e experiências.",
+  alternates: { canonical: "/solucoes" },
+};
 
 export default function SolutionsPage() {
   return (
@@ -14,30 +18,34 @@ export default function SolutionsPage() {
       <Header />
       <main>
         <SolutionsHero />
-        
-        {/* Intro Text for the solutions list */}
-        <div className="bg-white py-24 border-b border-black/5">
-          <div className="container2025Redesign text-center">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark mb-6"
-            >
-              Expertise em Tecnologia e Inovação
-            </motion.h2>
-            <div className="text-center">
-                <p className="text-[1.8rem] md:text-[2rem] text-tramp-gray max-w-4xl mx-auto leading-relaxed italic border-l-4 border-tramp-accent pl-8 inline-block text-left">
-                “Nossa missão é transformar desafios complexos em soluções digitais simples, 
-                escaláveis e com alto valor agregado para o seu negócio.”
-                </p>
-            </div>
-          </div>
-        </div>
+
+        <SectionIntro
+          title="Um sistema coerente de competências."
+          quote="Transformamos desafios organizacionais complexos em estratégias, competências, processos e soluções digitais aplicáveis."
+        />
 
         <SolutionsDetail />
-        
-        <AboutCTA />
+
+        <section className="bg-tramp-dark relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[40%] h-full bg-tramp-accent/5 -skew-x-12 translate-x-1/2" />
+
+          <div className="container2025Redesign relative z-10 text-center">
+            <h2 className="text-balance text-[3.5rem] md:text-[5.5rem] font-black text-white leading-[1.1] mb-8">
+              Não sabe por onde começar?
+            </h2>
+
+            <p className="text-[1.8rem] md:text-[2.2rem] text-white/70 max-w-3xl mx-auto leading-relaxed mb-12">
+              Conte seu desafio. Ajudamos a identificar a frente certa e desenhar o caminho da transformação.
+            </p>
+
+            <Link
+              href="/contato"
+              className="inline-block bg-white text-tramp-dark px-16 py-6 rounded-2xl text-[1.8rem] font-black shadow-2xl hover:bg-tramp-accent hover:text-white hover:scale-105 active:scale-95 transition-all duration-300"
+            >
+              Conte seu desafio
+            </Link>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

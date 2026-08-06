@@ -9,25 +9,25 @@ export const EducationDifferentiators = () => {
     {
       icon: <Settings className="w-12 h-12" />,
       title: "Programas Sob Medida",
-      description: "Cada treinamento é adaptado ao contexto, maturidade e objetivos da sua organização."
+      description: "Cada formação é adaptada ao contexto, à maturidade e aos objetivos da organização."
     },
     {
       icon: <MousePointerClick className="w-12 h-12" />,
       title: "Foco no Uso Prático",
-      description: "Nenhuma teoria sem aplicação. Os participantes saem com ferramentas dominadas e planos concretos."
+      description: "Nenhuma teoria sem aplicação. Participantes saem com ferramentas dominadas e planos concretos."
     },
     {
       icon: <Users className="w-12 h-12" />,
       title: "Facilitadores Especialistas",
-      description: "Quem ensina é quem pratica. Nossa equipe usa IA no dia a dia dos projetos da Trampolean."
+      description: "Quem ensina é quem pratica. Nossa equipe usa IA no dia a dia dos projetos."
     }
   ];
 
   return (
-    <section className="py-32 bg-tramp-bg-light/30">
+    <section className="bg-tramp-bg-light/30">
       <div className="container2025Redesign">
         <div className="text-center mb-24">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -35,23 +35,14 @@ export const EducationDifferentiators = () => {
           >
             Nossa Metodologia
           </motion.span>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[3.5rem] md:text-[5rem] font-black text-tramp-dark"
+            className="text-[3.5rem] md:text-[5rem] font-black text-tramp-dark text-balance"
           >
-            Por que Educação com a Trampolean?
+            Por que educação com a Trampolean?
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-[1.8rem] md:text-[2.1rem] text-tramp-gray mt-6 max-w-3xl mx-auto"
-          >
-            Combinamos tecnologia de ponta com experiência pedagógica real para garantir o máximo aproveitamento.
-          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

@@ -1,7 +1,18 @@
 import React from "react";
+import Link from "next/link";
 
-const FeatureRow = ({ title, subtitle, description, items, image, reverse, buttonText }: any) => (
-  <div className={`container2025Redesign flex flex-wrap items-center gap-16 py-24 ${reverse ? "flex-row-reverse" : "flex-row"}`}>
+interface FeatureRowProps {
+  title: string;
+  subtitle: string;
+  description: string;
+  items: string[];
+  image: string;
+  reverse?: boolean;
+  buttonText?: string;
+}
+
+const FeatureRow = ({ title, subtitle, description, items, image, reverse, buttonText }: FeatureRowProps) => (
+  <div className={`container2025Redesign !py-16 md:!py-20 flex flex-wrap items-center gap-16 ${reverse ? "flex-row-reverse" : "flex-row"}`}>
     <div className="flex-1 min-w-[320px] md:min-w-[400px]">
       <h3 className="text-[1.4rem] uppercase tracking-[2px] text-tramp-cyan mb-4 font-bold">{subtitle}</h3>
       <h2 className="text-[3.2rem] md:text-[3.6rem] text-tramp-navy mb-6 font-extrabold leading-tight">{title}</h2>
@@ -13,9 +24,12 @@ const FeatureRow = ({ title, subtitle, description, items, image, reverse, butto
           </li>
         ))}
       </ul>
-      <button className="mt-10 px-10 py-4 bg-tramp-navy text-white rounded-xl font-bold text-[1.6rem] shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
+      <Link
+        href="/contato"
+        className="inline-block mt-10 px-10 py-4 bg-tramp-navy text-white rounded-xl font-bold text-[1.6rem] shadow-lg hover:scale-105 active:scale-95 transition-all duration-200"
+      >
         {buttonText || "Conheça as soluções"}
-      </button>
+      </Link>
     </div>
     <div className="flex-1 min-w-[320px] md:min-w-[400px] relative group">
       {/* Decorative Background */}
@@ -92,19 +106,11 @@ export const Solutions = () => {
       items: ["Programas de saúde mental gamificados", "Triagem digital postural", "Dashboards de saúde organizacional"],
       image: "/img_site/Persona 01.webp",
       reverse: false
-    },
-    // {
-    //   title: "Transformação Digital e Inteligência Artificial",
-    //   subtitle: "Estratégia + Tecnologia",
-    //   description: "Apoio completo na jornada de Transformação Digital. Implementação de IA aplicada a RH, treinamentos e gestão de riscos operacionais.",
-    //   items: ["Roadmap de Maturidade Digital", "Automação de Onboarding", "Ética e Governança de IA"],
-    //   image: "ai.png",
-    //   reverse: true
-    // }
+    }
   ];
 
   return (
-    <section id="solucoes" className="bg-white overflow-hidden py-12">
+    <section id="solucoes" className="bg-white overflow-hidden">
       <div className="container2025Redesign text-center !pb-0 mb-10 md:mb-16">
         <span className="inline-block px-4 py-1 bg-tramp-magenta/10 text-tramp-magenta text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
           Nossas Soluções

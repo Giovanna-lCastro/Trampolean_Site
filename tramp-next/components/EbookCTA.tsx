@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const EbookCTA = () => {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden bg-tramp-dark text-white border-b border-white/10">
+    <section className="relative overflow-hidden bg-tramp-dark text-white border-b border-white/10">
       {/* Background Decorativo - Brilho suave */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-tramp-magenta/20 via-tramp-dark to-tramp-dark pointer-events-none"></div>
 

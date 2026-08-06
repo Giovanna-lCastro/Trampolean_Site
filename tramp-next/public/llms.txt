@@ -1,0 +1,45 @@
+# Trampolean
+
+> Arquitetura de aprendizagem e trabalho na era da Inteligência Artificial. A Trampolean é uma
+> empresa brasileira (São Paulo, SP) com mais de 10 anos de atuação em Segurança e Saúde no
+> Trabalho (SST), que hoje une Inteligência Artificial, educação corporativa, gamificação e
+> desenvolvimento de software para transformar como empresas trabalham, treinam e engajam pessoas.
+
+Fundadora e CEO: Fabiana Raulino.
+
+Contato: contato@trampolean.net · WhatsApp +55 11 91327-1774 · https://trampolean.net
+
+## Produtos
+
+- Manual de Ética de IA para Empresas — guia prático de governança e compliance de IA (LGPD). /produtos#manual-etica
+- Book Wizard — IA generativa para criação assistida de livros, apostilas e materiais corporativos. /produtos#book-wizard
+- Player 2 — assistente de IA integrado à Unity Engine para acelerar o desenvolvimento de jogos. /produtos#player-2
+- Kapta — plataforma gamificada de coleta seletiva e gestão de resíduos (ESG). /produtos#kapta
+
+## Soluções
+
+- Consultoria de IA — diagnóstico de maturidade digital e roadmap de adoção de IA. /solucoes#consultoria-ia
+- Desenvolvimento de Jogos — jogos sérios, educacionais, corporativos e simuladores. /solucoes#dev-jogos
+- Desenvolvimento de Software — aplicações web, apps mobile, APIs e plataformas SaaS sob medida. /solucoes#dev-software
+- Automação de IA — automação de processos, atendimento e fluxos com IA. /solucoes#automacao-ia
+- Treinamentos — capacitação corporativa em tecnologia, inovação e IA. /solucoes#treinamentos
+- Workshops — imersões práticas de 1 a 2 dias para times e lideranças. /solucoes#workshops
+- Gamificação — mecânicas de jogo aplicadas a onboarding, saúde e treinamentos. /solucoes#gamificacao
+- Saúde e Segurança do Trabalho (SST) — soluções de SST com gamificação e tecnologia, conformidade NR-17. /solucoes#sst
+
+## Educação
+
+- IA na Educação — metodologias disruptivas para instituições de ensino. /educacao#ia-educacao
+- Workshop para Líderes — capacitação prática em IA para tomada de decisão. /educacao#workshop-lideres
+- Treinamento Corporativo — capacitação em IA escalada para toda a empresa. /educacao#treinamento-empresas
+
+## Páginas
+
+- Início: /
+- A Trampolean (sobre, liderança, valores): /sobre
+- Produtos: /produtos
+- Soluções: /solucoes
+- Educação: /educacao
+- Carreira (vagas e candidatura): /carreira
+- Contato: /contato
+- Política de Privacidade: /privacidade

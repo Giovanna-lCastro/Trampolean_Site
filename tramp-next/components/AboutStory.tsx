@@ -19,8 +19,8 @@ export const AboutStory = () => {
               <span className="text-tramp-accent font-bold text-[1.4rem] tracking-[0.2em] uppercase mb-4 block">
                 Nossa Trajetória
               </span>
-              <h2 className="text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2] mb-8">
-                De uma ideia disruptiva a uma referência em inovação
+              <h2 className="text-balance text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2] mb-8">
+                Entre educação, tecnologia e ciência do trabalho.
               </h2>
             </motion.div>
           </div>
@@ -35,18 +35,20 @@ export const AboutStory = () => {
               className="space-y-8"
             >
               <p className="text-[1.8rem] md:text-[2rem] leading-relaxed text-tramp-gray">
-                A Trampolean foi fundada com uma missão clara: unir criatividade, tecnologia e estratégia 
-                para resolver os desafios reais das organizações. Ao longo dos anos, crescemos construindo 
-                produtos originais, metodologias próprias e uma cultura que valoriza o humano e o digital em igual medida.
+                A Trampolean nasceu da investigação sobre como as pessoas aprendem, trabalham, comunicam, decidem
+                e interagem com sistemas complexos. Essa base orientou a expansão da empresa para educação
+                corporativa, transformação digital, inteligência artificial, software, jogos e experiências
+                imersivas.
               </p>
               <p className="text-[1.8rem] md:text-[2rem] leading-relaxed text-tramp-gray">
-                Atuamos em projetos de impacto para empresas de médio e grande porte, instituições de ensino 
-                e organizações do terceiro setor, levando soluções que vão do desenvolvimento de jogos sérios 
-                à consultoria de inteligência artificial aplicada.
+                Nossa atuação combina ergonomia para compreender o trabalho real, semiótica para analisar
+                linguagem e produção de sentido, educação para desenvolver competências e tecnologia para
+                implementar soluções. Essa integração permite atuar em problemas que não são apenas técnicos,
+                mas também organizacionais, humanos e comunicacionais.
               </p>
               <p className="text-[1.8rem] md:text-[2rem] leading-relaxed text-tramp-gray font-medium italic border-l-4 border-tramp-accent pl-8 py-2">
-                Hoje, a Trampolean consolida sua posição como parceira estratégica de negócios que querem liderar 
-                a próxima era — com responsabilidade, propósito e tecnologia de ponta.
+                Não construímos tecnologia pela tecnologia. Construímos pontes entre o que as pessoas precisam
+                e o que a tecnologia torna possível.
               </p>
             </motion.div>
           </div>

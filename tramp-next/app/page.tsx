@@ -1,12 +1,14 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { CompetenceStrip } from "@/components/CompetenceStrip";
+import { ProblemSection } from "@/components/ProblemSection";
 import { PressSection } from "@/components/PressSection";
-import { EbookCTA } from "@/components/EbookCTA";
 import { ResultsSection } from "@/components/ResultsSection";
 import { Partners } from "@/components/Partners";
 import { Features } from "@/components/Features";
 import { Solutions } from "@/components/Solutions";
-// import { Segments } from "@/components/Segments";
+import { FAQ } from "@/components/FAQ";
+import { Differential } from "@/components/Differential";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 
@@ -16,13 +18,15 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <CompetenceStrip />
+        <ProblemSection />
         <PressSection />
-        <EbookCTA />
         <ResultsSection />
         <Partners />
         <Features />
         <Solutions />
-        {/* <Segments /> */}
+        <FAQ />
+        <Differential />
         <FinalCTA />
       </main>
       <Footer />

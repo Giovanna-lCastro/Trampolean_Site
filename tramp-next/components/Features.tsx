@@ -1,58 +1,43 @@
 "use client";
 
 import React from "react";
-import { Brain, Bot, BookOpen, HeartPulse, Rocket, Gamepad2, MonitorSmartphone, Glasses } from "lucide-react";
+import { Rocket, Bot, Gamepad2, BookOpen, HeartPulse } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const Features = () => {
   const pillars = [
     {
-      title: "Inteligência Artificial para Empresas",
-      description: "Treinamentos, consultoria e soluções em IA para melhorar processos, apoiar decisões, automatizar rotinas e preparar equipes para a transformação digital.",
-      icon: <Brain className="w-16 h-16 text-tramp-magenta" />
-    },
-    {
-      title: "Agentes de IA e Automação",
-      description: "Criamos agentes inteligentes, assistentes internos e fluxos automatizados para atendimento, operação, gestão do conhecimento e aumento de produtividade.",
-      icon: <Bot className="w-16 h-16 text-tramp-magenta" />
-    },
-    {
-      title: "Educação Corporativa",
-      description: "Desenvolvemos universidades corporativas, trilhas de aprendizagem, programas de capacitação e microlearning alinhados às metas do negócio.",
-      icon: <BookOpen className="w-16 h-16 text-tramp-magenta" />
-    },
-    {
-      title: "Ergonomia e Saúde no Trabalho",
-      description: "Atuamos com ergonomia, fatores humanos, segurança do trabalho e prevenção de riscos psicossociais para promover ambientes mais seguros, saudáveis e produtivos.",
-      icon: <HeartPulse className="w-16 h-16 text-tramp-magenta" />
-    },
-    {
-      title: "Transformação Digital",
-      description: "Realizamos diagnósticos, mapeamos processos e recomendamos soluções digitais para empresas que precisam inovar com coerência, eficiência e sustentabilidade.",
+      title: "Transformação Digital e Estratégia de IA",
+      description: "Estratégia, diagnóstico, governança, redesenho de processos e adoção de tecnologias alinhadas aos objetivos da organização.",
       icon: <Rocket className="w-16 h-16 text-tramp-magenta" />
     },
     {
-      title: "Gamificação e Jogos Digitais",
-      description: "Criamos experiências gamificadas, jogos corporativos e soluções interativas para aumentar engajamento, retenção e aplicação prática do conhecimento.",
+      title: "Automações, Agentes e Software",
+      description: "Automação de fluxos, agentes de IA, integrações, sistemas, plataformas, aplicativos e soluções digitais desenvolvidas sob medida.",
+      icon: <Bot className="w-16 h-16 text-tramp-magenta" />
+    },
+    {
+      title: "Jogos, Gamificação e Imersão",
+      description: "Jogos corporativos, serious games, simuladores, experiências gamificadas e ambientes imersivos para aprendizagem, comunicação e mudança de comportamento.",
       icon: <Gamepad2 className="w-16 h-16 text-tramp-magenta" />
     },
     {
-      title: "Software Sob Medida e UX/UI",
-      description: "Desenvolvemos plataformas, sistemas e produtos digitais com foco em usabilidade, eficiência operacional e aderência real às necessidades do cliente.",
-      icon: <MonitorSmartphone className="w-16 h-16 text-tramp-magenta" />
+      title: "Educação Corporativa e Treinamentos de IA",
+      description: "Formação prática para líderes, equipes, docentes e organizações aplicarem IA com segurança, criticidade e produtividade.",
+      icon: <BookOpen className="w-16 h-16 text-tramp-magenta" />
     },
     {
-      title: "Realidade Virtual e Experiências Imersivas",
-      description: "Projetamos simulações, treinamentos em realidade virtual e experiências imersivas para aprendizagem prática, sensibilização e desenvolvimento de competências.",
-      icon: <Glasses className="w-16 h-16 text-tramp-magenta" />
+      title: "Ergonomia, Semiótica e Fatores Humanos",
+      description: "Análise do trabalho, riscos, linguagem, interfaces, experiências e sistemas para tornar a transformação mais compreensível, segura e humana.",
+      icon: <HeartPulse className="w-16 h-16 text-tramp-magenta" />
     }
   ];
 
   return (
-    <section className="bg-white py-32 border-b border-tramp-navy/5">
-      <div className="container2025Redesign !pb-0">
+    <section className="bg-white border-b border-tramp-navy/5">
+      <div className="container2025Redesign">
         {/* Z-Pattern Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-20 md:mb-24">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -61,17 +46,17 @@ export const Features = () => {
             className="text-left"
           >
             <span className="inline-block px-4 py-1 bg-tramp-magenta/10 text-tramp-magenta text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
-              ERGONOMIA, SEGURANÇA DO TRABALHO E INTELIGÊNCIA ARTIFICIAL
+              NOSSA ABORDAGEM
             </span>
             <h2 className="text-[3.5rem] md:text-[5.5rem] text-tramp-navy font-black mb-10 leading-[1.1] tracking-tight">
-              Tecnologia para tornar o trabalho<br /> <span className="text-tramp-magenta"> mais seguro, inteligente e humano.</span>
+              Do trabalho real<br /> <span className="text-tramp-magenta">à solução digital.</span>
             </h2>
             <div className="space-y-6">
               <p className="text-[1.8rem] md:text-[2.1rem] text-tramp-gray leading-relaxed">
                 A Trampolean nasceu da Ergonomia de Sistemas de Produção e da Segurança e Saúde no Trabalho. Hoje, desenvolve soluções em inteligência artificial, educação corporativa, saúde digital, UX/UI, jogos digitais e software sob medida para empresas que precisam transformar processos, capacitar equipes e reduzir riscos no trabalho.
               </p>
               <p className="text-[1.6rem] md:text-[1.8rem] text-tramp-gray/70 leading-relaxed italic border-l-4 border-tramp-magenta pl-8">
-                Combinamos diagnóstico técnico, formação de pessoas e desenvolvimento de soluções digitais para apoiar organizações na gestão da ergonomia, na prevenção de riscos psicossociais e na inovação de processos com foco em produtividade, segurança e cuidado.
+                Combinamos ergonomia para compreender a atividade, semiótica para estruturar linguagem e interação, educação para desenvolver competências e tecnologia para implementar automações, agentes, softwares, jogos e plataformas.
               </p>
             </div>
           </motion.div>
@@ -93,7 +78,7 @@ export const Features = () => {
         </div>
 
         {/* Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-8">
           {pillars.map((pillar, index) => (
             <motion.div
               key={index}

@@ -22,10 +22,10 @@ const MetricCard = ({ value, label, delay }: { value: string; label: string; del
 
 export const AboutMetrics = () => {
   const metrics = [
-    { value: "+10 anos", label: "de experiência em inovação digital" },
+    { value: "+10 anos", label: "de atuação em ergonomia, SST e transformação do trabalho" },
     { value: "+50 projetos", label: "entregues para empresas e instituições" },
-    { value: "4 produtos", label: "desenvolvidos com tecnologia de ponta" },
-    { value: "+1.000", label: "pessoas impactadas por nossos programas" },
+    { value: "4 produtos", label: "próprios desenvolvidos com IA" },
+    { value: "40k+", label: "pessoas impactadas por nossos programas" },
   ];
 
   return (
@@ -41,7 +41,7 @@ export const AboutMetrics = () => {
             <span className="text-tramp-accent font-bold text-[1.4rem] tracking-[0.2em] uppercase mb-4 block">
               Trampolean em Números
             </span>
-            <h2 className="text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2]">
+            <h2 className="text-balance text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2]">
               Resultados que falam por si
             </h2>
           </motion.div>

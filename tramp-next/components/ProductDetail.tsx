@@ -16,7 +16,7 @@ interface ProductProps {
 }
 
 const ProductSection = ({ id, tag, title, description, fullDescription, benefits, image, reverse }: ProductProps) => (
-  <section id={id} className={`py-32 overflow-hidden border-b border-black/5 ${reverse ? "bg-tramp-bg-light/10" : "bg-white"}`}>
+  <section id={id} className={`overflow-hidden border-b border-black/5 ${reverse ? "bg-tramp-bg-light/10" : "bg-white"}`}>
     <div className="container2025Redesign">
       <div className={`grid grid-cols-1 lg:grid-cols-2 gap-20 items-center ${reverse ? "lg:flex-row-reverse" : ""}`}>
         {/* Text Area */}
@@ -30,7 +30,7 @@ const ProductSection = ({ id, tag, title, description, fullDescription, benefits
           <span className="inline-block px-4 py-1 bg-tramp-accent/10 text-tramp-accent text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
             {tag}
           </span>
-          <h2 className="text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2] mb-6 tracking-tight">
+          <h2 className="text-balance text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2] mb-6 tracking-tight">
             {title}
           </h2>
           <h3 className="text-[1.8rem] md:text-[2.2rem] font-semibold text-tramp-gray/80 mb-8 italic">
@@ -85,12 +85,12 @@ export const ProductDetail = () => {
       tag: "Governança & Compliance",
       title: "Manual de Ética de IA para Empresas",
       description: "O guia prático para implementar inteligência artificial com responsabilidade e conformidade.",
-      fullDescription: "O Manual de Ética de IA é um produto desenvolvido pela Trampolean para ajudar empresas a adotarem inteligência artificial de forma responsável. Ele cobre desde princípios fundamentais até protocolos de auditoria e conformidade com a LGPD.",
+      fullDescription: "Produto desenvolvido para ajudar empresas a adotarem IA de forma responsável. Cobre desde princípios fundamentais até protocolos de auditoria e conformidade com a LGPD.",
       benefits: [
         "Protocolos de governança prontos para aplicação",
         "Alinhamento com LGPD e marcos regulatórios",
         "Redução de riscos reputacionais e legais",
-        "Customizável para o contexto de cada empresa"
+        "Customizável para cada empresa"
       ],
       image: "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?q=80&w=800&auto=format&fit=crop",
       reverse: false
@@ -100,11 +100,11 @@ export const ProductDetail = () => {
       tag: "Inteligência Artificial",
       title: "Book Wizard",
       description: "A IA que transforma suas ideias em livros completos — do conceito ao conteúdo estruturado.",
-      fullDescription: "O Book Wizard é uma ferramenta de IA generativa desenvolvida para criação assistida de livros, apostilas e materiais corporativos. Reduz drasticamente o tempo de produção editorial mantendo a qualidade técnica.",
+      fullDescription: "Ferramenta de IA generativa para criação assistida de livros, apostilas e materiais corporativos. Reduz drasticamente o tempo de produção mantendo a qualidade técnica.",
       benefits: [
         "Geração automatizada de estrutura e conteúdo",
-        "Ideal para livros técnicos e materiais didáticos",
-        "Interface intuitiva — sem necessidade de técnica",
+        "Ideal para materiais técnicos e didáticos",
+        "Interface intuitiva",
         "Exportação em múltiplos formatos (PDF, Word, ePub)"
       ],
       image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800&auto=format&fit=crop",
@@ -115,12 +115,12 @@ export const ProductDetail = () => {
        tag: "Game Development",
        title: "Player 2",
        description: "O plugin que integra geração de jogos por IA diretamente no Unity.",
-       fullDescription: "Player 2 atua como um assistente de IA dentro da Unity Engine, democratizando e acelerando o desenvolvimento de jogos. Permite criar mecânicas, cenários e NPCs com auxílio de IA gerativa em tempo real.",
+       fullDescription: "Assistente de IA dentro da Unity Engine que acelera o desenvolvimento de jogos. Permite criar mecânicas, cenários e NPCs com auxílio de IA generativa em tempo real.",
        benefits: [
-         "Integração nativa com a engine Unity",
+         "Integração nativa com a Unity",
          "Geração de assets e mecânicas assistida por IA",
-         "Acelera significativamente o ciclo de prototipagem",
-         "Ideal para Serious Games e jogos corporativos"
+         "Acelera a prototipagem",
+         "Ideal para serious games e jogos corporativos"
        ],
        image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop",
        reverse: false
@@ -130,12 +130,12 @@ export const ProductDetail = () => {
        tag: "ESG & Gamificação",
        title: "Kapta",
        description: "Plataforma gamificada que transforma a coleta de resíduos em engajamento real.",
-       fullDescription: "Kapta aplica mecânicas de jogo ao processo de coleta seletiva e gestão de resíduos. Por meio de desafios e recompensas, engaja comunidades e colaboradores na prática sustentável e gera relatórios de impacto ESG.",
+       fullDescription: "Aplica mecânicas de jogo à coleta seletiva e à gestão de resíduos. Por meio de desafios e recompensas, engaja comunidades e colaboradores e gera relatórios de impacto ESG.",
        benefits: [
          "Engajamento sustentado por gamificação",
-         "Painel de dados para relatórios de ESG detalhados",
+         "Painel de dados para relatórios ESG",
          "Adaptável para empresas, condomínios e governos",
-         "Incentiva mudança de comportamento positiva"
+         "Incentiva mudança de comportamento"
        ],
        image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=800&auto=format&fit=crop",
        reverse: true

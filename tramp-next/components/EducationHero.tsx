@@ -23,13 +23,13 @@ export const EducationHero = () => {
             <span className="inline-block px-6 py-2 bg-white/5 border border-white/10 rounded-full text-tramp-accent text-[1.4rem] font-bold tracking-widest uppercase mb-8">
               Educação & Capacitação
             </span>
-            
-            <h1 className="text-[4.5rem] md:text-[6.5rem] lg:text-[7.5rem] font-black text-white leading-[1.1] mb-8 tracking-tight">
-              Preparando pessoas para <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">liderar a era da IA.</span>
+
+            <h1 className="text-[3.2rem] md:text-[4.2rem] lg:text-[4.8rem] font-black text-white leading-[1.15] mb-8 tracking-tight text-balance">
+              Treinamentos de IA para <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">transformar a prática de trabalho.</span>
             </h1>
-            
-            <p className="text-[1.8rem] md:text-[2.2rem] text-white/70 max-w-2xl leading-relaxed mb-12">
-              Nossos programas educacionais unem metodologia, prática e tecnologia para transformar a forma como organizações aprendem, ensinam e inovam.
+
+            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 max-w-2xl leading-relaxed mb-12">
+              Desenvolvemos programas para líderes, equipes, docentes e instituições utilizarem inteligência artificial com segurança, pensamento crítico, produtividade e aplicação real.
             </p>
           </motion.div>
 
@@ -51,7 +51,7 @@ export const EducationHero = () => {
              
              {/* Floating Elements (similar to ProductsHero) */}
              <div className="absolute -top-10 -right-10 bg-tramp-magenta p-8 rounded-3xl shadow-2xl border border-white/10 animate-bounce-slow">
-                <p className="text-white text-[2rem] font-black leading-tight">3 <br /> <span className="text-white/70 text-[1.2rem] uppercase tracking-widest leading-none">Specialized <br /> Programs</span></p>
+                <p className="text-white text-[2rem] font-black leading-tight">5 <br /> <span className="text-white/70 text-[1.2rem] uppercase tracking-widest leading-none">Programas <br /> Especializados</span></p>
              </div>
           </motion.div>
         </div>

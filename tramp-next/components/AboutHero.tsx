@@ -25,26 +25,22 @@ export const AboutHero = () => {
               Nossa Identidade
             </span>
 
-            <h1 className="text-[4.5rem] md:text-[6.5rem] lg:text-[7.5rem] font-black text-white leading-[1.1] mb-8 tracking-tight">
-              Somos a <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">Trampolean</span>
+            <h1 className="text-balance text-[3.2rem] md:text-[4.2rem] lg:text-[4.8rem] font-black text-white leading-[1.15] mb-10 tracking-tight">
+              Transformação digital construída a partir do trabalho humano.
             </h1>
 
-            <h2 className="text-[2.2rem] md:text-[2.8rem] font-bold text-white/90 mb-10 leading-tight">
-              Arquitetura de aprendizagem e trabalho na era da inteligência artificial.
-            </h2>
-
-            <p className="text-[1.8rem] md:text-[2rem] text-white/70 max-w-2xl leading-relaxed mb-12">
-              Nascemos da crença de que tecnologia e educação, quando caminham juntas,
-              transformam empresas e pessoas. Somos uma empresa brasileira especializada em transformação digital,
-              gamificação e educação corporativa estratégica.
+            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 max-w-2xl leading-relaxed mb-12">
+              A Trampolean é uma consultoria e desenvolvedora de soluções que conecta tecnologia, aprendizagem,
+              trabalho e linguagem. Atuamos com inteligência artificial, automação, software, jogos digitais,
+              educação corporativa, ergonomia e semiótica.
             </p>
 
             <div className="flex justify-start">
               <a
-                href="#historia"
+                href="/solucoes"
                 className="bg-tramp-accent text-white px-12 py-5 rounded-2xl text-[1.7rem] font-black shadow-[0_10px_30px_rgba(240,36,246,0.4)] hover:shadow-[0_15px_40px_rgba(240,36,246,0.6)] hover:scale-105 active:scale-95 transition-all duration-300"
               >
-                Conheça nossa trajetória
+                Conheça nossas soluções
               </a>
             </div>
           </motion.div>
@@ -61,8 +57,8 @@ export const AboutHero = () => {
 
             <div className="relative rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop"
-                alt="Cyber Tech Background"
+                src="/noticia_e_img/Imagens/20241024_100302.jpg"
+                alt="Fabiana Raulino, CEO da Trampolean, apresentando em evento sobre Inteligência Artificial"
                 className="w-full h-auto object-cover aspect-video hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-tramp-dark via-transparent to-transparent opacity-60" />
@@ -70,7 +66,7 @@ export const AboutHero = () => {
 
             {/* Floating Badge */}
             <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-3xl shadow-2xl border border-black/5 animate-bounce-slow">
-              <p className="text-tramp-dark text-[2.2rem] font-black leading-tight">2026 <br /> <span className="text-tramp-accent text-[1.4rem] uppercase tracking-widest">Inovação AI</span></p>
+              <p className="text-tramp-dark text-[2.2rem] font-black leading-tight">+10 anos <br /> <span className="text-tramp-accent text-[1.4rem] uppercase tracking-widest">Inovação AI</span></p>
             </div>
           </motion.div>
         </div>

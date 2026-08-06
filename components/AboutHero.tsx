@@ -29,7 +29,7 @@ export const AboutHero = () => {
               Transformação digital construída a partir do trabalho humano.
             </h1>
 
-            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 max-w-2xl leading-relaxed mb-12">
+            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 text-pretty leading-relaxed mb-12">
               A Trampolean é uma consultoria e desenvolvedora de soluções que conecta tecnologia, aprendizagem,
               trabalho e linguagem. Atuamos com inteligência artificial, automação, software, jogos digitais,
               educação corporativa, ergonomia e semiótica.

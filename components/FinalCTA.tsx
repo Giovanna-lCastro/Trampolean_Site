@@ -23,7 +23,7 @@ export const FinalCTA = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="max-w-4xl mx-auto mb-16 opacity-80 text-[1.8rem] md:text-[2.2rem] leading-relaxed"
+            className="mb-16 opacity-80 text-[1.8rem] md:text-[2.2rem] text-pretty leading-relaxed"
           >
              Converse com nossa equipe sobre transformação digital, IA, automação, software, jogos, treinamentos, ergonomia ou semiótica aplicada.
           </motion.p>

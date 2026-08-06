@@ -29,7 +29,7 @@ export const Partners = () => {
           <h2 className="text-balance text-[3rem] md:text-[4.2rem] text-tramp-dark font-black mb-6 leading-tight tracking-tight">
              Marcas que evoluem com a <span className="text-tramp-magenta">Trampolean.</span>
           </h2>
-          <p className="text-[1.8rem] md:text-[2rem] text-tramp-gray opacity-70 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-[1.8rem] md:text-[2rem] text-tramp-gray opacity-70 leading-relaxed text-pretty">
              Parcerias estratégicas que transformam o futuro das organizações por meio da inovação.
           </p>
         </div>

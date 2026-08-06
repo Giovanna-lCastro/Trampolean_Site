@@ -28,7 +28,7 @@ export const ContactHero = () => {
               Conte o que sua organização precisa transformar.
             </h1>
 
-            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 max-w-2xl leading-relaxed mb-12">
+            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 text-pretty leading-relaxed mb-12">
               Fale com a Trampolean sobre transformação digital, inteligência artificial, automação, software, jogos, treinamentos, ergonomia, semiótica ou projetos especiais.
             </p>
           </motion.div>

@@ -118,7 +118,7 @@ export const Solutions = () => {
         <h2 className="text-[3.5rem] md:text-[4.5rem] text-tramp-navy font-black leading-tight tracking-tight">
           Tecnologia para impulsionar sua <span className="text-transparent bg-clip-text bg-gradient-to-r from-tramp-gradient-start to-tramp-gradient-end">Evolução</span>
         </h2>
-        <p className="max-w-4xl mx-auto mt-6 text-tramp-gray opacity-80 text-[1.8rem] md:text-[2.1rem] leading-relaxed">
+        <p className="mt-6 text-tramp-gray opacity-80 text-[1.8rem] md:text-[2.1rem] text-pretty leading-relaxed">
           Combinamos Inteligência Artificial, Ergonomia e Educação para entregar ferramentas e serviços que redefinem os limites da produtividade, cuidado e gestão.
         </p>
       </div>

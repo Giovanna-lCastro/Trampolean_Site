@@ -49,7 +49,7 @@ export const CareerCulture = () => {
             <h2 className="text-balance text-[3.5rem] md:text-[5.5rem] text-tramp-navy font-black mb-10 leading-tight">
               Por que a <span className="text-tramp-magenta">Trampolean?</span>
             </h2>
-            <p className="max-w-4xl mx-auto text-[1.8rem] md:text-[2.1rem] text-tramp-gray leading-relaxed mb-16">
+            <p className="text-pretty text-[1.8rem] md:text-[2.1rem] text-tramp-gray leading-relaxed mb-16">
               Do diagnóstico à entrega, no mesmo projeto: diagnosticamos, desenhamos a estratégia, formamos pessoas, automatizamos processos e desenvolvemos a tecnologia. Você resolve problemas que não são só técnicos, mas organizacionais, humanos e comunicacionais.
             </p>
           </motion.div>

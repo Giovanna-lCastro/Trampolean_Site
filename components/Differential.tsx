@@ -26,7 +26,7 @@ export const Differential = () => {
   return (
     <section className="bg-white">
       <div className="container2025Redesign">
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <div className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-tramp-magenta/10 text-tramp-magenta text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
             Por que a Trampolean
           </span>
@@ -43,7 +43,7 @@ export const Differential = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-[1.8rem] md:text-[2.1rem] text-tramp-gray leading-relaxed"
+            className="text-[1.8rem] md:text-[2.1rem] text-tramp-gray text-pretty leading-relaxed"
           >
             A Trampolean reúne competências que normalmente são contratadas separadamente. Podemos diagnosticar o problema, desenhar a estratégia, formar as pessoas, automatizar o processo e desenvolver a tecnologia, o jogo, a plataforma ou a experiência necessária.
           </motion.p>

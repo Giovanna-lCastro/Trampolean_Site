@@ -28,7 +28,7 @@ export const CareerHero = () => {
               Construa tecnologia que as pessoas <span className="text-transparent bg-clip-text bg-gradient-to-r from-tramp-magenta via-white to-white/70">compreendem, usam e incorporam</span> ao trabalho.
             </h1>
 
-            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 max-w-2xl leading-relaxed mb-12">
+            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 text-pretty leading-relaxed mb-12">
               Reunimos, na mesma empresa, competências que o mercado costuma contratar separadamente: estratégia e IA, automação e software, jogos e experiências, educação corporativa, ergonomia e semiótica. Se você quer atuar na fronteira entre tecnologia, trabalho, aprendizagem e linguagem, seu lugar é aqui.
             </p>
 

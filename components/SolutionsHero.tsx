@@ -28,7 +28,7 @@ export const SolutionsHero = () => {
               Da estratégia à automação, <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">do treinamento ao produto digital.</span>
             </h1>
 
-            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 max-w-2xl leading-relaxed mb-12">
+            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 text-pretty leading-relaxed mb-12">
               A Trampolean atua em todo o ciclo da transformação digital. Diagnosticamos desafios,
               redesenhamos processos, formamos pessoas e desenvolvemos agentes, automações,
               softwares, jogos e experiências digitais.

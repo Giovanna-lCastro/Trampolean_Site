@@ -29,7 +29,7 @@ export const ProductsHero = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">problemas reais.</span>
             </h1>
 
-            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 max-w-2xl leading-relaxed mb-12">
+            <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 text-pretty leading-relaxed mb-12">
               Desenvolvemos produtos originais que unem inteligência artificial, gamificação e inovação
               para transformar a forma como empresas e pessoas aprendem, criam e se responsabilizam.
             </p>

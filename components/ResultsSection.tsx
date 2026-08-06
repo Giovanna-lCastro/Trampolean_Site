@@ -36,7 +36,7 @@ export const ResultsSection = () => {
           <h2 className="text-[3rem] md:text-[4.5rem] font-extrabold leading-tight text-white mb-4">
             Transformação em <span className="text-transparent bg-clip-text bg-gradient-to-r from-tramp-gradient-start to-tramp-gradient-end">Números</span>
           </h2>
-          <p className="text-[1.8rem] text-gray-300 font-medium max-w-3xl mx-auto">
+          <p className="text-[1.8rem] text-gray-300 font-medium text-pretty">
             Mais do que métricas, entregamos experiências e soluções que transformam o trabalho e impulsionam as organizações.
           </p>
         </div>

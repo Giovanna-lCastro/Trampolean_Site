@@ -46,7 +46,7 @@ export const Segments = () => {
                initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
-               className="max-w-3xl mx-auto opacity-70 text-[1.8rem] md:text-[2rem] leading-relaxed"
+               className="opacity-70 text-[1.8rem] md:text-[2rem] text-pretty leading-relaxed"
             >
                Seja você um gestor de SST, um líder de RH ou um diretor de inovação — a Trampolean tem a solução certa para o seu contexto.
             </motion.p>

@@ -20,7 +20,7 @@ export const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-16 items-center">
 
           <div className="fire-animation animate-left-to-right">
-            <div className="text-[1.4rem] lg:text-[1.7rem] leading-relaxed opacity-90 max-w-none mb-12 text-gray-300">
+            <div className="text-[1.4rem] lg:text-[1.7rem] leading-relaxed opacity-90 text-pretty max-w-none mb-12 text-gray-300">
               <p>A Trampolean une inteligência artificial, automação, software, jogos digitais, educação corporativa, ergonomia e semiótica para criar soluções aderentes aos desafios reais das organizações. Atuamos da estratégia à implementação, desenvolvendo pessoas, processos e tecnologias sob medida.</p>
             </div>
 

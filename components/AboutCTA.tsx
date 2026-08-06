@@ -33,7 +33,7 @@ export const AboutCTA = ({
             {title}
           </h2>
 
-          <p className="text-[1.8rem] md:text-[2.2rem] text-white/70 max-w-3xl mx-auto leading-relaxed mb-12">
+          <p className="text-[1.8rem] md:text-[2.2rem] text-white/70 text-pretty leading-relaxed mb-12">
             {description}
           </p>
 

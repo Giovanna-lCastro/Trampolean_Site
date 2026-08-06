@@ -64,7 +64,7 @@ export const ProblemSection = () => {
         <h2 className="text-balance text-[3rem] md:text-[3.8rem] lg:text-[4.2rem] text-tramp-navy font-black leading-tight tracking-tight mb-8">
           Digitalizar exige compreender tecnologia, trabalho e pessoas.
         </h2>
-        <p className="max-w-6xl mx-auto text-[1.8rem] md:text-[2.1rem] text-tramp-gray leading-relaxed mb-16">
+        <p className="text-[1.8rem] md:text-[2.1rem] text-tramp-gray leading-relaxed mb-16">
           Projetos de transformação falham quando automatizam processos mal compreendidos, adotam ferramentas sem preparar equipes ou desenvolvem interfaces que não fazem sentido para quem as utiliza. A Trampolean integra diagnóstico, aprendizagem, linguagem, fatores humanos e tecnologia para construir soluções aplicáveis e sustentáveis.
         </p>
 

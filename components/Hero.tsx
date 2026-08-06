@@ -8,6 +8,10 @@ export const Hero = () => {
 
       <div className="container2025Redesign relative z-10 !py-0">
         <div className="fire-animation animate-left-to-right mb-12 lg:mb-16 text-center">
+          <p className="text-[1.2rem] uppercase tracking-widest font-semibold mb-6 text-tramp-accent">
+            Transformação Digital Centrada no Humano
+          </p>
+
           <h1 className="text-balance text-[3rem] md:text-[3.8rem] lg:text-[4.2rem] xl:text-[4.8rem] font-extrabold leading-[1.15] tracking-tighter max-w-none">
             Tecnologia para organizações mais saudáveis
           </h1>
@@ -16,7 +20,7 @@ export const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-16 items-center">
 
           <div className="fire-animation animate-left-to-right">
-            <p className="text-[1.8rem] lg:text-[2.1rem] font-bold text-tramp-accent text-pretty leading-snug mb-6">
+            <p className="text-[1.8rem] lg:text-[2.1rem] font-bold text-white text-pretty leading-snug mb-6">
               A Trampolean nasce da ergonomia e evolui com a inovação.
             </p>
 
@@ -41,9 +45,9 @@ export const Hero = () => {
             <div className="flex flex-wrap gap-x-12 gap-y-4 pt-10 border-t border-white/10">
               <div className="text-[1.8rem] font-bold">20 anos</div>
               <div className="w-[1px] bg-white/20 h-8 self-center"></div>
-              <div className="text-[1.8rem] font-bold">Mais de 1.200 projetos</div>
+              <div className="text-[1.8rem] font-bold">1.2k projetos</div>
               <div className="w-[1px] bg-white/20 h-8 self-center"></div>
-              <div className="text-[1.8rem] font-bold">+15.000 pessoas impactadas</div>
+              <div className="text-[1.8rem] font-bold">+15k pessoas impactadas</div>
             </div>
           </div>
 

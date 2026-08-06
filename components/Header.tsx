@@ -207,7 +207,7 @@ export const Header = () => {
                   className="absolute right-0 top-full mt-3 w-96 bg-white rounded-2xl shadow-2xl border border-black/5 overflow-hidden z-50"
                 >
                   <a
-                    href="mailto:contato@trampolean.net"
+                    href="mailto:crie@trampolean.net"
                     onClick={() => setContactOpen(false)}
                     className="flex items-center gap-4 px-6 py-5 text-tramp-dark hover:bg-tramp-bg-light transition-colors"
                   >
@@ -216,7 +216,7 @@ export const Header = () => {
                     </span>
                     <span className="flex flex-col leading-tight whitespace-nowrap">
                       <span className="text-[1.5rem] font-bold">E-mail</span>
-                      <span className="text-[1.2rem] text-tramp-gray">contato@trampolean.net</span>
+                      <span className="text-[1.2rem] text-tramp-gray">crie@trampolean.net</span>
                     </span>
                   </a>
                   <a

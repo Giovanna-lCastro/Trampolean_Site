@@ -56,7 +56,7 @@ const organizationJsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+55-11-91327-1774",
-    email: "contato@trampolean.net",
+    email: "crie@trampolean.net",
     contactType: "customer service",
     areaServed: "BR",
     availableLanguage: "Portuguese",

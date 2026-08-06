@@ -46,8 +46,8 @@ export default function PrivacyPage() {
               <p>
                 Você pode solicitar a qualquer momento a confirmação, correção, portabilidade ou exclusão dos
                 seus dados pessoais pelo e-mail{" "}
-                <a href="mailto:contato@trampolean.net" className="text-tramp-accent font-bold">
-                  contato@trampolean.net
+                <a href="mailto:crie@trampolean.net" className="text-tramp-accent font-bold">
+                  crie@trampolean.net
                 </a>.
               </p>
             </div>
@@ -56,8 +56,8 @@ export default function PrivacyPage() {
               <h2 className="text-[2.2rem] font-black text-tramp-dark mb-4">Contato</h2>
               <p>
                 Em caso de dúvidas, fale pelo e-mail{" "}
-                <a href="mailto:contato@trampolean.net" className="text-tramp-accent font-bold">
-                  contato@trampolean.net
+                <a href="mailto:crie@trampolean.net" className="text-tramp-accent font-bold">
+                  crie@trampolean.net
                 </a>{" "}
                 ou pelo WhatsApp{" "}
                 <a href="https://wa.me/5511913271774" target="_blank" rel="noopener noreferrer" className="text-tramp-accent font-bold">

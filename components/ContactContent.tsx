@@ -17,7 +17,7 @@ export const ContactContent = () => {
     const message = data.get("message") as string;
 
     const body = `Nome: ${name}\nE-mail: ${email}\n\n${message}`;
-    window.location.href = `mailto:contato@trampolean.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:crie@trampolean.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     setSent(true);
     form.reset();
@@ -48,8 +48,8 @@ export const ContactContent = () => {
                   </div>
                   <div>
                     <p className="text-[1.4rem] font-bold text-tramp-gray uppercase tracking-widest mb-1">E-mail</p>
-                    <a href="mailto:contato@trampolean.net" className="text-[1.8rem] text-tramp-dark font-medium hover:text-tramp-magenta transition-colors">
-                      contato@trampolean.net
+                    <a href="mailto:crie@trampolean.net" className="text-[1.8rem] text-tramp-dark font-medium hover:text-tramp-magenta transition-colors">
+                      crie@trampolean.net
                     </a>
                   </div>
                 </div>

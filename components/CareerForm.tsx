@@ -19,7 +19,7 @@ export const CareerForm = () => {
     const about = data.get("about") as string;
 
     const body = `Nome: ${name}\nE-mail: ${email}\nWhatsApp: ${whatsapp}\nVaga/Área de interesse: ${areaValue}\nPortfólio/LinkedIn: ${portfolio}\n\n${about}`;
-    window.location.href = `mailto:contato@trampolean.net?subject=${encodeURIComponent("Candidatura - Carreira Trampolean")}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:crie@trampolean.net?subject=${encodeURIComponent("Candidatura - Carreira Trampolean")}&body=${encodeURIComponent(body)}`;
 
     setSent(true);
     setArea("");

@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: "Como entrar em contato?",
-    answer: "Pelo e-mail contato@trampolean.net, pelo WhatsApp +55 (11) 91327-1774 ou pelo formulário da página de Contato.",
+    answer: "Pelo e-mail crie@trampolean.net, pelo WhatsApp +55 (11) 91327-1774 ou pelo formulário da página de Contato.",
   },
 ];
 

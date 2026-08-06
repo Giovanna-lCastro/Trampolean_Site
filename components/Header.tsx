@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, MessageCircle } from "lucide-react";
 import { MegaMenu } from "./MegaMenu";
+import { useLanguage, Lang } from "@/lib/i18n/LanguageContext";
 
 // --- Custom SVGs for Mega Menu Icons ---
 const IconShield = () => (
@@ -41,7 +42,74 @@ const IconPulse = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
 );
 
+// --- Flag icons for the language switcher ---
+const FlagBR = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" className="rounded-full block">
+    <circle cx="10" cy="10" r="10" fill="#009c3b" />
+    <polygon points="10,3 17.5,10 10,17 2.5,10" fill="#ffdf00" />
+    <circle cx="10" cy="10" r="3.4" fill="#002776" />
+  </svg>
+);
+const FlagUS = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" className="rounded-full block">
+    <circle cx="10" cy="10" r="10" fill="#b22234" />
+    <g fill="#fff">
+      <rect y="2.85" width="20" height="1.55" />
+      <rect y="5.95" width="20" height="1.55" />
+      <rect y="9.05" width="20" height="1.55" />
+      <rect y="12.15" width="20" height="1.55" />
+      <rect y="15.25" width="20" height="1.55" />
+    </g>
+    <rect x="0" y="0" width="9.5" height="10.4" fill="#3c3b6e" />
+  </svg>
+);
+const FlagES = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" className="rounded-full block">
+    <circle cx="10" cy="10" r="10" fill="#aa151b" />
+    <rect y="5" width="20" height="10" fill="#f1bf00" />
+  </svg>
+);
+const FlagCN = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" className="rounded-full block">
+    <circle cx="10" cy="10" r="10" fill="#de2910" />
+    <g fill="#ffde00">
+      <polygon points="5,4 5.9,6.6 8.6,6.6 6.4,8.2 7.3,10.8 5,9.1 2.7,10.8 3.6,8.2 1.4,6.6 4.1,6.6" />
+      <polygon points="9.6,3.2 10,4.3 11.1,4.3 10.2,5 10.5,6.1 9.6,5.4 8.7,6.1 9,5 8.1,4.3 9.2,4.3" />
+      <polygon points="11.6,5.6 12,6.7 13.1,6.7 12.2,7.4 12.5,8.5 11.6,7.8 10.7,8.5 11,7.4 10.1,6.7 11.2,6.7" />
+      <polygon points="11.6,8.8 12,9.9 13.1,9.9 12.2,10.6 12.5,11.7 11.6,11 10.7,11.7 11,10.6 10.1,9.9 11.2,9.9" />
+      <polygon points="9.6,11 10,12.1 11.1,12.1 10.2,12.8 10.5,13.9 9.6,13.2 8.7,13.9 9,12.8 8.1,12.1 9.2,12.1" />
+    </g>
+  </svg>
+);
+
+const FLAGS: { lang: Lang; label: string; Icon: () => React.JSX.Element }[] = [
+  { lang: "pt", label: "Português", Icon: FlagBR },
+  { lang: "en", label: "English", Icon: FlagUS },
+  { lang: "es", label: "Español", Icon: FlagES },
+  { lang: "zh", label: "中文", Icon: FlagCN },
+];
+
+const LanguageSwitcher = ({ lang, setLang, size = "sm", dark = true }: { lang: Lang; setLang: (l: Lang) => void; size?: "sm" | "lg"; dark?: boolean }) => (
+  <div className={`flex items-center gap-1 rounded-xl ${dark ? "bg-white/10" : "bg-black/5"} ${size === "lg" ? "p-1.5" : "p-1"}`}>
+    {FLAGS.map(({ lang: flagLang, label, Icon }) => (
+      <button
+        key={flagLang}
+        type="button"
+        onClick={() => setLang(flagLang)}
+        aria-label={label}
+        aria-pressed={lang === flagLang}
+        className={`rounded-lg transition-all duration-200 ${size === "lg" ? "p-1.5" : "p-1"} ${
+          lang === flagLang ? "ring-2 ring-tramp-accent scale-110" : "opacity-50 hover:opacity-100"
+        }`}
+      >
+        <Icon />
+      </button>
+    ))}
+  </div>
+);
+
 export const Header = () => {
+  const { lang, setLang, t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -68,47 +136,47 @@ export const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Início", href: "/" },
-    { name: "A Trampolean", href: "/sobre" },
+    { name: t.header.nav.home, href: "/" },
+    { name: t.header.nav.about, href: "/sobre" },
     {
-      name: "Soluções",
+      name: t.header.nav.solutions,
       href: "/solucoes",
       hasMega: true,
       gridCols: "grid-cols-1",
       items: [
-        { title: "Transformação Digital e Estratégia de IA", description: "Diagnóstico, roadmap, redesenho de processos, governança e adoção.", href: "/solucoes#transformacao-digital", icon: <IconRocket /> },
-        { title: "Automações, Agentes e Software", description: "Fluxos automatizados, assistentes, RAG, integrações, sistemas e plataformas sob medida.", href: "/solucoes#automacoes-agentes-software", icon: <IconBot /> },
-        { title: "Jogos, Gamificação e Imersão", description: "Serious games, simuladores, experiências gamificadas e realidade virtual.", href: "/solucoes#jogos-gamificacao-imersao", icon: <IconGamepad /> },
-        { title: "Educação Corporativa e Treinamentos de IA", description: "Formação de líderes, trilhas por área, IA na educação e programas de adoção.", href: "/solucoes#educacao-corporativa", icon: <IconSchool /> },
-        { title: "Ergonomia, Semiótica e Fatores Humanos", description: "Trabalho real, interfaces, linguagem, riscos psicossociais e SST.", href: "/solucoes#ergonomia-semiotica", icon: <IconPulse /> }
+        { ...t.header.solutionsMenu[0], href: "/solucoes#transformacao-digital", icon: <IconRocket /> },
+        { ...t.header.solutionsMenu[1], href: "/solucoes#automacoes-agentes-software", icon: <IconBot /> },
+        { ...t.header.solutionsMenu[2], href: "/solucoes#jogos-gamificacao-imersao", icon: <IconGamepad /> },
+        { ...t.header.solutionsMenu[3], href: "/solucoes#educacao-corporativa", icon: <IconSchool /> },
+        { ...t.header.solutionsMenu[4], href: "/solucoes#ergonomia-semiotica", icon: <IconPulse /> }
       ],
-      footer: { text: "Todas as soluções", href: "/solucoes" }
+      footer: { text: t.header.solutionsMenuFooter, href: "/solucoes" }
     },
     {
-      name: "Educação",
+      name: t.header.nav.education,
       href: "/educacao",
       hasMega: true,
       items: [
-        { title: "IA para Lideranças", description: "Formação executiva para decidir e conduzir a transformação.", href: "/educacao#ia-liderancas", icon: <IconBuilding /> },
-        { title: "IA Aplicada ao Trabalho", description: "Prática em prompts, agentes, automações e fluxos.", href: "/educacao#ia-aplicada", icon: <IconZap /> },
-        { title: "IA na Educação", description: "Formação de docentes e gestores para transformar a aprendizagem.", href: "/educacao#ia-educacao", icon: <IconSchool /> },
-        { title: "Governança e Uso Responsável", description: "Ética, privacidade, segurança e responsabilidade humana.", href: "/educacao#governanca", icon: <IconShield /> }
+        { ...t.header.educationMenu[0], href: "/educacao#ia-liderancas", icon: <IconBuilding /> },
+        { ...t.header.educationMenu[1], href: "/educacao#ia-aplicada", icon: <IconZap /> },
+        { ...t.header.educationMenu[2], href: "/educacao#ia-educacao", icon: <IconSchool /> },
+        { ...t.header.educationMenu[3], href: "/educacao#governanca", icon: <IconShield /> }
       ],
-      footer: { text: "Explorar programas", href: "/educacao" }
+      footer: { text: t.header.educationMenuFooter, href: "/educacao" }
     },
     {
-      name: "Produtos",
+      name: t.header.nav.products,
       href: "/produtos",
       hasMega: true,
       items: [
-        { title: "Manual de Ética de IA", description: "Governança e compliance para uso responsável de IA.", href: "/produtos#manual-etica", icon: <IconShield /> },
-        { title: "Book Wizard", description: "Transforme ideias em livros e apostilas com IA.", href: "/produtos#book-wizard", icon: <IconWand /> },
-        { title: "Player 2", description: "Acelere a prototipagem de games no Unity com IA.", href: "/produtos#player-2", icon: <IconGamepad /> },
-        { title: "Kapta", description: "Gamificação aplicada à sustentabilidade e resíduos.", href: "/produtos#kapta", icon: <IconLeaf /> }
+        { ...t.header.productsMenu[0], href: "/produtos#manual-etica", icon: <IconShield /> },
+        { ...t.header.productsMenu[1], href: "/produtos#book-wizard", icon: <IconWand /> },
+        { ...t.header.productsMenu[2], href: "/produtos#player-2", icon: <IconGamepad /> },
+        { ...t.header.productsMenu[3], href: "/produtos#kapta", icon: <IconLeaf /> }
       ],
-      footer: { text: "Ver todos os produtos", href: "/produtos" }
+      footer: { text: t.header.productsMenuFooter, href: "/produtos" }
     },
-    { name: "Carreira", href: "/carreira" },
+    { name: t.header.nav.career, href: "/carreira" },
   ];
 
   return (
@@ -182,13 +250,15 @@ export const Header = () => {
 
         {/* Search & CTAs */}
         <div className="flex items-center gap-6">
+          <LanguageSwitcher lang={lang} setLang={setLang} dark={!scrolled} />
+
           <div className="relative" ref={contactRef}>
             <button
               onClick={() => setContactOpen((prev) => !prev)}
               aria-expanded={contactOpen}
               className="bg-tramp-accent text-white px-8 py-3.5 rounded-2xl text-[1.5rem] font-black shadow-[0_8px_20px_rgba(240,36,246,0.3)] hover:shadow-[0_12px_24px_rgba(240,36,246,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2"
             >
-              Contato
+              {t.header.contact}
               <motion.span
                 animate={{ rotate: contactOpen ? 180 : 0 }}
                 className="text-[1.1rem] opacity-80"
@@ -215,7 +285,7 @@ export const Header = () => {
                       <Mail className="w-5 h-5" />
                     </span>
                     <span className="flex flex-col leading-tight whitespace-nowrap">
-                      <span className="text-[1.5rem] font-bold">E-mail</span>
+                      <span className="text-[1.5rem] font-bold">{t.header.email}</span>
                       <span className="text-[1.2rem] text-tramp-gray">crie@trampolean.net</span>
                     </span>
                   </a>
@@ -230,7 +300,7 @@ export const Header = () => {
                       <MessageCircle className="w-5 h-5" />
                     </span>
                     <span className="flex flex-col leading-tight whitespace-nowrap">
-                      <span className="text-[1.5rem] font-bold">WhatsApp</span>
+                      <span className="text-[1.5rem] font-bold">{t.header.whatsapp}</span>
                       <span className="text-[1.2rem] text-tramp-gray">+55 (11) 96313-5038</span>
                     </span>
                   </a>
@@ -242,7 +312,7 @@ export const Header = () => {
           {/* Mobile Menu Trigger */}
           <button
             onClick={() => setMobileOpen((prev) => !prev)}
-            aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
+            aria-label={mobileOpen ? t.header.closeMenu : t.header.openMenu}
             aria-expanded={mobileOpen}
             className={`lg:hidden p-2 ${scrolled ? "text-tramp-dark" : "text-white"}`}
           >
@@ -301,10 +371,13 @@ export const Header = () => {
                 href="https://wa.me/5511963135038"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[1.8rem] font-bold text-tramp-accent py-3"
+                className="text-[1.8rem] font-bold text-tramp-accent py-3 border-b border-black/5"
               >
-                Falar no WhatsApp
+                {t.header.whatsappCta}
               </a>
+              <div className="flex items-center justify-center py-4">
+                <LanguageSwitcher lang={lang} setLang={setLang} size="lg" dark={false} />
+              </div>
             </nav>
           </motion.div>
         )}

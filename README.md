@@ -1,69 +1,36 @@
-# Projeto Trampolean
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Este repositório contém o código-fonte principal do site institucional e corporativo da **Trampolean**, uma empresa focada em inovação, Inteligência Artificial, desenvolvimento de software/jogos, e soluções educacionais/corporativas.
+## Getting Started
 
-O projeto está estruturado em torno do diretório `tramp-next`, que abriga uma aplicação web moderna, focada em performance, design responsivo e uma experiência de usuário (UX) premium.
+First, run the development server:
 
----
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## 📂 Análise do Diretório `@directory:tramp-next`
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-A pasta `tramp-next` é o núcleo da aplicação front-end, construída utilizando as mais recentes e robustas tecnologias do ecossistema web:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### Tecnologias Principais:
-- **[Next.js 16](https://nextjs.org/)**: Framework React com suporte a App Router (`app/`), renderização híbrida (SSR/SSG), otimização de fontes e imagens.
-- **[React 19](https://react.dev/)**: Biblioteca base para a construção de interfaces de usuário com componentes reutilizáveis.
-- **[TailwindCSS 4 & PostCSS](https://tailwindcss.com/)**: Engine de estilização utilitária para designs fluidos, responsivos e fáceis de manter.
-- **[Framer Motion](https://www.framer.com/motion/)**: Utilizado para animações complexas, transições de página fluidas e microinterações que dão vida à interface.
-- **[Lucide React](https://lucide.dev/)**: Conjunto de ícones vetoriais modernos e customizáveis.
-- **TypeScript**: Tipagem estática para garantir segurança, auto-complete e robustez no desenvolvimento.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### Estrutura de Pastas e Arquivos:
+## Learn More
 
-- **`/app` (App Router)**
-  - O coração do roteamento do Next.js. Cada subdiretório representa uma rota na aplicação:
-    - `page.tsx`, `layout.tsx`, `globals.css`: A página inicial, layout global e estilos base. A página principal ("Home") compõe diversas seções dinâmicas como Hero, Partners, Features, Solutions, etc.
-    - `/sobre`: Página "A Trampolean", contendo a história, métricas, valores e liderança da empresa.
-    - `/produtos`: Demonstra o portfólio de produtos (ex: *Manual de Ética de IA*, *Book Wizard*, *Player 2*, *Kapta*).
-    - `/educacao`: Página voltada para soluções acadêmicas (IA na Educação, Workshops, Treinamentos).
-    - `/solucoes`: Catálogo detalhado de serviços (Consultoria de IA, Dev de Jogos/Software, Automação, Gamificação, SST).
-    - `/carreira`: Portal de vagas e cultura da empresa, incluindo formulários de candidatura.
-    - `/contato`: Página com informações de contato e formulário para novos negócios.
+To learn more about Next.js, take a look at the following resources:
 
-- **`/components`**
-  - Contém todos os blocos de construção da interface isolados em componentes React reutilizáveis:
-    - **Navegação**: `Header.tsx`, `Footer.tsx`, `MegaMenu.tsx` (menus avançados dropdown).
-    - **Páginas Específicas**: Componentes granulares como `AboutHero.tsx`, `CareerForm.tsx`, `EducationDetail.tsx`, `ContactContent.tsx`.
-    - **Seções Globais**: `Hero.tsx`, `Features.tsx`, `Solutions.tsx`, `Partners.tsx`, `FinalCTA.tsx`.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- **Arquivos de Configuração**
-  - `package.json` e `package-lock.json`: Gerenciamento de dependências e scripts (`dev`, `build`, `start`, `lint`).
-  - `next.config.ts`, `tsconfig.json`: Configurações de build do Next.js e compilação do TypeScript.
-  - `eslint.config.mjs`, `postcss.config.mjs`: Configuração de linters (qualidade do código) e processamento de CSS.
-  - `/public`: Assets estáticos como favicons e imagens.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-## 🚀 Funcionamento Geral e Estado Atual do Projeto
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-O projeto atual atua como um cartão de visitas digital de alto nível para a Trampolean. Seu funcionamento é focado em atrair, informar e engajar os usuários, sejam eles clientes em potencial (B2B), educadores ou candidatos a vagas.
-
-### Design e Experiência do Usuário (UX/UI)
-O projeto possui um foco imenso em estética e interatividade:
-- **Design System e Estilos**: Usa uma identidade visual forte (com cores temáticas como `tramp-accent` e fundos profundos `#16002e`). 
-- **Glassmorphism**: Aplicação de efeitos de desfoque (blur) e transparência nas barras de navegação que reagem ao scroll da página, dando uma sensação "premium".
-- **Interatividade**: Componentes ricos como o `MegaMenu`, botões CTA (Call-to-Action) com sombras e escalas interativas (`hover:scale-105`), e transições de ícones geram um ambiente de uso dinâmico que vai além de um site estático comum.
-
-### Escalabilidade e Manutenção
-Graças à divisão por rotas em `/app` e uma arquitetura altamente componentizada em `/components`, a aplicação está preparada para crescer:
-- **Manutenção facilitada**: Alterar uma seção específica da página "Produtos" afeta apenas arquivos restritos.
-- **Performance**: O uso do Next.js e componentes do lado do servidor (RSC) garante que a aplicação tenha um carregamento rápido e seja otimizada para SEO (motores de busca).
-
-### Para Rodar o Projeto Localmente
-1. Acesse a pasta do frontend: `cd tramp-next`
-2. Instale as dependências: `npm install`
-3. Inicie o servidor de desenvolvimento: `npm run dev`
-4. Acesse em seu navegador: [http://localhost:3000](http://localhost:3000)
-
----
-*Este documento foi gerado a fim de contextualizar a arquitetura front-end e o propósito de negócio atrelado à base de código.*
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

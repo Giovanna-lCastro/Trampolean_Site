@@ -405,10 +405,18 @@ export interface Dictionary {
   };
   privacyPage: {
     title: string;
-    intro: string;
-    dataCollected: { heading: string; paragraph: string };
-    dataUse: { heading: string; paragraph: string };
-    rights: { heading: string; beforeEmail: string; afterEmail: string };
+    lastUpdated: string;
+    intro: { heading: string; paragraphs: string[] };
+    dataCollected: { heading: string; intro: string; items: string[] };
+    dataUse: { heading: string; intro: string; items: string[] };
+    dataSharing: { heading: string; intro: string; items: string[] };
+    dataRetention: { heading: string; paragraph: string };
+    dataSecurity: { heading: string; paragraph: string };
+    rights: { heading: string; intro: string; items: string[]; beforeEmail: string; afterEmail: string };
+    children: { heading: string; paragraph: string };
+    thirdPartyLinks: { heading: string; paragraph: string };
+    internationalTransfer: { heading: string; paragraph: string };
+    changes: { heading: string; paragraph: string };
     contact: { heading: string; beforeEmail: string; betweenEmailAndWhatsapp: string; afterWhatsapp: string };
   };
   solutionsPage: {

@@ -778,23 +778,88 @@ export const es: Dictionary = {
   },
   privacyPage: {
     title: "Política de Privacidad",
-    intro: "Trampolean respeta la privacidad de clientes, candidatos y visitantes del sitio y trata los datos personales de conformidad con la Ley General de Protección de Datos de Brasil (Ley n.º 13.709/2018 — LGPD).",
+    lastUpdated: "Última actualización: agosto de 2026",
+    intro: {
+      heading: "1. Introducción",
+      paragraphs: [
+        "Trampolean (\"nosotros\", \"nuestro\" o \"la empresa\") toma tu privacidad en serio. Esta Política de Privacidad describe de forma integral cómo nuestro sitio web, productos y servicios (en conjunto, los \"Servicios\") recopilan, utilizan, comparten, almacenan y protegen los datos personales de los usuarios.",
+        "Al acceder o utilizar nuestros Servicios, aceptas las prácticas descritas en esta política. Si no estás de acuerdo, no utilices los Servicios.",
+      ],
+    },
     dataCollected: {
-      heading: "Qué datos recopilamos",
-      paragraph: "Recopilamos únicamente los datos que proporcionas voluntariamente en nuestros formularios de contacto y de postulación: nombre, correo electrónico, WhatsApp, área/tema de interés y el mensaje enviado.",
+      heading: "2. Datos que Recopilamos",
+      intro: "Podemos recopilar los siguientes tipos de información:",
+      items: [
+        "Datos de contacto: nombre, correo electrónico, teléfono/WhatsApp e información de la empresa, proporcionados voluntariamente al completar formularios del sitio o al contactarnos.",
+        "Datos de uso: páginas visitadas, tiempo de permanencia, clics, acciones realizadas y métricas de interacción.",
+        "Datos del dispositivo: navegador, sistema operativo, dirección IP, idioma y zona horaria.",
+        "Datos de comunicación: contenido de los mensajes enviados a través de formularios, correo electrónico o WhatsApp cuando inicias el contacto.",
+        "Cookies y tecnologías similares: para recordar tus preferencias (como el idioma seleccionado) y analizar el tráfico del sitio.",
+      ],
     },
     dataUse: {
-      heading: "Cómo usamos tus datos",
-      paragraph: "Utilizamos estos datos exclusivamente para responder solicitudes, evaluar postulaciones y dar continuidad a la relación comercial o profesional que iniciaste. No vendemos ni compartimos tus datos con terceros con fines de marketing.",
+      heading: "3. Cómo Usamos tus Datos",
+      intro: "Utilizamos la información recopilada para:",
+      items: [
+        "Proporcionar, operar, mantener y mejorar nuestros Servicios;",
+        "Responder a solicitudes y consultas, y brindar soporte;",
+        "Personalizar contenido, funciones y experiencias relevantes;",
+        "Enviar comunicaciones, incluidas actualizaciones y materiales de marketing (con tu consentimiento, cuando corresponda);",
+        "Detectar, prevenir e investigar fraudes, abusos y actividades ilícitas;",
+        "Cumplir con obligaciones legales, regulatorias y contractuales;",
+        "Realizar análisis estadísticos, de desempeño y de seguridad de los Servicios.",
+      ],
+    },
+    dataSharing: {
+      heading: "4. Compartición de Datos",
+      intro: "No vendemos tus datos personales. Podemos compartir información con los siguientes tipos de terceros:",
+      items: [
+        "Proveedores de servicios: terceros que procesan datos en nuestro nombre (p. ej., alojamiento en la nube, servicios de analítica, proveedores de correo electrónico), siempre bajo acuerdos de confidencialidad y protección de datos.",
+        "Autoridades legales: cuando lo exija la ley, una orden judicial, o para proteger los derechos, la seguridad y la propiedad de Trampolean, de nuestros usuarios o del público.",
+        "Reorganizaciones societarias: en caso de fusión, adquisición o venta de activos, con notificación previa a los usuarios cuando corresponda.",
+      ],
+    },
+    dataRetention: {
+      heading: "5. Retención y Eliminación de Datos",
+      paragraph: "Conservamos tus datos personales solo durante el tiempo necesario para cumplir con los fines descritos en esta política, salvo que la retención sea exigida por ley. Los datos de interacción anonimizados pueden conservarse indefinidamente con fines analíticos. Puedes solicitar la eliminación de tus datos en cualquier momento, según lo descrito en la sección \"Tus Derechos\".",
+    },
+    dataSecurity: {
+      heading: "6. Seguridad de la Información",
+      paragraph: "Adoptamos medidas técnicas y organizativas alineadas con las mejores prácticas de seguridad de la información, incluidos los principios de la norma ISO/IEC 27001, para proteger tus datos contra el acceso no autorizado, la pérdida, alteración o divulgación. Esto incluye cifrado en tránsito (TLS) y en reposo, controles de acceso basados en privilegios, monitoreo continuo y procesos de gestión de incidentes de seguridad. Ningún método de transmisión por internet o almacenamiento electrónico es 100% seguro, pero nos esforzamos por seguir las mejores prácticas del mercado.",
     },
     rights: {
-      heading: "Tus derechos",
-      beforeEmail: "Puedes solicitar en cualquier momento la confirmación, corrección, portabilidad o eliminación de tus datos personales escribiendo al correo",
+      heading: "7. Tus Derechos (LGPD / GDPR)",
+      intro: "De conformidad con la Ley General de Protección de Datos de Brasil (LGPD — Ley N.º 13.709/2018) y, cuando corresponda, el Reglamento General de Protección de Datos (GDPR — Unión Europea), tienes los siguientes derechos:",
+      items: [
+        "Acceder, corregir, actualizar u obtener una copia de tus datos personales;",
+        "Solicitar la eliminación de tus datos (\"derecho al olvido\");",
+        "Retirar el consentimiento en cualquier momento, sin afectar la legalidad del tratamiento previo;",
+        "Solicitar la portabilidad de los datos;",
+        "Rechazar el uso de tus datos para publicidad personalizada;",
+        "Presentar una reclamación ante la autoridad de protección de datos competente (Autoridad Nacional de Protección de Datos — ANPD, en Brasil).",
+      ],
+      beforeEmail: "Para ejercer cualquier derecho, envía un correo a",
       afterEmail: ".",
     },
+    children: {
+      heading: "8. Datos de Niños y Adolescentes",
+      paragraph: "Nuestros Servicios no están dirigidos a menores de 18 años y no recopilamos intencionalmente datos personales de niños. Si identificamos que hemos recopilado datos de un menor sin el consentimiento verificable de sus responsables, procederemos a eliminarlos de inmediato cuando así se solicite.",
+    },
+    thirdPartyLinks: {
+      heading: "9. Enlaces a Sitios de Terceros",
+      paragraph: "Nuestros Servicios pueden contener enlaces a sitios web o servicios de terceros (como socios, redes sociales y medios de prensa). No somos responsables de las prácticas de privacidad ni del contenido de dichos terceros. Te recomendamos leer la política de privacidad de cada sitio o servicio que visites.",
+    },
+    internationalTransfer: {
+      heading: "10. Transferencia Internacional de Datos",
+      paragraph: "Tus datos pueden ser procesados en servidores ubicados fuera de Brasil, incluidos países con leyes de protección de datos distintas a las brasileñas. En esos casos, adoptamos cláusulas contractuales estándar y otras salvaguardas legales adecuadas para garantizar la protección de tus datos.",
+    },
+    changes: {
+      heading: "11. Cambios a esta Política",
+      paragraph: "Podemos actualizar esta Política de Privacidad periódicamente. Notificaremos cambios significativos por correo electrónico o mediante un aviso destacado en el sitio. La fecha de \"última actualización\" en la parte superior de esta página indica la versión vigente. Te recomendamos revisar esta página periódicamente.",
+    },
     contact: {
-      heading: "Contacto",
-      beforeEmail: "Si tienes dudas, escríbenos al correo",
+      heading: "12. Contacto",
+      beforeEmail: "Si tienes dudas sobre esta Política de Privacidad o sobre el tratamiento de tus datos, contáctanos por correo electrónico a",
       betweenEmailAndWhatsapp: "o por WhatsApp al",
       afterWhatsapp: ".",
     },

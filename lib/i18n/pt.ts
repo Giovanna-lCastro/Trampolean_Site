@@ -778,23 +778,88 @@ export const pt: Dictionary = {
   },
   privacyPage: {
     title: "Política de Privacidade",
-    intro: "A Trampolean respeita a privacidade de clientes, candidatos e visitantes do site e trata dados pessoais em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD).",
+    lastUpdated: "Última atualização: agosto de 2026",
+    intro: {
+      heading: "1. Introdução",
+      paragraphs: [
+        "A Trampolean (\"nós\", \"nosso\" ou \"a empresa\") leva sua privacidade a sério. Esta Política de Privacidade descreve de forma abrangente como nosso site, produtos e serviços (conjuntamente, os \"Serviços\") coletam, utilizam, compartilham, armazenam e protegem os dados pessoais dos usuários.",
+        "Ao acessar ou utilizar nossos Serviços, você concorda com as práticas descritas nesta política. Caso não concorde, não utilize os Serviços.",
+      ],
+    },
     dataCollected: {
-      heading: "Quais dados coletamos",
-      paragraph: "Coletamos apenas os dados fornecidos voluntariamente por você nos formulários de contato e de candidatura: nome, e-mail, WhatsApp, área/tema de interesse e a mensagem enviada.",
+      heading: "2. Dados que Coletamos",
+      intro: "Podemos coletar os seguintes tipos de informações:",
+      items: [
+        "Dados de contato: nome, e-mail, telefone/WhatsApp e informações de empresa, fornecidos voluntariamente ao preencher formulários do site ou entrar em contato.",
+        "Dados de uso: páginas visitadas, tempo de permanência, cliques, ações realizadas e métricas de engajamento.",
+        "Dados de dispositivo: navegador, sistema operacional, endereço IP, idioma e fuso horário.",
+        "Dados de comunicação: conteúdo de mensagens enviadas via formulário, e-mail ou WhatsApp quando você inicia o contato.",
+        "Cookies e tecnologias semelhantes: para lembrar suas preferências (como o idioma selecionado) e analisar o tráfego do site.",
+      ],
     },
     dataUse: {
-      heading: "Como usamos seus dados",
-      paragraph: "Utilizamos esses dados exclusivamente para responder a solicitações, avaliar candidaturas e dar continuidade ao relacionamento comercial ou profissional iniciado por você. Não vendemos nem compartilhamos seus dados com terceiros para fins de marketing.",
+      heading: "3. Como Usamos Seus Dados",
+      intro: "Utilizamos as informações coletadas para:",
+      items: [
+        "Fornecer, operar, manter e melhorar nossos Serviços;",
+        "Responder a solicitações, dúvidas e fornecer suporte;",
+        "Personalizar conteúdo, recursos e experiências relevantes;",
+        "Enviar comunicações, incluindo atualizações e materiais de marketing (com seu consentimento, quando aplicável);",
+        "Detectar, prevenir e investigar fraudes, abusos e atividades ilícitas;",
+        "Cumprir obrigações legais, regulatórias e contratuais;",
+        "Realizar análises estatísticas, de desempenho e de segurança dos Serviços.",
+      ],
+    },
+    dataSharing: {
+      heading: "4. Compartilhamento de Dados",
+      intro: "Não vendemos seus dados pessoais. Podemos compartilhar informações com os seguintes tipos de partes:",
+      items: [
+        "Provedores de serviços: terceiros que processam dados em nosso nome (ex.: hospedagem em nuvem, serviços de analytics, provedores de e-mail), sempre sob acordos de confidencialidade e proteção de dados.",
+        "Autoridades legais: quando exigido por lei, ordem judicial ou para proteger direitos, segurança e propriedade da Trampolean, de nossos usuários ou do público.",
+        "Reorganizações societárias: em caso de fusão, aquisição ou venda de ativos, com notificação prévia aos usuários quando aplicável.",
+      ],
+    },
+    dataRetention: {
+      heading: "5. Retenção e Exclusão de Dados",
+      paragraph: "Mantemos seus dados pessoais apenas pelo tempo necessário para cumprir as finalidades descritas nesta política, salvo quando a retenção for exigida por lei. Dados de engajamento anonimizados podem ser mantidos indefinidamente para fins analíticos. Você pode solicitar a exclusão dos seus dados a qualquer momento conforme a seção \"Seus Direitos\".",
+    },
+    dataSecurity: {
+      heading: "6. Segurança da Informação",
+      paragraph: "Adotamos medidas técnicas e organizacionais alinhadas às boas práticas de segurança da informação, incluindo os princípios da norma ISO/IEC 27001, para proteger seus dados contra acesso não autorizado, perda, alteração ou divulgação. Isso inclui criptografia em trânsito (TLS) e em repouso, controles de acesso baseados em privilégios, monitoramento contínuo e processos de gestão de incidentes de segurança. Nenhum método de transmissão pela internet ou armazenamento eletrônico é 100% seguro, mas buscamos utilizar as melhores práticas do mercado.",
     },
     rights: {
-      heading: "Seus direitos",
-      beforeEmail: "Você pode solicitar a qualquer momento a confirmação, correção, portabilidade ou exclusão dos seus dados pessoais pelo e-mail",
+      heading: "7. Seus Direitos (LGPD / GDPR)",
+      intro: "Em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018) e, quando aplicável, o Regulamento Geral de Proteção de Dados (GDPR — União Europeia), você tem os seguintes direitos:",
+      items: [
+        "Acessar, corrigir, atualizar ou obter cópia dos seus dados pessoais;",
+        "Solicitar a exclusão dos seus dados (\"direito ao esquecimento\");",
+        "Retirar o consentimento a qualquer momento, sem afetar a legalidade do tratamento anterior;",
+        "Solicitar a portabilidade dos dados;",
+        "Recusar o uso de seus dados para publicidade personalizada (opt-out);",
+        "Apresentar reclamação à autoridade de proteção de dados competente (Autoridade Nacional de Proteção de Dados — ANPD, no Brasil).",
+      ],
+      beforeEmail: "Para exercer qualquer direito, envie um e-mail para",
       afterEmail: ".",
     },
+    children: {
+      heading: "8. Dados de Crianças e Adolescentes",
+      paragraph: "Nossos Serviços não são direcionados a menores de 18 anos e não coletamos intencionalmente dados pessoais de crianças. Caso identifiquemos que coletamos dados de um menor sem o consentimento verificável dos responsáveis, faremos a exclusão imediata mediante solicitação.",
+    },
+    thirdPartyLinks: {
+      heading: "9. Links para Sites de Terceiros",
+      paragraph: "Nossos Serviços podem conter links para sites ou serviços de terceiros (como parceiros, mídias sociais e imprensa). Não somos responsáveis pelas práticas de privacidade ou pelo conteúdo desses terceiros. Recomendamos que você leia as políticas de privacidade de cada site ou serviço visitado.",
+    },
+    internationalTransfer: {
+      heading: "10. Transferência Internacional de Dados",
+      paragraph: "Seus dados podem ser processados em servidores localizados fora do Brasil, inclusive em países com leis de proteção de dados diferentes das brasileiras. Nesses casos, adotamos cláusulas contratuais padrão e outras salvaguardas legais adequadas para garantir a proteção dos seus dados.",
+    },
+    changes: {
+      heading: "11. Alterações desta Política",
+      paragraph: "Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos mudanças significativas por e-mail ou por meio de um aviso em destaque no site. A data de \"última atualização\" no topo desta página indica a versão vigente. Recomendamos que você revise esta página periodicamente.",
+    },
     contact: {
-      heading: "Contato",
-      beforeEmail: "Em caso de dúvidas, fale pelo e-mail",
+      heading: "12. Contato",
+      beforeEmail: "Em caso de dúvidas sobre esta Política de Privacidade ou sobre o tratamento dos seus dados, entre em contato pelo e-mail",
       betweenEmailAndWhatsapp: "ou pelo WhatsApp",
       afterWhatsapp: ".",
     },

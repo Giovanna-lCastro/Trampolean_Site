@@ -2,33 +2,18 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-
-const pillars = [
-  {
-    title: "Sociotécnica",
-    description: "Tecnologia, trabalho e pessoas tratados como parte do mesmo sistema.",
-  },
-  {
-    title: "Ergonomia",
-    description: "Soluções desenhadas a partir do trabalho real, não apenas do processo prescrito.",
-  },
-  {
-    title: "Semiótica aplicada",
-    description: "Linguagem, interfaces e narrativas analisadas para fortalecer adoção.",
-  },
-  {
-    title: "Desenvolvimento",
-    description: "Não só recomendamos: construímos a automação, o software ou o jogo.",
-  },
-];
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export const Differential = () => {
+  const { t } = useLanguage();
+  const pillars = t.differential.pillars;
+
   return (
     <section className="bg-white">
       <div className="container2025Redesign">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-tramp-magenta/10 text-tramp-magenta text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
-            Por que a Trampolean
+            {t.differential.eyebrow}
           </span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -36,7 +21,7 @@ export const Differential = () => {
             viewport={{ once: true }}
             className="text-balance text-[3rem] md:text-[4rem] text-tramp-navy font-black leading-tight tracking-tight mb-8"
           >
-            Estratégia, formação e desenvolvimento na mesma empresa.
+            {t.differential.title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -45,7 +30,7 @@ export const Differential = () => {
             transition={{ delay: 0.1 }}
             className="text-[1.8rem] md:text-[2.1rem] text-tramp-gray text-pretty leading-relaxed"
           >
-            A Trampolean reúne competências que normalmente são contratadas separadamente. Podemos diagnosticar o problema, desenhar a estratégia, formar as pessoas, automatizar o processo e desenvolver a tecnologia, o jogo, a plataforma ou a experiência necessária.
+            {t.differential.paragraph}
           </motion.p>
         </div>
 

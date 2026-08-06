@@ -2,8 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export const AboutHero = () => {
+  const { t } = useLanguage();
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-24 overflow-hidden bg-tramp-dark">
       {/* Background Gradient & Effects */}
@@ -22,17 +24,15 @@ export const AboutHero = () => {
             className="text-left"
           >
             <span className="inline-block px-6 py-2 bg-white/5 border border-white/10 rounded-full text-tramp-accent text-[1.4rem] font-bold tracking-widest uppercase mb-8">
-              Nossa Identidade
+              {t.aboutHero.eyebrow}
             </span>
 
             <h1 className="text-balance text-[3.2rem] md:text-[4.2rem] lg:text-[4.8rem] font-black text-white leading-[1.15] mb-10 tracking-tight">
-              Transformação digital construída a partir do trabalho humano.
+              {t.aboutHero.title}
             </h1>
 
             <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 text-pretty leading-relaxed mb-12">
-              A Trampolean é uma consultoria e desenvolvedora de soluções que conecta tecnologia, aprendizagem,
-              trabalho e linguagem. Atuamos com inteligência artificial, automação, software, jogos digitais,
-              educação corporativa, ergonomia e semiótica.
+              {t.aboutHero.paragraph}
             </p>
 
             <div className="flex justify-start">
@@ -40,7 +40,7 @@ export const AboutHero = () => {
                 href="/solucoes"
                 className="bg-tramp-accent text-white px-12 py-5 rounded-2xl text-[1.7rem] font-black shadow-[0_10px_30px_rgba(240,36,246,0.4)] hover:shadow-[0_15px_40px_rgba(240,36,246,0.6)] hover:scale-105 active:scale-95 transition-all duration-300"
               >
-                Conheça nossas soluções
+                {t.aboutHero.ctaLabel}
               </a>
             </div>
           </motion.div>
@@ -58,7 +58,7 @@ export const AboutHero = () => {
             <div className="relative rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
               <img
                 src="/noticia_e_img/Imagens/20241024_100302.jpg"
-                alt="Fabiana Raulino, CEO da Trampolean, apresentando em evento sobre Inteligência Artificial"
+                alt={t.aboutHero.imageAlt}
                 className="w-full h-auto object-cover aspect-video hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-tramp-dark via-transparent to-transparent opacity-60" />
@@ -66,7 +66,7 @@ export const AboutHero = () => {
 
             {/* Floating Badge */}
             <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-3xl shadow-2xl border border-black/5 animate-bounce-slow">
-              <p className="text-tramp-dark text-[2.2rem] font-black leading-tight">+10 anos <br /> <span className="text-tramp-accent text-[1.4rem] uppercase tracking-widest">Inovação AI</span></p>
+              <p className="text-tramp-dark text-[2.2rem] font-black leading-tight">{t.aboutHero.badgeLine1} <br /> <span className="text-tramp-accent text-[1.4rem] uppercase tracking-widest">{t.aboutHero.badgeHighlight}</span></p>
             </div>
           </motion.div>
         </div>

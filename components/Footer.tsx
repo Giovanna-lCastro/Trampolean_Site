@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const socialLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/company/trampolean/" },
@@ -7,6 +10,8 @@ const socialLinks = [
 ];
 
 export const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-tramp-dark text-white py-20 border-t border-white/10">
       <div className="container2025Redesign !pb-0">
@@ -17,30 +22,30 @@ export const Footer = () => {
               Trampolean
             </span>
             <p className="text-[1.4rem] text-white/50 leading-relaxed max-w-xs mx-auto md:mx-0">
-              Transformação digital que conecta tecnologia, trabalho, aprendizagem e linguagem.
+              {t.footer.tagline}
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <p className="text-[1.3rem] font-bold uppercase tracking-widest text-white/40 mb-6">Navegação</p>
+            <p className="text-[1.3rem] font-bold uppercase tracking-widest text-white/40 mb-6">{t.footer.navHeading}</p>
             <div className="flex flex-col gap-4 text-[1.5rem] opacity-80">
-              <a href="/sobre" className="hover:text-tramp-cyan transition-colors">A Trampolean</a>
-              <a href="/solucoes" className="hover:text-tramp-cyan transition-colors">Soluções</a>
-              <a href="/educacao" className="hover:text-tramp-cyan transition-colors">Educação</a>
-              <a href="/produtos" className="hover:text-tramp-cyan transition-colors">Produtos</a>
-              <a href="/carreira" className="hover:text-tramp-cyan transition-colors">Carreira</a>
-              <a href="/contato" className="hover:text-tramp-cyan transition-colors">Contato</a>
+              <a href="/sobre" className="hover:text-tramp-cyan transition-colors">{t.footer.nav.about}</a>
+              <a href="/solucoes" className="hover:text-tramp-cyan transition-colors">{t.footer.nav.solutions}</a>
+              <a href="/educacao" className="hover:text-tramp-cyan transition-colors">{t.footer.nav.education}</a>
+              <a href="/produtos" className="hover:text-tramp-cyan transition-colors">{t.footer.nav.products}</a>
+              <a href="/carreira" className="hover:text-tramp-cyan transition-colors">{t.footer.nav.career}</a>
+              <a href="/contato" className="hover:text-tramp-cyan transition-colors">{t.footer.nav.contact}</a>
             </div>
           </div>
 
           {/* Contact & Social */}
           <div>
-            <p className="text-[1.3rem] font-bold uppercase tracking-widest text-white/40 mb-6">Contato</p>
+            <p className="text-[1.3rem] font-bold uppercase tracking-widest text-white/40 mb-6">{t.footer.contactHeading}</p>
             <div className="flex flex-col gap-4 text-[1.5rem] opacity-80 mb-8">
               <a href="mailto:crie@trampolean.net" className="hover:text-tramp-cyan transition-colors">crie@trampolean.net</a>
               <a href="https://wa.me/5511963135038" target="_blank" rel="noopener noreferrer" className="hover:text-tramp-cyan transition-colors">+55 (11) 96313-5038</a>
-              <span>São Paulo, SP — Brasil</span>
+              <span>{t.footer.address}</span>
             </div>
             <div className="flex gap-4 justify-center md:justify-start">
               {socialLinks.map((social) => (
@@ -60,8 +65,8 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-[1.3rem] text-white/30 border-t border-white/5 pt-10 pb-10">
-          <span>© {new Date().getFullYear()} Trampolean. Todos os direitos reservados.</span>
-          <a href="/privacidade" className="hover:text-tramp-cyan transition-colors">Política de Privacidade</a>
+          <span>© {new Date().getFullYear()} {t.footer.copyright}</span>
+          <a href="/privacidade" className="hover:text-tramp-cyan transition-colors">{t.footer.privacyPolicy}</a>
         </div>
       </div>
     </footer>

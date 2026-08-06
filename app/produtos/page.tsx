@@ -3,9 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProductsHero } from "@/components/ProductsHero";
 import { ProductDetail } from "@/components/ProductDetail";
-import { AboutCTA } from "@/components/AboutCTA";
-import { SectionIntro } from "@/components/SectionIntro";
 import { EbookCTA } from "@/components/EbookCTA";
+import { ProductsIntro, ProductsPageCTA } from "@/components/ProductsPageExtras";
 
 export const metadata: Metadata = {
   title: { absolute: "Produtos | Trampolean" },
@@ -20,21 +19,13 @@ export default function ProductsPage() {
       <main>
         <ProductsHero />
 
-        <SectionIntro
-          title="Conheça nossas soluções originais"
-          quote="Nossos produtos não são apenas ferramentas; são catalisadores de mudança para organizações que entendem o papel da IA no trabalho."
-        />
+        <ProductsIntro />
 
         <ProductDetail />
 
         <EbookCTA />
 
-        <AboutCTA
-          title="Quer aplicar algum produto na sua organização?"
-          description="Fale com a Trampolean e descubra como o Manual de Ética de IA, o Book Wizard, o Player 2 ou o Kapta podem ser aplicados no seu contexto."
-          buttonLabel="Entre em contato"
-          buttonHref="/contato"
-        />
+        <ProductsPageCTA />
       </main>
       <Footer />
     </div>

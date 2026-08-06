@@ -4,8 +4,7 @@ import { Footer } from "@/components/Footer";
 import { EducationHero } from "@/components/EducationHero";
 import { EducationDetail } from "@/components/EducationDetail";
 import { EducationDifferentiators } from "@/components/EducationDifferentiators";
-import { AboutCTA } from "@/components/AboutCTA";
-import { SectionIntro } from "@/components/SectionIntro";
+import { EducationIntro, EducationPageCTA } from "@/components/EducationPageExtras";
 
 export const metadata: Metadata = {
   title: { absolute: "Educação | Trampolean" },
@@ -20,20 +19,13 @@ export default function EducationPage() {
       <main>
         <EducationHero />
 
-        <SectionIntro
-          title="Nossos programas de capacitação"
-          quote="A verdadeira transformação com IA não vem apenas da tecnologia, mas da capacidade humana de aplicá-la com lucidez e propósito."
-          accent="magenta"
-        />
+        <EducationIntro />
 
         <EducationDetail />
 
         <EducationDifferentiators />
 
-        <AboutCTA
-          title="Vamos formar sua equipe para a era da IA?"
-          buttonLabel="Fale com especialistas"
-        />
+        <EducationPageCTA />
       </main>
       <Footer />
     </div>

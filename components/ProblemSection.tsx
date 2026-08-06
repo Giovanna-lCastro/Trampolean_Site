@@ -3,54 +3,26 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { GraduationCap, ShieldCheck, Code2, Gamepad2, Rocket, Megaphone, Download, ChevronLeft, ChevronRight } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
-const deck = [
-  {
-    icon: GraduationCap,
-    tag: "Para gestores de sistemas educacionais",
-    title: "Educar para a era da IA, no ritmo da nova geração.",
-    description: "Formação em IA, metodologias ativas e Geração Z.",
-    file: "/downloads/01_educacao_sistemas.pdf",
-  },
-  {
-    icon: ShieldCheck,
-    tag: "Para gestores de grandes organizações",
-    title: "Proteger pessoas e preparar sua organização para a IA.",
-    description: "Ergonomia, fatores humanos e formação em IA.",
-    file: "/downloads/02_grandes_organizacoes.pdf",
-  },
-  {
-    icon: Code2,
-    tag: "Para gestores de PMEs",
-    title: "Software sob medida para PMEs que querem crescer.",
-    description: "Sistemas, apps, automações e IA.",
-    file: "/downloads/03_pmes_software.pdf",
-  },
-  {
-    icon: Gamepad2,
-    tag: "Jogos digitais e gamificação",
-    title: "Jogos que fazem as pessoas aprender, decidir e mudar.",
-    description: "Serious games, gamificação e realidade virtual.",
-    file: "/downloads/04_jogos_gamificacao.pdf",
-  },
-  {
-    icon: Rocket,
-    tag: "Mentoria profissional: empreendedorismo & IA",
-    title: "Construa um negócio digital na velocidade da IA.",
-    description: "Mentoria profissional e empreendedorismo digital.",
-    file: "/downloads/05_mentoria.pdf",
-  },
-  {
-    icon: Megaphone,
-    tag: "Gestão de redes sociais e posicionamento",
-    title: "Transforme autoridade em presença que converte.",
-    description: "Posicionamento, conteúdo e gestão de redes.",
-    file: "/downloads/06_redes_posicionamento.pdf",
-  },
+const deckMeta = [
+  { icon: GraduationCap, file: "/downloads/01_educacao_sistemas.pdf" },
+  { icon: ShieldCheck, file: "/downloads/02_grandes_organizacoes.pdf" },
+  { icon: Code2, file: "/downloads/03_pmes_software.pdf" },
+  { icon: Gamepad2, file: "/downloads/04_jogos_gamificacao.pdf" },
+  { icon: Rocket, file: "/downloads/05_mentoria.pdf" },
+  { icon: Megaphone, file: "/downloads/06_redes_posicionamento.pdf" },
 ];
 
 export const ProblemSection = () => {
+  const { t } = useLanguage();
   const [active, setActive] = useState(0);
+
+  const deck = deckMeta.map((meta, idx) => ({
+    ...meta,
+    ...t.problemSection.deck[idx],
+  }));
+
   const total = deck.length;
 
   const go = (dir: number) => setActive((prev) => (prev + dir + total) % total);
@@ -59,22 +31,22 @@ export const ProblemSection = () => {
     <section className="bg-white">
       <div className="container2025Redesign text-center">
         <span className="inline-block px-4 py-1 bg-tramp-magenta/10 text-tramp-magenta text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
-          Transformação com Aplicação Real
+          {t.problemSection.eyebrow}
         </span>
         <h2 className="text-balance text-[3rem] md:text-[3.8rem] lg:text-[4.2rem] text-tramp-navy font-black leading-tight tracking-tight mb-8">
-          Digitalizar exige compreender tecnologia, trabalho e pessoas.
+          {t.problemSection.title}
         </h2>
         <p className="text-[1.8rem] md:text-[2.1rem] text-tramp-gray text-pretty leading-relaxed mb-16">
-          Projetos de transformação falham quando automatizam processos mal compreendidos, adotam ferramentas sem preparar equipes ou desenvolvem interfaces que não fazem sentido para quem as utiliza. A Trampolean integra diagnóstico, aprendizagem, linguagem, fatores humanos e tecnologia para construir soluções aplicáveis e sustentáveis.
+          {t.problemSection.paragraph}
         </p>
 
         {/* Galeria do Deck de Serviço */}
         <div className="max-w-3xl mx-auto mb-12">
           <span className="inline-block px-4 py-1 bg-tramp-cyan/10 text-tramp-cyan text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-4">
-            Deck de Serviço
+            {t.problemSection.deckEyebrow}
           </span>
           <p className="text-[1.6rem] text-tramp-gray">
-            Baixe a apresentação completa de cada frente de atuação da Trampolean.
+            {t.problemSection.deckIntro}
           </p>
         </div>
 
@@ -129,7 +101,7 @@ export const ProblemSection = () => {
                   {isCenter && (
                     <div className="flex items-center gap-2 text-tramp-magenta font-bold text-[1.3rem]">
                       <Download className="w-4 h-4" />
-                      Baixar PDF
+                      {t.problemSection.downloadLabel}
                     </div>
                   )}
                 </motion.a>
@@ -140,14 +112,14 @@ export const ProblemSection = () => {
           {/* Setas */}
           <button
             onClick={() => go(-1)}
-            aria-label="Anterior"
+            aria-label={t.problemSection.prevLabel}
             className="absolute left-0 md:-left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white border border-tramp-navy/10 shadow-lg flex items-center justify-center text-tramp-navy hover:bg-tramp-magenta hover:text-white hover:border-tramp-magenta transition-all duration-300"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={() => go(1)}
-            aria-label="Próximo"
+            aria-label={t.problemSection.nextLabel}
             className="absolute right-0 md:-right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white border border-tramp-navy/10 shadow-lg flex items-center justify-center text-tramp-navy hover:bg-tramp-magenta hover:text-white hover:border-tramp-magenta transition-all duration-300"
           >
             <ChevronRight className="w-6 h-6" />
@@ -159,7 +131,7 @@ export const ProblemSection = () => {
               <button
                 key={idx}
                 onClick={() => setActive(idx)}
-                aria-label={`Ir para o item ${idx + 1}`}
+                aria-label={t.problemSection.goToItemLabel.replace("{n}", String(idx + 1))}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
                   idx === active ? "w-8 bg-tramp-magenta" : "w-2.5 bg-tramp-navy/20"
                 }`}

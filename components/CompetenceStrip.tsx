@@ -1,13 +1,11 @@
+"use client";
+
 import React from "react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export const CompetenceStrip = () => {
-  const items = [
-    "Transformação digital e estratégia de IA",
-    "Automações, agentes e software",
-    "Jogos digitais e gamificação",
-    "Treinamentos de IA e educação corporativa",
-    "Ergonomia, semiótica e fatores humanos",
-  ];
+  const { t } = useLanguage();
+  const items = t.competenceStrip.items;
 
   return (
     <section className="bg-tramp-dark border-b border-white/10 py-10">

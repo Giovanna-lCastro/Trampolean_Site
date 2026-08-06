@@ -3,30 +3,21 @@
 import React from "react";
 import { Umbrella, Users, Rocket, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+
+const categoriesMeta = [
+   { icon: <Umbrella className="w-16 h-16 text-tramp-magenta" /> },
+   { icon: <Users className="w-16 h-16 text-tramp-magenta" /> },
+   { icon: <Rocket className="w-16 h-16 text-tramp-magenta" /> },
+   { icon: <ShieldCheck className="w-16 h-16 text-tramp-magenta" /> },
+];
 
 export const Segments = () => {
-   const categories = [
-      {
-         title: "Para Gestores de SST e Ergonomia",
-         description: "Preveja riscos, otimize ambientes de trabalho e garanta a conformidade com NR-17 através de ferramentas inovadoras.",
-         icon: <Umbrella className="w-16 h-16 text-tramp-magenta" />
-      },
-      {
-         title: "Para Líderes de RH e T&D",
-         description: "Acelere o desenvolvimento das suas equipes com universidades corporativas e plataformas de gamificação com ROI mensurável.",
-         icon: <Users className="w-16 h-16 text-tramp-magenta" />
-      },
-      {
-         title: "Para Diretores de Inovação",
-         description: "Implemente IA, automação e ferramentas digitais com estratégia e responsabilidade. Transforme processos operacionais.",
-         icon: <Rocket className="w-16 h-16 text-tramp-magenta" />
-      },
-      {
-         title: "Para Líderes de ESG",
-         description: "Demonstre compromisso real com o bem-estar dos colaboradores e metas ambientais com dados transparentes.",
-         icon: <ShieldCheck className="w-16 h-16 text-tramp-magenta" />
-      }
-   ];
+   const { t } = useLanguage();
+   const categories = categoriesMeta.map((meta, idx) => ({
+      ...meta,
+      ...t.segments.items[idx],
+   }));
 
    return (
       <section className="bg-tramp-purple-dark text-white py-32 relative overflow-hidden">
@@ -40,7 +31,7 @@ export const Segments = () => {
                viewport={{ once: true }}
                className="text-[3.2rem] md:text-[4.5rem] font-black mb-6 leading-tight"
             >
-               Soluções Inteligentes para os <br /> Seus <span className="text-tramp-magenta">Desafios Mais Críticos</span>
+               {t.segments.titleLine1} <br /> {t.segments.titleLine2Before}<span className="text-tramp-magenta">{t.segments.titleHighlight}</span>
             </motion.h2>
             <motion.p
                initial={{ opacity: 0, y: 20 }}
@@ -48,7 +39,7 @@ export const Segments = () => {
                viewport={{ once: true }}
                className="opacity-70 text-[1.8rem] md:text-[2rem] text-pretty leading-relaxed"
             >
-               Seja você um gestor de SST, um líder de RH ou um diretor de inovação — a Trampolean tem a solução certa para o seu contexto.
+               {t.segments.subtitle}
             </motion.p>
          </div>
          <div className="container2025Redesign !py-8 relative z-10">
@@ -77,7 +68,7 @@ export const Segments = () => {
                className="text-center mt-20"
             >
                <a href="/solucoes" className="btn-premium-purple px-12 py-5 rounded-2xl font-bold text-[1.7rem] shadow-xl inline-block">
-                  Explore Todas as Nossas Soluções
+                  {t.segments.ctaLabel}
                </a>
             </motion.div>
          </div>

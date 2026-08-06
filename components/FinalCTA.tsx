@@ -2,8 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export const FinalCTA = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="cta-final" className="bg-tramp-purple-dark text-white relative overflow-hidden border-t border-white/5">
        {/* High-end background finish */}
@@ -16,7 +19,7 @@ export const FinalCTA = () => {
             viewport={{ once: true }}
             className="text-balance text-[3.2rem] md:text-[4.8rem] font-black mb-10 leading-tight tracking-tight"
           >
-             Que processo, experiência ou competência sua organização precisa <span className="text-tramp-magenta">transformar?</span>
+             {t.finalCTA.titleBefore}<span className="text-tramp-magenta">{t.finalCTA.titleHighlight}</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -25,7 +28,7 @@ export const FinalCTA = () => {
             transition={{ delay: 0.2 }}
             className="mb-16 opacity-80 text-[1.8rem] md:text-[2.2rem] text-pretty leading-relaxed"
           >
-             Converse com nossa equipe sobre transformação digital, IA, automação, software, jogos, treinamentos, ergonomia ou semiótica aplicada.
+             {t.finalCTA.paragraph}
           </motion.p>
 
           <motion.div
@@ -36,7 +39,7 @@ export const FinalCTA = () => {
             className="flex flex-wrap gap-6 justify-center items-center"
           >
              <a href="/contato" className="btn-premium-purple px-12 py-6 rounded-2xl text-[1.7rem] font-bold shadow-2xl">
-                Fale com especialistas
+                {t.finalCTA.ctaLabel}
              </a>
           </motion.div>
        </div>

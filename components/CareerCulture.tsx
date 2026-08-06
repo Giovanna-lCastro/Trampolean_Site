@@ -3,37 +3,26 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Lightbulb, Users, Layers, ShieldCheck, Code2, GraduationCap, Megaphone, BarChart3 } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+
+const valuesIcons = [
+  <Lightbulb key="lightbulb" className="w-8 h-8 text-tramp-magenta" />,
+  <Users key="users" className="w-8 h-8 text-tramp-magenta" />,
+  <Layers key="layers" className="w-8 h-8 text-tramp-magenta" />,
+  <ShieldCheck key="shield" className="w-8 h-8 text-tramp-magenta" />,
+];
+
+const jobsIcons = [
+  <GraduationCap key="grad" className="w-10 h-10 text-tramp-magenta" />,
+  <Code2 key="code" className="w-10 h-10 text-tramp-magenta" />,
+  <BarChart3 key="bar" className="w-10 h-10 text-tramp-magenta" />,
+  <Megaphone key="megaphone" className="w-10 h-10 text-tramp-magenta" />,
+];
 
 export const CareerCulture = () => {
-  const values = [
-    { title: "Inovação com aplicação real", icon: <Lightbulb className="w-8 h-8 text-tramp-magenta" /> },
-    { title: "Impacto humano", icon: <Users className="w-8 h-8 text-tramp-magenta" /> },
-    { title: "Interdisciplinaridade de verdade", icon: <Layers className="w-8 h-8 text-tramp-magenta" /> },
-    { title: "Liberdade com responsabilidade", icon: <ShieldCheck className="w-8 h-8 text-tramp-magenta" /> },
-  ];
-
-  const jobs = [
-    {
-      title: "Estágio (múltiplas áreas)",
-      description: "Oportunidades em Tech, Design/UX, Educação e Social Media.",
-      icon: <GraduationCap className="w-10 h-10 text-tramp-magenta" />,
-    },
-    {
-      title: "Pessoa Desenvolvedora (Full Stack / IA)",
-      description: "Web, agentes, RAG, automações e integrações.",
-      icon: <Code2 className="w-10 h-10 text-tramp-magenta" />,
-    },
-    {
-      title: "Analista de PMO",
-      description: "Governança e entrega de projetos multidisciplinares.",
-      icon: <BarChart3 className="w-10 h-10 text-tramp-magenta" />,
-    },
-    {
-      title: "Social Media / Analista de Conteúdo",
-      description: "Traduzir a autoridade técnica em conteúdo por canal.",
-      icon: <Megaphone className="w-10 h-10 text-tramp-magenta" />,
-    },
-  ];
+  const { t } = useLanguage();
+  const values = t.careerCulture.values.map((v, idx) => ({ ...v, icon: valuesIcons[idx] }));
+  const jobs = t.careerCulture.jobs.map((job, idx) => ({ ...job, icon: jobsIcons[idx] }));
 
   return (
     <section className="bg-white overflow-hidden border-b border-black/5">
@@ -44,13 +33,13 @@ export const CareerCulture = () => {
             viewport={{ once: true }}
           >
             <span className="inline-block px-4 py-1 bg-tramp-magenta/10 text-tramp-magenta text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
-              Nossa Cultura
+              {t.careerCulture.eyebrow}
             </span>
             <h2 className="text-balance text-[3.5rem] md:text-[5.5rem] text-tramp-navy font-black mb-10 leading-tight">
-              Por que a <span className="text-tramp-magenta">Trampolean?</span>
+              {t.careerCulture.titleBefore}<span className="text-tramp-magenta">{t.careerCulture.titleHighlight}</span>
             </h2>
             <p className="text-pretty text-[1.8rem] md:text-[2.1rem] text-tramp-gray leading-relaxed mb-16">
-              Do diagnóstico à entrega, no mesmo projeto: diagnosticamos, desenhamos a estratégia, formamos pessoas, automatizamos processos e desenvolvemos a tecnologia. Você resolve problemas que não são só técnicos, mas organizacionais, humanos e comunicacionais.
+              {t.careerCulture.paragraph}
             </p>
           </motion.div>
 
@@ -79,10 +68,10 @@ export const CareerCulture = () => {
             className="text-center mb-16"
           >
             <span className="inline-block px-4 py-1 bg-tramp-magenta/10 text-tramp-magenta text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
-              Oportunidades
+              {t.careerCulture.jobsEyebrow}
             </span>
             <h2 className="text-balance text-[3.2rem] md:text-[4.5rem] text-tramp-navy font-black leading-tight">
-              Vagas abertas
+              {t.careerCulture.jobsTitle}
             </h2>
           </motion.div>
 

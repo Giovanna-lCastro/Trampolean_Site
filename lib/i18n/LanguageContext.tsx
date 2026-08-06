@@ -32,8 +32,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("pt");
 
   useEffect(() => {
+    // Reads localStorage once after mount to avoid an SSR/client hydration
+    // mismatch (the server always renders "pt", the static default).
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (stored === "pt" || stored === "en" || stored === "es" || stored === "zh") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLangState(stored);
     }
   }, []);

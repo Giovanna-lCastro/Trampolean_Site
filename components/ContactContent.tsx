@@ -3,8 +3,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export const ContactContent = () => {
+  const { t } = useLanguage();
   const [sent, setSent] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -13,10 +15,11 @@ export const ContactContent = () => {
     const data = new FormData(form);
     const name = data.get("name") as string;
     const email = data.get("email") as string;
-    const subject = (data.get("subject") as string) || "Contato pelo site";
+    const subject = (data.get("subject") as string) || t.contactContent.defaultSubject;
     const message = data.get("message") as string;
 
-    const body = `Nome: ${name}\nE-mail: ${email}\n\n${message}`;
+    const labels = t.contactContent.emailBodyLabels;
+    const body = `${labels.name}: ${name}\n${labels.email}: ${email}\n\n${message}`;
     window.location.href = `mailto:crie@trampolean.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     setSent(true);
@@ -37,7 +40,7 @@ export const ContactContent = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-[3.2rem] md:text-[4rem] font-black text-tramp-dark leading-[1.2] mb-12">
-                Onde nos <br /> <span className="text-tramp-accent">encontrar</span>
+                {t.contactContent.headingLine1} <br /> <span className="text-tramp-accent">{t.contactContent.headingHighlight}</span>
               </h2>
 
               <div className="space-y-10">
@@ -47,7 +50,7 @@ export const ContactContent = () => {
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="text-[1.4rem] font-bold text-tramp-gray uppercase tracking-widest mb-1">E-mail</p>
+                    <p className="text-[1.4rem] font-bold text-tramp-gray uppercase tracking-widest mb-1">{t.contactContent.emailLabel}</p>
                     <a href="mailto:crie@trampolean.net" className="text-[1.8rem] text-tramp-dark font-medium hover:text-tramp-magenta transition-colors">
                       crie@trampolean.net
                     </a>
@@ -60,7 +63,7 @@ export const ContactContent = () => {
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="text-[1.4rem] font-bold text-tramp-gray uppercase tracking-widest mb-1">WhatsApp</p>
+                    <p className="text-[1.4rem] font-bold text-tramp-gray uppercase tracking-widest mb-1">{t.contactContent.whatsappLabel}</p>
                     <a href="https://wa.me/5511963135038" target="_blank" rel="noopener noreferrer" className="text-[1.8rem] text-tramp-dark font-medium hover:text-tramp-magenta transition-colors">
                       +55 (11) 96313-5038
                     </a>
@@ -73,10 +76,10 @@ export const ContactContent = () => {
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="text-[1.4rem] font-bold text-tramp-gray uppercase tracking-widest mb-1">Localização</p>
+                    <p className="text-[1.4rem] font-bold text-tramp-gray uppercase tracking-widest mb-1">{t.contactContent.locationLabel}</p>
                     <p className="text-[1.8rem] text-tramp-dark font-medium leading-relaxed">
-                      São Paulo, SP — Brasil <br />
-                      <span className="text-[1.4rem] text-tramp-gray font-normal">Atendimento Global</span>
+                      {t.contactContent.locationValue} <br />
+                      <span className="text-[1.4rem] text-tramp-gray font-normal">{t.contactContent.locationSub}</span>
                     </p>
                   </div>
                 </div>
@@ -84,7 +87,7 @@ export const ContactContent = () => {
 
               {/* Social Media */}
               <div className="pt-12 border-t border-black/5">
-                <p className="text-[1.4rem] font-bold text-tramp-gray uppercase tracking-widest mb-6">Siga a Trampolean</p>
+                <p className="text-[1.4rem] font-bold text-tramp-gray uppercase tracking-widest mb-6">{t.contactContent.followLabel}</p>
                 <div className="flex gap-4">
                   {[
                     // LinkedIn
@@ -132,27 +135,27 @@ export const ContactContent = () => {
               className="bg-tramp-bg-light/10 p-10 md:p-16 rounded-[3rem] border border-black/5 shadow-inner"
             >
               <h3 className="text-[2.2rem] md:text-[2.8rem] font-black text-tramp-dark mb-12">
-                Envie uma mensagem
+                {t.contactContent.formTitle}
               </h3>
-              
+
               <form className="space-y-10" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div className="flex flex-col gap-4">
-                    <label className="text-[1.4rem] font-bold text-tramp-dark uppercase tracking-wider ml-2">Nome Completo *</label>
+                    <label className="text-[1.4rem] font-bold text-tramp-dark uppercase tracking-wider ml-2">{t.contactContent.nameLabel}</label>
                     <input
                       type="text"
                       name="name"
-                      placeholder="Seu nome"
+                      placeholder={t.contactContent.namePlaceholder}
                       className="w-full bg-white border border-black/10 px-8 py-5 rounded-2xl text-[1.6rem] outline-none focus:border-tramp-accent transition-all"
                       required
                     />
                   </div>
                   <div className="flex flex-col gap-4">
-                    <label className="text-[1.4rem] font-bold text-tramp-dark uppercase tracking-wider ml-2">E-mail *</label>
+                    <label className="text-[1.4rem] font-bold text-tramp-dark uppercase tracking-wider ml-2">{t.contactContent.emailFieldLabel}</label>
                     <input
                       type="email"
                       name="email"
-                      placeholder="seu@email.com"
+                      placeholder={t.contactContent.emailPlaceholder}
                       className="w-full bg-white border border-black/10 px-8 py-5 rounded-2xl text-[1.6rem] outline-none focus:border-tramp-accent transition-all"
                       required
                     />
@@ -160,31 +163,24 @@ export const ContactContent = () => {
                 </div>
 
                 <div className="flex flex-col gap-4">
-                  <label className="text-[1.4rem] font-bold text-tramp-dark uppercase tracking-wider ml-2">Tema de interesse</label>
+                  <label className="text-[1.4rem] font-bold text-tramp-dark uppercase tracking-wider ml-2">{t.contactContent.subjectLabel}</label>
                   <select
                     name="subject"
                     defaultValue=""
                     className="w-full bg-white border border-black/10 px-8 py-5 rounded-2xl text-[1.6rem] outline-none focus:border-tramp-accent transition-all"
                   >
-                    <option value="" disabled>Selecione um tema</option>
-                    <option value="Transformação digital e estratégia de IA">Transformação digital e estratégia de IA</option>
-                    <option value="Automação de processos">Automação de processos</option>
-                    <option value="Agentes de IA e bases de conhecimento">Agentes de IA e bases de conhecimento</option>
-                    <option value="Software ou plataforma">Software ou plataforma</option>
-                    <option value="Jogos, gamificação ou realidade virtual">Jogos, gamificação ou realidade virtual</option>
-                    <option value="Treinamentos de IA e educação corporativa">Treinamentos de IA e educação corporativa</option>
-                    <option value="Ergonomia, fatores humanos ou riscos psicossociais">Ergonomia, fatores humanos ou riscos psicossociais</option>
-                    <option value="Semiótica e comunicação">Semiótica e comunicação</option>
-                    <option value="SST, EHS e campanhas">SST, EHS e campanhas</option>
-                    <option value="Outro">Outro</option>
+                    <option value="" disabled>{t.contactContent.subjectPlaceholder}</option>
+                    {t.contactContent.subjectOptions.map((option) => (
+                      <option key={option} value={option}>{option}</option>
+                    ))}
                   </select>
                 </div>
 
                 <div className="flex flex-col gap-4">
-                  <label className="text-[1.4rem] font-bold text-tramp-dark uppercase tracking-wider ml-2">Mensagem *</label>
+                  <label className="text-[1.4rem] font-bold text-tramp-dark uppercase tracking-wider ml-2">{t.contactContent.messageLabel}</label>
                   <textarea
                     name="message"
-                    placeholder="Descreva seu desafio, projeto ou proposta..."
+                    placeholder={t.contactContent.messagePlaceholder}
                     rows={6}
                     className="w-full bg-white border border-black/10 px-8 py-5 rounded-2xl text-[1.6rem] outline-none focus:border-tramp-accent transition-all resize-none"
                     required
@@ -195,12 +191,12 @@ export const ContactContent = () => {
                   type="submit"
                   className="inline-flex items-center gap-4 bg-tramp-dark text-white px-12 py-6 rounded-2xl text-[1.7rem] font-black shadow-xl hover:bg-tramp-accent transition-all duration-300"
                 >
-                  Solicitar conversa estratégica
+                  {t.contactContent.submitButton}
                 </button>
 
                 {sent && (
                   <p className="text-[1.5rem] text-tramp-accent font-bold">
-                    Seu app de e-mail foi aberto com a mensagem pronta — é só confirmar o envio. Se preferir, fale com a gente pelo WhatsApp.
+                    {t.contactContent.sentMessage}
                   </p>
                 )}
               </form>

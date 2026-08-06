@@ -2,8 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export const ContactHero = () => {
+  const { t } = useLanguage();
   return (
     <section className="relative min-h-[75vh] flex items-center justify-center pt-32 pb-24 overflow-hidden bg-tramp-dark">
       {/* Background Gradient & Effects */}
@@ -21,15 +23,15 @@ export const ContactHero = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="inline-block px-6 py-2 bg-white/5 border border-white/10 rounded-full text-tramp-accent text-[1.4rem] font-bold tracking-widest uppercase mb-8">
-              Contato & Parcerias
+              {t.contactHero.eyebrow}
             </span>
 
             <h1 className="text-[3.2rem] md:text-[4.2rem] lg:text-[4.8rem] font-black text-white leading-[1.15] mb-8 tracking-tight text-balance">
-              Conte o que sua organização precisa transformar.
+              {t.contactHero.title}
             </h1>
 
             <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 text-pretty leading-relaxed mb-12">
-              Fale com a Trampolean sobre transformação digital, inteligência artificial, automação, software, jogos, treinamentos, ergonomia, semiótica ou projetos especiais.
+              {t.contactHero.paragraph}
             </p>
           </motion.div>
 
@@ -43,15 +45,15 @@ export const ContactHero = () => {
              <div className="relative rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
                <img 
                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1000&auto=format&fit=crop" 
-                 alt="Conexão e parceria estratégica" 
-                 className="w-full h-auto object-cover aspect-video hover:scale-110 transition-transform duration-700" 
+                 alt={t.contactHero.imageAlt}
+                 className="w-full h-auto object-cover aspect-video hover:scale-110 transition-transform duration-700"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-tramp-dark via-transparent to-transparent opacity-60" />
              </div>
-             
+
              {/* Floating Badge */}
              <div className="absolute -top-10 -right-10 bg-white p-8 rounded-3xl shadow-2xl animate-bounce-slow">
-                <p className="text-tramp-dark text-[2rem] font-black leading-tight text-center">IA & <br /> <span className="text-tramp-magenta uppercase text-[1.2rem] tracking-widest">Inovação</span></p>
+                <p className="text-tramp-dark text-[2rem] font-black leading-tight text-center">{t.contactHero.badgeLine1} <br /> <span className="text-tramp-magenta uppercase text-[1.2rem] tracking-widest">{t.contactHero.badgeHighlight}</span></p>
              </div>
           </motion.div>
         </div>

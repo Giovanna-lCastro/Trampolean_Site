@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const IconLamp = () => (
   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
@@ -35,24 +36,14 @@ const ValueCard = ({ icon, title, description, delay }: { icon: React.ReactNode;
   </motion.div>
 );
 
+const valuesIcons = [<IconLamp key="lamp" />, <IconUsers key="users" />, <IconGear key="gear" />];
+
 export const AboutValues = () => {
-  const values = [
-    {
-      title: "Inovação com aplicação",
-      description: "Buscamos o novo pela transformação real do trabalho, não pela novidade em si.",
-      icon: <IconLamp />
-    },
-    {
-      title: "Propósito",
-      description: "Cada projeto tem impacto real. Trabalhamos com tecnologia porque acreditamos nas pessoas.",
-      icon: <IconUsers />
-    },
-    {
-      title: "Excelência",
-      description: "Rigor técnico e criatividade em todas as etapas.",
-      icon: <IconGear />
-    },
-  ];
+  const { t } = useLanguage();
+  const values = t.aboutValues.items.map((item, idx) => ({
+    ...item,
+    icon: valuesIcons[idx],
+  }));
 
   return (
     <section className="bg-white py-32 overflow-hidden">
@@ -65,10 +56,10 @@ export const AboutValues = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-tramp-accent font-bold text-[1.4rem] tracking-[0.2em] uppercase mb-4 block">
-              O que nos move
+              {t.aboutValues.eyebrow}
             </span>
             <h2 className="text-balance text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2]">
-              Nossos Valores
+              {t.aboutValues.title}
             </h2>
           </motion.div>
         </div>

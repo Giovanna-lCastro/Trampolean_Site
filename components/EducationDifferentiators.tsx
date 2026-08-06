@@ -3,25 +3,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Settings, MousePointerClick, Users } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+
+const differentiatorsMeta = [
+  { icon: <Settings className="w-12 h-12" /> },
+  { icon: <MousePointerClick className="w-12 h-12" /> },
+  { icon: <Users className="w-12 h-12" /> },
+];
 
 export const EducationDifferentiators = () => {
-  const differentiators = [
-    {
-      icon: <Settings className="w-12 h-12" />,
-      title: "Programas Sob Medida",
-      description: "Cada formação é adaptada ao contexto, à maturidade e aos objetivos da organização."
-    },
-    {
-      icon: <MousePointerClick className="w-12 h-12" />,
-      title: "Foco no Uso Prático",
-      description: "Nenhuma teoria sem aplicação. Participantes saem com ferramentas dominadas e planos concretos."
-    },
-    {
-      icon: <Users className="w-12 h-12" />,
-      title: "Facilitadores Especialistas",
-      description: "Quem ensina é quem pratica. Nossa equipe usa IA no dia a dia dos projetos."
-    }
-  ];
+  const { t } = useLanguage();
+  const differentiators = differentiatorsMeta.map((meta, idx) => ({
+    ...meta,
+    ...t.educationDifferentiators.items[idx],
+  }));
 
   return (
     <section className="bg-tramp-bg-light/30">
@@ -33,7 +28,7 @@ export const EducationDifferentiators = () => {
             viewport={{ once: true }}
             className="inline-block px-4 py-1 bg-tramp-magenta/10 text-tramp-magenta text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6"
           >
-            Nossa Metodologia
+            {t.educationDifferentiators.eyebrow}
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -41,7 +36,7 @@ export const EducationDifferentiators = () => {
             viewport={{ once: true }}
             className="text-[3.5rem] md:text-[5rem] font-black text-tramp-dark text-balance"
           >
-            Por que educação com a Trampolean?
+            {t.educationDifferentiators.title}
           </motion.h2>
         </div>
 

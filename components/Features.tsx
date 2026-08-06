@@ -3,35 +3,22 @@
 import React from "react";
 import { Rocket, Bot, Gamepad2, BookOpen, HeartPulse } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+
+const pillarIcons = [
+  <Rocket key="rocket" className="w-16 h-16 text-tramp-magenta" />,
+  <Bot key="bot" className="w-16 h-16 text-tramp-magenta" />,
+  <Gamepad2 key="gamepad" className="w-16 h-16 text-tramp-magenta" />,
+  <BookOpen key="book" className="w-16 h-16 text-tramp-magenta" />,
+  <HeartPulse key="heart" className="w-16 h-16 text-tramp-magenta" />,
+];
 
 export const Features = () => {
-  const pillars = [
-    {
-      title: "Transformação Digital e Estratégia de IA",
-      description: "Estratégia, diagnóstico, governança, redesenho de processos e adoção de tecnologias alinhadas aos objetivos da organização.",
-      icon: <Rocket className="w-16 h-16 text-tramp-magenta" />
-    },
-    {
-      title: "Automações, Agentes e Software",
-      description: "Automação de fluxos, agentes de IA, integrações, sistemas, plataformas, aplicativos e soluções digitais desenvolvidas sob medida.",
-      icon: <Bot className="w-16 h-16 text-tramp-magenta" />
-    },
-    {
-      title: "Jogos, Gamificação e Imersão",
-      description: "Jogos corporativos, serious games, simuladores, experiências gamificadas e ambientes imersivos para aprendizagem, comunicação e mudança de comportamento.",
-      icon: <Gamepad2 className="w-16 h-16 text-tramp-magenta" />
-    },
-    {
-      title: "Educação Corporativa e Treinamentos de IA",
-      description: "Formação prática para líderes, equipes, docentes e organizações aplicarem IA com segurança, criticidade e produtividade.",
-      icon: <BookOpen className="w-16 h-16 text-tramp-magenta" />
-    },
-    {
-      title: "Ergonomia, Semiótica e Fatores Humanos",
-      description: "Análise do trabalho, riscos, linguagem, interfaces, experiências e sistemas para tornar a transformação mais compreensível, segura e humana.",
-      icon: <HeartPulse className="w-16 h-16 text-tramp-magenta" />
-    }
-  ];
+  const { t } = useLanguage();
+  const pillars = t.features.pillars.map((pillar, idx) => ({
+    ...pillar,
+    icon: pillarIcons[idx],
+  }));
 
   return (
     <section className="bg-white border-b border-tramp-navy/5">
@@ -46,17 +33,17 @@ export const Features = () => {
             className="text-left"
           >
             <span className="inline-block px-4 py-1 bg-tramp-magenta/10 text-tramp-magenta text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
-              NOSSA ABORDAGEM
+              {t.features.eyebrow}
             </span>
             <h2 className="text-[3.5rem] md:text-[5.5rem] text-tramp-navy font-black mb-10 leading-[1.1] tracking-tight">
-              Do trabalho real<br /> <span className="text-tramp-magenta">à solução digital.</span>
+              {t.features.titleLine1}<br /> <span className="text-tramp-magenta">{t.features.titleLine2}</span>
             </h2>
             <div className="space-y-6">
               <p className="text-[1.8rem] md:text-[2.1rem] text-tramp-gray leading-relaxed">
-                A Trampolean nasceu da Ergonomia de Sistemas de Produção e da Segurança e Saúde no Trabalho. Hoje, desenvolve soluções em inteligência artificial, educação corporativa, saúde digital, UX/UI, jogos digitais e software sob medida para empresas que precisam transformar processos, capacitar equipes e reduzir riscos no trabalho.
+                {t.features.paragraph}
               </p>
               <p className="text-[1.6rem] md:text-[1.8rem] text-tramp-gray/70 leading-relaxed italic border-l-4 border-tramp-magenta pl-8">
-                Combinamos ergonomia para compreender a atividade, semiótica para estruturar linguagem e interação, educação para desenvolver competências e tecnologia para implementar automações, agentes, softwares, jogos e plataformas.
+                {t.features.quote}
               </p>
             </div>
           </motion.div>
@@ -71,7 +58,7 @@ export const Features = () => {
             <div className="absolute -inset-4 bg-tramp-magenta/10 blur-[100px] rounded-full"></div>
             <img
               src="/img_site/times_usando_ia.png"
-              alt="Technology and Human collaboration"
+              alt={t.features.imageAlt}
               className="relative z-10 w-full rounded-[3rem] shadow-2xl"
             />
           </motion.div>

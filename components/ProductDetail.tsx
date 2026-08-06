@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 interface ProductProps {
   id: string;
@@ -13,9 +14,10 @@ interface ProductProps {
   benefits: string[];
   image: string;
   reverse?: boolean;
+  ctaLabel: string;
 }
 
-const ProductSection = ({ id, tag, title, description, fullDescription, benefits, image, reverse }: ProductProps) => (
+const ProductSection = ({ id, tag, title, description, fullDescription, benefits, image, reverse, ctaLabel }: ProductProps) => (
   <section id={id} className={`overflow-hidden border-b border-black/5 ${reverse ? "bg-tramp-bg-light/10" : "bg-white"}`}>
     <div className="container2025Redesign">
       <div className={`grid grid-cols-1 lg:grid-cols-2 gap-20 items-center ${reverse ? "lg:flex-row-reverse" : ""}`}>
@@ -53,7 +55,7 @@ const ProductSection = ({ id, tag, title, description, fullDescription, benefits
             href="/contato"
             className="inline-flex items-center gap-3 bg-tramp-dark text-white px-10 py-5 rounded-2xl text-[1.7rem] font-bold shadow-xl hover:bg-tramp-accent transition-all duration-300"
           >
-            Saber mais / Contato
+            {ctaLabel}
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </Link>
         </motion.div>
@@ -78,69 +80,20 @@ const ProductSection = ({ id, tag, title, description, fullDescription, benefits
   </section>
 );
 
+const productsMeta = [
+  { id: "manual-etica", image: "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?q=80&w=800&auto=format&fit=crop", reverse: false },
+  { id: "book-wizard", image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800&auto=format&fit=crop", reverse: true },
+  { id: "player-2", image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop", reverse: false },
+  { id: "kapta", image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=800&auto=format&fit=crop", reverse: true },
+];
+
 export const ProductDetail = () => {
-  const products = [
-    {
-      id: "manual-etica",
-      tag: "Governança & Compliance",
-      title: "Manual de Ética de IA para Empresas",
-      description: "O guia prático para implementar inteligência artificial com responsabilidade e conformidade.",
-      fullDescription: "Produto desenvolvido para ajudar empresas a adotarem IA de forma responsável. Cobre desde princípios fundamentais até protocolos de auditoria e conformidade com a LGPD.",
-      benefits: [
-        "Protocolos de governança prontos para aplicação",
-        "Alinhamento com LGPD e marcos regulatórios",
-        "Redução de riscos reputacionais e legais",
-        "Customizável para cada empresa"
-      ],
-      image: "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?q=80&w=800&auto=format&fit=crop",
-      reverse: false
-    },
-    {
-      id: "book-wizard",
-      tag: "Inteligência Artificial",
-      title: "Book Wizard",
-      description: "A IA que transforma suas ideias em livros completos — do conceito ao conteúdo estruturado.",
-      fullDescription: "Ferramenta de IA generativa para criação assistida de livros, apostilas e materiais corporativos. Reduz drasticamente o tempo de produção mantendo a qualidade técnica.",
-      benefits: [
-        "Geração automatizada de estrutura e conteúdo",
-        "Ideal para materiais técnicos e didáticos",
-        "Interface intuitiva",
-        "Exportação em múltiplos formatos (PDF, Word, ePub)"
-      ],
-      image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800&auto=format&fit=crop",
-      reverse: true
-    },
-    {
-       id: "player-2",
-       tag: "Game Development",
-       title: "Player 2",
-       description: "O plugin que integra geração de jogos por IA diretamente no Unity.",
-       fullDescription: "Assistente de IA dentro da Unity Engine que acelera o desenvolvimento de jogos. Permite criar mecânicas, cenários e NPCs com auxílio de IA generativa em tempo real.",
-       benefits: [
-         "Integração nativa com a Unity",
-         "Geração de assets e mecânicas assistida por IA",
-         "Acelera a prototipagem",
-         "Ideal para serious games e jogos corporativos"
-       ],
-       image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop",
-       reverse: false
-    },
-    {
-       id: "kapta",
-       tag: "ESG & Gamificação",
-       title: "Kapta",
-       description: "Plataforma gamificada que transforma a coleta de resíduos em engajamento real.",
-       fullDescription: "Aplica mecânicas de jogo à coleta seletiva e à gestão de resíduos. Por meio de desafios e recompensas, engaja comunidades e colaboradores e gera relatórios de impacto ESG.",
-       benefits: [
-         "Engajamento sustentado por gamificação",
-         "Painel de dados para relatórios ESG",
-         "Adaptável para empresas, condomínios e governos",
-         "Incentiva mudança de comportamento"
-       ],
-       image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=800&auto=format&fit=crop",
-       reverse: true
-    }
-  ];
+  const { t } = useLanguage();
+  const products = productsMeta.map((meta, idx) => ({
+    ...meta,
+    ...t.productDetail.items[idx],
+    ctaLabel: t.productDetail.ctaLabel,
+  }));
 
   return (
     <div className="bg-white">

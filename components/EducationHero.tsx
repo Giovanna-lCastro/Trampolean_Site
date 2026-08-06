@@ -2,8 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export const EducationHero = () => {
+  const { t } = useLanguage();
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center pt-32 pb-24 overflow-hidden bg-tramp-dark">
       {/* Background Gradient & Effects */}
@@ -21,15 +23,15 @@ export const EducationHero = () => {
              transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="inline-block px-6 py-2 bg-white/5 border border-white/10 rounded-full text-tramp-accent text-[1.4rem] font-bold tracking-widest uppercase mb-8">
-              Educação & Capacitação
+              {t.educationHero.eyebrow}
             </span>
 
             <h1 className="text-[3.2rem] md:text-[4.2rem] lg:text-[4.8rem] font-black text-white leading-[1.15] mb-8 tracking-tight text-balance">
-              Treinamentos de IA para <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">transformar a prática de trabalho.</span>
+              {t.educationHero.titleBefore}<span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">{t.educationHero.titleHighlight}</span>
             </h1>
 
             <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 text-pretty leading-relaxed mb-12">
-              Desenvolvemos programas para líderes, equipes, docentes e instituições utilizarem inteligência artificial com segurança, pensamento crítico, produtividade e aplicação real.
+              {t.educationHero.paragraph}
             </p>
           </motion.div>
 
@@ -43,7 +45,7 @@ export const EducationHero = () => {
              <div className="relative rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
                <img 
                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000&auto=format&fit=crop" 
-                 alt="Modern Classroom with Technology" 
+                 alt={t.educationHero.imageAlt}
                  className="w-full h-auto object-cover aspect-video hover:scale-110 transition-transform duration-700" 
                />
                <div className="absolute inset-0 bg-gradient-to-t from-tramp-dark via-transparent to-transparent opacity-60" />
@@ -51,7 +53,7 @@ export const EducationHero = () => {
              
              {/* Floating Elements (similar to ProductsHero) */}
              <div className="absolute -top-10 -right-10 bg-tramp-magenta p-8 rounded-3xl shadow-2xl border border-white/10 animate-bounce-slow">
-                <p className="text-white text-[2rem] font-black leading-tight">5 <br /> <span className="text-white/70 text-[1.2rem] uppercase tracking-widest leading-none">Programas <br /> Especializados</span></p>
+                <p className="text-white text-[2rem] font-black leading-tight">{t.educationHero.badgeLine1} <br /> <span className="text-white/70 text-[1.2rem] uppercase tracking-widest leading-none">{t.educationHero.badgeHighlight}</span></p>
              </div>
           </motion.div>
         </div>

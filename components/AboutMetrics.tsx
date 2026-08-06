@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const MetricCard = ({ value, label, delay }: { value: string; label: string; delay: number }) => (
   <motion.div
@@ -21,12 +22,8 @@ const MetricCard = ({ value, label, delay }: { value: string; label: string; del
 );
 
 export const AboutMetrics = () => {
-  const metrics = [
-    { value: "+10 anos", label: "de atuação em ergonomia, SST e transformação do trabalho" },
-    { value: "+50 projetos", label: "entregues para empresas e instituições" },
-    { value: "4 produtos", label: "próprios desenvolvidos com IA" },
-    { value: "40k+", label: "pessoas impactadas por nossos programas" },
-  ];
+  const { t } = useLanguage();
+  const metrics = t.aboutMetrics.items;
 
   return (
     <section className="bg-white pb-32 overflow-hidden">
@@ -39,10 +36,10 @@ export const AboutMetrics = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-tramp-accent font-bold text-[1.4rem] tracking-[0.2em] uppercase mb-4 block">
-              Trampolean em Números
+              {t.aboutMetrics.eyebrow}
             </span>
             <h2 className="text-balance text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2]">
-              Resultados que falam por si
+              {t.aboutMetrics.title}
             </h2>
           </motion.div>
         </div>

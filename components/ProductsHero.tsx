@@ -2,8 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export const ProductsHero = () => {
+  const { t } = useLanguage();
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center pt-32 pb-24 overflow-hidden bg-tramp-dark">
       {/* Background Gradient & Effects */}
@@ -21,17 +23,16 @@ export const ProductsHero = () => {
              transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="inline-block px-6 py-2 bg-white/5 border border-white/10 rounded-full text-tramp-accent text-[1.4rem] font-bold tracking-widest uppercase mb-8">
-              Nossos Produtos
+              {t.productsHero.eyebrow}
             </span>
 
             <h1 className="text-balance text-[3.2rem] md:text-[4.2rem] lg:text-[4.8rem] font-black text-white leading-[1.15] mb-8 tracking-tight">
-              Tecnologia própria para resolver{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">problemas reais.</span>
+              {t.productsHero.titleBefore}{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">{t.productsHero.titleHighlight}</span>
             </h1>
 
             <p className="text-[1.6rem] md:text-[1.8rem] text-white/70 text-pretty leading-relaxed mb-12">
-              Desenvolvemos produtos originais que unem inteligência artificial, gamificação e inovação
-              para transformar a forma como empresas e pessoas aprendem, criam e se responsabilizam.
+              {t.productsHero.paragraph}
             </p>
           </motion.div>
 
@@ -45,7 +46,7 @@ export const ProductsHero = () => {
              <div className="relative rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
                <img 
                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop" 
-                 alt="Digital Technology Abstract" 
+                 alt={t.productsHero.imageAlt}
                  className="w-full h-auto object-cover aspect-video hover:scale-110 transition-transform duration-700" 
                />
                <div className="absolute inset-0 bg-gradient-to-t from-tramp-dark via-transparent to-transparent opacity-60" />
@@ -53,7 +54,7 @@ export const ProductsHero = () => {
              
              {/* Floating Elements */}
              <div className="absolute -top-10 -right-10 bg-tramp-accent p-8 rounded-3xl shadow-2xl border border-white/10 animate-bounce-slow">
-                <p className="text-white text-[2rem] font-black leading-tight">4 <br /> <span className="text-white/70 text-[1.2rem] uppercase tracking-widest leading-none">produtos <br /> originais</span></p>
+                <p className="text-white text-[2rem] font-black leading-tight">{t.productsHero.badgeLine1} <br /> <span className="text-white/70 text-[1.2rem] uppercase tracking-widest leading-none">{t.productsHero.badgeHighlight}</span></p>
              </div>
           </motion.div>
         </div>

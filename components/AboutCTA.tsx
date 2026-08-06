@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 interface AboutCTAProps {
   title?: React.ReactNode;
@@ -12,11 +13,21 @@ interface AboutCTAProps {
 }
 
 export const AboutCTA = ({
-  title = <>Pronto para transformar <br className="hidden md:block" /> sua empresa?</>,
-  description = "Converse com nossos especialistas e descubra como a Trampolean pode impulsionar seu negócio com estratégia, tecnologia e propósito.",
-  buttonLabel = "Entre em Contato",
+  title,
+  description,
+  buttonLabel,
   buttonHref = "/contato",
 }: AboutCTAProps) => {
+  const { t } = useLanguage();
+  const resolvedTitle =
+    title ?? (
+      <>
+        {t.aboutCTA.titleLine1} <br className="hidden md:block" /> {t.aboutCTA.titleLine2}
+      </>
+    );
+  const resolvedDescription = description ?? t.aboutCTA.description;
+  const resolvedButtonLabel = buttonLabel ?? t.aboutCTA.buttonLabel;
+
   return (
     <section className="bg-tramp-dark py-32 relative overflow-hidden">
       {/* Decorative background elements */}
@@ -30,18 +41,18 @@ export const AboutCTA = ({
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-[3.5rem] md:text-[5.5rem] font-black text-white leading-[1.1] mb-8 text-balance">
-            {title}
+            {resolvedTitle}
           </h2>
 
           <p className="text-[1.8rem] md:text-[2.2rem] text-white/70 text-pretty leading-relaxed mb-12">
-            {description}
+            {resolvedDescription}
           </p>
 
           <Link
             href={buttonHref}
             className="inline-block bg-white text-tramp-dark px-16 py-6 rounded-2xl text-[1.8rem] font-black shadow-2xl hover:bg-tramp-accent hover:text-white hover:scale-105 active:scale-95 transition-all duration-300"
           >
-            {buttonLabel}
+            {resolvedButtonLabel}
           </Link>
         </motion.div>
       </div>

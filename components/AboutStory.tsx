@@ -2,8 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export const AboutStory = () => {
+  const { t } = useLanguage();
   return (
     <section id="historia" className="bg-white py-32 overflow-hidden border-b border-black/5">
       <div className="container2025Redesign">
@@ -17,10 +19,10 @@ export const AboutStory = () => {
               transition={{ duration: 0.6 }}
             >
               <span className="text-tramp-accent font-bold text-[1.4rem] tracking-[0.2em] uppercase mb-4 block">
-                Nossa Trajetória
+                {t.aboutStory.eyebrow}
               </span>
               <h2 className="text-balance text-[3.2rem] md:text-[4.5rem] font-black text-tramp-dark leading-[1.2] mb-8">
-                Entre educação, tecnologia e ciência do trabalho.
+                {t.aboutStory.title}
               </h2>
             </motion.div>
           </div>
@@ -35,20 +37,13 @@ export const AboutStory = () => {
               className="space-y-8"
             >
               <p className="text-[1.8rem] md:text-[2rem] leading-relaxed text-tramp-gray">
-                A Trampolean nasceu da investigação sobre como as pessoas aprendem, trabalham, comunicam, decidem
-                e interagem com sistemas complexos. Essa base orientou a expansão da empresa para educação
-                corporativa, transformação digital, inteligência artificial, software, jogos e experiências
-                imersivas.
+                {t.aboutStory.paragraphs[0]}
               </p>
               <p className="text-[1.8rem] md:text-[2rem] leading-relaxed text-tramp-gray">
-                Nossa atuação combina ergonomia para compreender o trabalho real, semiótica para analisar
-                linguagem e produção de sentido, educação para desenvolver competências e tecnologia para
-                implementar soluções. Essa integração permite atuar em problemas que não são apenas técnicos,
-                mas também organizacionais, humanos e comunicacionais.
+                {t.aboutStory.paragraphs[1]}
               </p>
               <p className="text-[1.8rem] md:text-[2rem] leading-relaxed text-tramp-gray font-medium italic border-l-4 border-tramp-accent pl-8 py-2">
-                Não construímos tecnologia pela tecnologia. Construímos pontes entre o que as pessoas precisam
-                e o que a tecnologia torna possível.
+                {t.aboutStory.paragraphs[2]}
               </p>
             </motion.div>
           </div>

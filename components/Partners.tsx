@@ -1,6 +1,10 @@
+"use client";
+
 import React from "react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export const Partners = () => {
+  const { t } = useLanguage();
   const logos = [
     { file: "Logo_-_Descomplica.png", name: "Descomplica" },
     { file: "Oficina.webp", name: "Oficina" },
@@ -24,13 +28,13 @@ export const Partners = () => {
       <div className="container2025Redesign text-center mb-16 !pb-0">
         <div className="max-w-[95%] lg:max-w-none mx-auto">
           <span className="inline-block px-4 py-1 bg-tramp-magenta/10 text-tramp-magenta text-[1.3rem] font-bold uppercase tracking-widest rounded-lg mb-6">
-            Confiança
+            {t.partners.eyebrow}
           </span>
           <h2 className="text-balance text-[3rem] md:text-[4.2rem] text-tramp-dark font-black mb-6 leading-tight tracking-tight">
-             Marcas que evoluem com a <span className="text-tramp-magenta">Trampolean.</span>
+             {t.partners.titleBefore}<span className="text-tramp-magenta">{t.partners.titleHighlight}</span>
           </h2>
           <p className="text-[1.8rem] md:text-[2rem] text-tramp-gray opacity-70 leading-relaxed text-pretty">
-             Parcerias estratégicas que transformam o futuro das organizações por meio da inovação.
+             {t.partners.subtitle}
           </p>
         </div>
       </div>

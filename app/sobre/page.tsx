@@ -7,7 +7,7 @@ import { AboutMetrics } from "@/components/AboutMetrics";
 import { AboutDifferentiators } from "@/components/AboutDifferentiators";
 import { AboutLeadership } from "@/components/AboutLeadership";
 import { AboutValues } from "@/components/AboutValues";
-import { AboutCTA } from "@/components/AboutCTA";
+import { AboutPageCTA } from "@/components/AboutPageExtras";
 
 export const metadata: Metadata = {
   title: { absolute: "A Trampolean | Transformação digital centrada no humano" },
@@ -26,12 +26,7 @@ export default function AboutPage() {
         <AboutDifferentiators />
         <AboutLeadership />
         <AboutValues />
-        <AboutCTA
-          title={<>Pronto para transformar <br className="hidden md:block" /> sua organização?</>}
-          description="Converse com nossos especialistas e descubra como a Trampolean pode transformar processos, competências e experiências."
-          buttonLabel="Entre em contato"
-          buttonHref="/contato"
-        />
+        <AboutPageCTA />
       </main>
       <Footer />
     </div>

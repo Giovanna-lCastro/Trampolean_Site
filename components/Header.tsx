@@ -220,7 +220,7 @@ export const Header = () => {
                     </span>
                   </a>
                   <a
-                    href="https://wa.me/5511913271774"
+                    href="https://wa.me/5511963135038"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setContactOpen(false)}
@@ -231,7 +231,7 @@ export const Header = () => {
                     </span>
                     <span className="flex flex-col leading-tight whitespace-nowrap">
                       <span className="text-[1.5rem] font-bold">WhatsApp</span>
-                      <span className="text-[1.2rem] text-tramp-gray">+55 (11) 91327-1774</span>
+                      <span className="text-[1.2rem] text-tramp-gray">+55 (11) 96313-5038</span>
                     </span>
                   </a>
                 </motion.div>
@@ -298,7 +298,7 @@ export const Header = () => {
                 </Link>
               ))}
               <a
-                href="https://wa.me/5511913271774"
+                href="https://wa.me/5511963135038"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[1.8rem] font-bold text-tramp-accent py-3"

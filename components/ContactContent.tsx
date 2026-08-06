@@ -61,8 +61,8 @@ export const ContactContent = () => {
                   </div>
                   <div>
                     <p className="text-[1.4rem] font-bold text-tramp-gray uppercase tracking-widest mb-1">WhatsApp</p>
-                    <a href="https://wa.me/5511913271774" target="_blank" rel="noopener noreferrer" className="text-[1.8rem] text-tramp-dark font-medium hover:text-tramp-magenta transition-colors">
-                      +55 (11) 91327-1774
+                    <a href="https://wa.me/5511963135038" target="_blank" rel="noopener noreferrer" className="text-[1.8rem] text-tramp-dark font-medium hover:text-tramp-magenta transition-colors">
+                      +55 (11) 96313-5038
                     </a>
                   </div>
                 </div>

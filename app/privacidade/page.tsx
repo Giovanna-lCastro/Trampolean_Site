@@ -60,8 +60,8 @@ export default function PrivacyPage() {
                   crie@trampolean.net
                 </a>{" "}
                 ou pelo WhatsApp{" "}
-                <a href="https://wa.me/5511913271774" target="_blank" rel="noopener noreferrer" className="text-tramp-accent font-bold">
-                  +55 (11) 91327-1774
+                <a href="https://wa.me/5511963135038" target="_blank" rel="noopener noreferrer" className="text-tramp-accent font-bold">
+                  +55 (11) 96313-5038
                 </a>.
               </p>
             </div>

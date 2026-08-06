@@ -39,7 +39,7 @@ export const Footer = () => {
             <p className="text-[1.3rem] font-bold uppercase tracking-widest text-white/40 mb-6">Contato</p>
             <div className="flex flex-col gap-4 text-[1.5rem] opacity-80 mb-8">
               <a href="mailto:crie@trampolean.net" className="hover:text-tramp-cyan transition-colors">crie@trampolean.net</a>
-              <a href="https://wa.me/5511913271774" target="_blank" rel="noopener noreferrer" className="hover:text-tramp-cyan transition-colors">+55 (11) 91327-1774</a>
+              <a href="https://wa.me/5511963135038" target="_blank" rel="noopener noreferrer" className="hover:text-tramp-cyan transition-colors">+55 (11) 96313-5038</a>
               <span>São Paulo, SP — Brasil</span>
             </div>
             <div className="flex gap-4 justify-center md:justify-start">

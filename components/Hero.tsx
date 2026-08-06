@@ -8,10 +8,9 @@ export const Hero = () => {
 
       <div className="container2025Redesign relative z-10 !py-0">
         <div className="fire-animation animate-left-to-right mb-12 lg:mb-16 text-center">
-          <span className="inline-flex items-center gap-2 px-6 py-2 bg-tramp-accent/10 border border-tramp-accent/30 rounded-full text-[1.2rem] uppercase tracking-widest font-bold mb-6 text-tramp-accent">
-            <span className="w-2 h-2 rounded-full bg-tramp-accent animate-pulse"></span>
+          <p className="text-[1.2rem] uppercase tracking-widest font-semibold mb-6 text-tramp-accent">
             Transformação Digital Centrada no Humano
-          </span>
+          </p>
 
           <h1 className="text-balance text-[3rem] md:text-[3.8rem] lg:text-[4.2rem] xl:text-[4.8rem] font-extrabold leading-[1.15] tracking-tighter max-w-none">
             Tecnologia para transformar processos, trabalho e aprendizagem
@@ -38,21 +37,20 @@ export const Hero = () => {
             </div>
 
             {/* Indicadores de Credibilidade (Stats) */}
-            <div className="flex flex-wrap gap-4 pt-10 border-t border-white/10">
-              <div className="group flex items-center gap-2 px-6 py-3 rounded-full bg-tramp-accent/10 border border-tramp-accent/30 hover:bg-tramp-accent/20 hover:border-tramp-accent/50 transition-colors duration-300">
-                <span className="w-2 h-2 rounded-full bg-tramp-accent animate-pulse"></span>
-                <div className="text-[1.8rem] font-bold text-tramp-accent">+10 anos</div>
-                <div className="text-[1rem] uppercase tracking-widest opacity-60">Experiência SST</div>
+            <div className="flex gap-12 pt-10 border-t border-white/10">
+              <div>
+                <div className="text-[2.2rem] font-bold">+10 anos</div>
+                <div className="text-[1rem] uppercase tracking-widest opacity-50 mt-1">Experiência SST</div>
               </div>
-              <div className="group flex items-center gap-2 px-6 py-3 rounded-full bg-tramp-accent/10 border border-tramp-accent/30 hover:bg-tramp-accent/20 hover:border-tramp-accent/50 transition-colors duration-300">
-                <span className="w-2 h-2 rounded-full bg-tramp-accent animate-pulse" style={{ animationDelay: "0.3s" }}></span>
-                <div className="text-[1.8rem] font-bold text-tramp-accent">Centenas</div>
-                <div className="text-[1rem] uppercase tracking-widest opacity-60">Empresas</div>
+              <div className="w-[1px] bg-white/20 h-12 self-center"></div>
+              <div>
+                <div className="text-[2.2rem] font-bold">Centenas</div>
+                <div className="text-[1rem] uppercase tracking-widest opacity-50 mt-1">Empresas</div>
               </div>
-              <div className="group flex items-center gap-2 px-6 py-3 rounded-full bg-tramp-accent/10 border border-tramp-accent/30 hover:bg-tramp-accent/20 hover:border-tramp-accent/50 transition-colors duration-300">
-                <span className="w-2 h-2 rounded-full bg-tramp-accent animate-pulse" style={{ animationDelay: "0.6s" }}></span>
-                <div className="text-[1.8rem] font-bold text-tramp-accent">IA & Tecnologia</div>
-                <div className="text-[1rem] uppercase tracking-widest opacity-60">Soluções Integradas</div>
+              <div className="w-[1px] bg-white/20 h-12 self-center"></div>
+              <div>
+                <div className="text-[2.2rem] font-bold">IA & Tecnologia</div>
+                <div className="text-[1rem] uppercase tracking-widest opacity-50 mt-1">Soluções Integradas</div>
               </div>
             </div>
           </div>

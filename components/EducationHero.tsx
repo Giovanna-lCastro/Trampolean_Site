@@ -44,7 +44,7 @@ export const EducationHero = () => {
           >
              <div className="relative rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
                <img 
-                 src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000&auto=format&fit=crop" 
+                 src="/img_site/Education/EducationTreinamento.jpeg"
                  alt={t.educationHero.imageAlt}
                  className="w-full h-auto object-cover aspect-video hover:scale-110 transition-transform duration-700" 
                />

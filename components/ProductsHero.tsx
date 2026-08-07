@@ -45,7 +45,7 @@ export const ProductsHero = () => {
           >
              <div className="relative rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
                <img 
-                 src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop" 
+                 src="/img_site/ProductsHero.jpeg"
                  alt={t.productsHero.imageAlt}
                  className="w-full h-auto object-cover aspect-video hover:scale-110 transition-transform duration-700" 
                />

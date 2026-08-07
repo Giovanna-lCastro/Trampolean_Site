@@ -74,11 +74,11 @@ const EducationSection = ({ id, tag, title, description, forWhom, image, reverse
 );
 
 const programsMeta = [
-  { id: "ia-liderancas", image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop", reverse: false },
-  { id: "ia-aplicada-trabalho", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop", reverse: true },
-  { id: "ia-educacao", image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop", reverse: false },
-  { id: "governanca-uso-responsavel", image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop", reverse: true },
-  { id: "trilhas-universidades-corporativas", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop", reverse: false },
+  { id: "ia-liderancas", image: "/img_site/Education/EducationIALideranca.jpeg", reverse: false },
+  { id: "ia-aplicada-trabalho", image: "/img_site/Education/EducationIATrabalho.jpeg", reverse: true },
+  { id: "ia-educacao", image: "/img_site/Education/EducarionIAEducacao.jpeg", reverse: false },
+  { id: "governanca-uso-responsavel", image: "/img_site/Education/EducationGovernanca.jpeg", reverse: true },
+  { id: "trilhas-universidades-corporativas", image: "/img_site/Education/EducationTrilhas.jpeg", reverse: false },
 ];
 
 export const EducationDetail = () => {

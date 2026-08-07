@@ -33,6 +33,7 @@ export const en: Dictionary = {
     ],
     productsMenuFooter: "View all products",
     contact: "Contact",
+    login: "Login",
     email: "Email",
     whatsapp: "WhatsApp",
     whatsappCta: "Chat on WhatsApp",

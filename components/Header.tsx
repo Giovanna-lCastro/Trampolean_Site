@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle, LogIn } from "lucide-react";
 import { MegaMenu } from "./MegaMenu";
 import { useLanguage, Lang } from "@/lib/i18n/LanguageContext";
 
@@ -81,12 +81,20 @@ const FlagCN = () => (
     </g>
   </svg>
 );
+const FlagFR = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" className="rounded-full block">
+    <circle cx="10" cy="10" r="10" fill="#fff" />
+    <path d="M0 10a10 10 0 0 1 6.67-9.43v18.86A10 10 0 0 1 0 10z" fill="#0055a4" />
+    <path d="M20 10a10 10 0 0 1-6.67 9.43V.57A10 10 0 0 1 20 10z" fill="#ef4135" />
+  </svg>
+);
 
 const FLAGS: { lang: Lang; label: string; Icon: () => React.JSX.Element }[] = [
   { lang: "pt", label: "Português", Icon: FlagBR },
   { lang: "en", label: "English", Icon: FlagUS },
   { lang: "es", label: "Español", Icon: FlagES },
   { lang: "zh", label: "中文", Icon: FlagCN },
+  { lang: "fr", label: "Français", Icon: FlagFR },
 ];
 
 const LanguageSwitcher = ({ lang, setLang, size = "sm", dark = true }: { lang: Lang; setLang: (l: Lang) => void; size?: "sm" | "lg"; dark?: boolean }) => (
@@ -251,6 +259,19 @@ export const Header = () => {
         {/* Search & CTAs */}
         <div className="flex items-center gap-6">
           <LanguageSwitcher lang={lang} setLang={setLang} dark={!scrolled} />
+
+          <a
+            href="#"
+            title="Em breve"
+            className={`hidden sm:inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl text-[1.5rem] font-bold border-2 transition-all duration-300 ${
+              scrolled
+                ? "border-tramp-dark/15 text-tramp-dark/80 hover:border-tramp-dark/30 hover:bg-tramp-dark/5"
+                : "border-white/20 text-white hover:border-white/40 hover:bg-white/5"
+            }`}
+          >
+            <LogIn className="w-5 h-5" />
+            {t.header.login}
+          </a>
 
           <div className="relative" ref={contactRef}>
             <button

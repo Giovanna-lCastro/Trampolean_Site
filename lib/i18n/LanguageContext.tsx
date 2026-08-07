@@ -5,19 +5,21 @@ import { pt } from "./pt";
 import { en } from "./en";
 import { es } from "./es";
 import { zh } from "./zh";
+import { fr } from "./fr";
 import type { Dictionary } from "./types";
 
-export type Lang = "pt" | "en" | "es" | "zh";
+export type Lang = "pt" | "en" | "es" | "zh" | "fr";
 
 const STORAGE_KEY = "trampolean-lang";
 
-const dictionaries: Record<Lang, Dictionary> = { pt, en, es, zh };
+const dictionaries: Record<Lang, Dictionary> = { pt, en, es, zh, fr };
 
 const htmlLang: Record<Lang, string> = {
   pt: "pt-br",
   en: "en",
   es: "es",
   zh: "zh-Hans",
+  fr: "fr",
 };
 
 interface LanguageContextValue {
@@ -35,7 +37,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     // Reads localStorage once after mount to avoid an SSR/client hydration
     // mismatch (the server always renders "pt", the static default).
     const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (stored === "pt" || stored === "en" || stored === "es" || stored === "zh") {
+    if (stored === "pt" || stored === "en" || stored === "es" || stored === "zh" || stored === "fr") {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setLangState(stored);
     }

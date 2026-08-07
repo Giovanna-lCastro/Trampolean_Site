@@ -33,6 +33,7 @@ export const zh: Dictionary = {
     ],
     productsMenuFooter: "查看全部产品",
     contact: "联系我们",
+    login: "登录",
     email: "电子邮箱",
     whatsapp: "WhatsApp",
     whatsappCta: "通过WhatsApp联系",

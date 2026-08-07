@@ -25,6 +25,7 @@ export interface Dictionary {
     productsMenu: [MegaMenuEntry, MegaMenuEntry, MegaMenuEntry, MegaMenuEntry];
     productsMenuFooter: string;
     contact: string;
+    login: string;
     email: string;
     whatsapp: string;
     whatsappCta: string;

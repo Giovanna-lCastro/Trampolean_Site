@@ -13,6 +13,7 @@ const routes = [
   "/carreira",
   "/contato",
   "/privacidade",
+  "/support",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

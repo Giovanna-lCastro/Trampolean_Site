@@ -79,11 +79,11 @@ const SolutionSection = ({ id, tag, title, description, itemsLabel, items, image
 );
 
 const solutionsMeta = [
-  { id: "estrategia-ia", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop", reverse: false },
-  { id: "automacoes-agentes-software", image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop", reverse: true },
-  { id: "jogos-gamificacao-experiencias", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop", reverse: false },
-  { id: "educacao-corporativa-ia", image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop", reverse: true },
-  { id: "ergonomia-semiotica-fatores-humanos", image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=800&auto=format&fit=crop", reverse: false },
+  { id: "estrategia-ia", image: "/img_site/Solutions/SolutionEstrategia.jpeg", reverse: false },
+  { id: "automacoes-agentes-software", image: "/img_site/Solutions/SolutionTecnologia.jpeg", reverse: true },
+  { id: "jogos-gamificacao-experiencias", image: "/img_site/Solutions/SolutionsGames.jpeg", reverse: false },
+  { id: "educacao-corporativa-ia", image: "/img_site/Solutions/SolutionsCapacitacao.jpeg", reverse: true },
+  { id: "ergonomia-semiotica-fatores-humanos", image: "/img_site/Solutions/SolutionsFatoresHumanos.jpeg", reverse: false },
 ];
 
 export const SolutionsDetail = () => {

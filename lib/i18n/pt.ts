@@ -649,6 +649,9 @@ export const pt: Dictionary = {
   },
   productDetail: {
     ctaLabel: "Saber mais / Contato",
+    downloadLabel: "Baixar Manual (PDF)",
+    unityStoreLabel: "Ver na Unity Asset Store",
+    climateDownloadLabel: "Baixar material sobre Mudança Climática (PDF)",
     items: [
       {
         tag: "Governança & Compliance",

@@ -343,6 +343,9 @@ export interface Dictionary {
   };
   productDetail: {
     ctaLabel: string;
+    downloadLabel: string;
+    unityStoreLabel: string;
+    climateDownloadLabel: string;
     items: [
       { tag: string; title: string; description: string; fullDescription: string; benefits: string[] },
       { tag: string; title: string; description: string; fullDescription: string; benefits: string[] },

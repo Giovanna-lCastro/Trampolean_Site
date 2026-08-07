@@ -15,9 +15,23 @@ interface ProductProps {
   image: string;
   reverse?: boolean;
   ctaLabel: string;
+  ctaHref: string;
+  ctaExternal?: boolean;
+  ctaDownload?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+  secondaryDownload?: string;
 }
 
-const ProductSection = ({ id, tag, title, description, fullDescription, benefits, image, reverse, ctaLabel }: ProductProps) => (
+const DownloadIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+    <polyline points="7 10 12 15 17 10"></polyline>
+    <line x1="12" y1="15" x2="12" y2="3"></line>
+  </svg>
+);
+
+const ProductSection = ({ id, tag, title, description, fullDescription, benefits, image, reverse, ctaLabel, ctaHref, ctaExternal, ctaDownload, secondaryLabel, secondaryHref, secondaryDownload }: ProductProps) => (
   <section id={id} className={`overflow-hidden border-b border-black/5 ${reverse ? "bg-tramp-bg-light/10" : "bg-white"}`}>
     <div className="container2025Redesign">
       <div className={`grid grid-cols-1 lg:grid-cols-2 gap-20 items-center ${reverse ? "lg:flex-row-reverse" : ""}`}>
@@ -51,13 +65,47 @@ const ProductSection = ({ id, tag, title, description, fullDescription, benefits
             ))}
           </ul>
 
-          <Link 
-            href="/contato"
-            className="inline-flex items-center gap-3 bg-tramp-dark text-white px-10 py-5 rounded-2xl text-[1.7rem] font-bold shadow-xl hover:bg-tramp-accent transition-all duration-300"
-          >
-            {ctaLabel}
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </Link>
+          <div className="flex flex-wrap items-center gap-5">
+            {ctaExternal ? (
+              <a
+                href={ctaHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-tramp-dark text-white px-10 py-5 rounded-2xl text-[1.7rem] font-bold shadow-xl hover:bg-tramp-accent transition-all duration-300"
+              >
+                {ctaLabel}
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            ) : ctaDownload ? (
+              <a
+                href={ctaHref}
+                download={ctaDownload}
+                className="inline-flex items-center gap-3 bg-tramp-dark text-white px-10 py-5 rounded-2xl text-[1.7rem] font-bold shadow-xl hover:bg-tramp-accent transition-all duration-300"
+              >
+                {ctaLabel}
+                <DownloadIcon />
+              </a>
+            ) : (
+              <Link
+                href={ctaHref}
+                className="inline-flex items-center gap-3 bg-tramp-dark text-white px-10 py-5 rounded-2xl text-[1.7rem] font-bold shadow-xl hover:bg-tramp-accent transition-all duration-300"
+              >
+                {ctaLabel}
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </Link>
+            )}
+
+            {secondaryLabel && secondaryHref && (
+              <a
+                href={secondaryHref}
+                download={secondaryDownload}
+                className="inline-flex items-center gap-3 bg-tramp-accent/10 text-tramp-accent px-10 py-5 rounded-2xl text-[1.7rem] font-bold hover:bg-tramp-accent/20 transition-all duration-300"
+              >
+                {secondaryLabel}
+                <DownloadIcon />
+              </a>
+            )}
+          </div>
         </motion.div>
 
         {/* Image Area */}
@@ -81,10 +129,34 @@ const ProductSection = ({ id, tag, title, description, fullDescription, benefits
 );
 
 const productsMeta = [
-  { id: "manual-etica", image: "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?q=80&w=800&auto=format&fit=crop", reverse: false },
-  { id: "book-wizard", image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800&auto=format&fit=crop", reverse: true },
-  { id: "player-2", image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop", reverse: false },
-  { id: "kapta", image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=800&auto=format&fit=crop", reverse: true },
+  {
+    id: "manual-etica",
+    image: "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?q=80&w=800&auto=format&fit=crop",
+    reverse: false,
+    ctaHref: "/downloads/manual-etica-ia.pdf",
+    ctaDownload: "Manual-Etica-IA-Trampolean.pdf",
+  },
+  {
+    id: "book-wizard",
+    image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800&auto=format&fit=crop",
+    reverse: true,
+    ctaHref: "/contato",
+  },
+  {
+    id: "player-2",
+    image: "/products/Player2Banner.jpeg",
+    reverse: false,
+    ctaHref: "https://assetstore.unity.com/packages/tools/generative-ai/player-2-ai-project-architect-344526",
+    ctaExternal: true,
+  },
+  {
+    id: "kapta",
+    image: "/products/KaptaBanner.jpeg",
+    reverse: true,
+    ctaHref: "/contato",
+    secondaryHref: "/downloads/mudanca-climatica.pdf",
+    secondaryDownload: "Mudanca-Climatica-Trampolean.pdf",
+  },
 ];
 
 export const ProductDetail = () => {
@@ -92,7 +164,12 @@ export const ProductDetail = () => {
   const products = productsMeta.map((meta, idx) => ({
     ...meta,
     ...t.productDetail.items[idx],
-    ctaLabel: t.productDetail.ctaLabel,
+    ctaLabel: meta.ctaExternal
+      ? t.productDetail.unityStoreLabel
+      : meta.ctaDownload
+      ? t.productDetail.downloadLabel
+      : t.productDetail.ctaLabel,
+    secondaryLabel: meta.secondaryHref ? t.productDetail.climateDownloadLabel : undefined,
   }));
 
   return (

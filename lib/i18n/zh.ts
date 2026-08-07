@@ -649,6 +649,9 @@ export const zh: Dictionary = {
   },
   productDetail: {
     ctaLabel: "了解更多 / 联系我们",
+    downloadLabel: "下载手册（PDF）",
+    unityStoreLabel: "在 Unity Asset Store 查看",
+    climateDownloadLabel: "下载气候变化资料（PDF）",
     items: [
       {
         tag: "治理与合规",

@@ -10,6 +10,7 @@ const routes = [
   "/produtos",
   "/solucoes",
   "/educacao",
+  "/cursos",
   "/carreira",
   "/contato",
   "/privacidade",

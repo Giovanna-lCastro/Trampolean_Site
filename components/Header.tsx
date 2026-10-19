@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Mail, MessageCircle, LogIn } from "lucide-react";
 import { MegaMenu } from "./MegaMenu";
 import { useLanguage, Lang } from "@/lib/i18n/LanguageContext";
+import { PLATAFORMA_URL } from "@/lib/cursos";
 
 // --- Custom SVGs for Mega Menu Icons ---
 const IconShield = () => (
@@ -172,6 +173,8 @@ export const Header = () => {
       ],
       footer: { text: t.header.educationMenuFooter, href: "/educacao" }
     },
+    // Simulação B2B: rótulo ainda sem tradução nos arquivos de i18n.
+    { name: "Cursos", href: "/cursos" },
     {
       name: t.header.nav.products,
       href: "/produtos",
@@ -261,8 +264,8 @@ export const Header = () => {
           <LanguageSwitcher lang={lang} setLang={setLang} dark={!scrolled} />
 
           <a
-            href="#"
-            title="Em breve"
+            href={PLATAFORMA_URL ? `${PLATAFORMA_URL}/login` : "#"}
+            title={PLATAFORMA_URL ? "Acessar a plataforma de cursos" : "Em breve"}
             className={`hidden sm:inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl text-[1.5rem] font-bold border-2 transition-all duration-300 ${
               scrolled
                 ? "border-tramp-dark/15 text-tramp-dark/80 hover:border-tramp-dark/30 hover:bg-tramp-dark/5"
